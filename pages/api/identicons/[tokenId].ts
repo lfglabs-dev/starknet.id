@@ -10,6 +10,6 @@ export default async function getDataUrl(
   const {
     query: { tokenId },
   } = req;
-  const svg = await Identicons.svg(tokenId);
+  const svg = await Identicons.svg((tokenId as string).replace(".svg", ""));
   res.status(200).send(svg);
 }

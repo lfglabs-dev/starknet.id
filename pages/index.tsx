@@ -58,7 +58,8 @@ const Home: NextPage = () => {
               <p className="text-xl">
                 You’re not 0x072d4…b2Be7, transact directly from domain to
                 domain instead of a cryptic key by claiming your unique .stark
-                domain that can be used, transferred or sold.
+                domain and link it with a starknet identity (that can be
+                transferred or sold).
               </p>
             </div>
           </div>
@@ -102,7 +103,7 @@ const Home: NextPage = () => {
               making the difference between engaged users and airdrop farmers or
               bots. Therefore If you want to contribute to the starknet
               ecosystem and be rewarded to do so, you should mint a starknet
-              identity.
+              identity now !
             </p>
           </div>
         </div>

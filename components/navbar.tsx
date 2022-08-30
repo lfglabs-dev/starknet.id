@@ -43,7 +43,9 @@ const Navbar: FunctionComponent = () => {
               </li>
             </Link>
             <div className="text-beige mr-5">
-              <Button onClick={() => window.open("")}>Launch App</Button>
+              <Button onClick={() => window.open("https://app.starknet.id")}>
+                Launch App
+              </Button>
             </div>
           </ul>
           <div onClick={handleNav} className="md:hidden">
@@ -117,7 +119,11 @@ const Navbar: FunctionComponent = () => {
                   </Link>
                 </div>
                 <div className="text-beige ml-3">
-                  <Button onClick={() => window.open("")}>Launch App</Button>
+                  <Button
+                    onClick={() => window.open("https://app.starknet.id/")}
+                  >
+                    Launch App
+                  </Button>
                 </div>
               </div>
             </div>
