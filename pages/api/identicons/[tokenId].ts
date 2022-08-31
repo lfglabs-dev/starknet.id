@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-const Identicons = require("@nimiq/identicons");
+import Identicons from "@nimiq/identicons";
 Identicons.svgPath = "./identicons/identicons.min.svg";
 
 export default async function getDataUrl(
