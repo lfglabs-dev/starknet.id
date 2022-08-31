@@ -32,7 +32,7 @@ const Navbar: FunctionComponent = () => {
         <div>
           <ul className="hidden md:flex uppercase items-center">
             <Link href="#info">
-              <li className={styles.menuItem}>What is Starknet.id ?</li>
+              <li className={styles.menuItem}>What is Starknet.id?</li>
             </Link>
             <Link href="#roadmap">
               <li className={styles.menuItem}>Roadmap</li>
@@ -43,7 +43,7 @@ const Navbar: FunctionComponent = () => {
               </li>
             </Link>
             <div className="text-beige mr-5">
-              <Button onClick={() => window.open("https://app.starknet.id")}>
+              <Button onClick={() => window.open("https://goerli.app.starknet.id")}>
                 Launch App
               </Button>
             </div>
@@ -96,7 +96,7 @@ const Navbar: FunctionComponent = () => {
                   onClick={() => setNav(false)}
                   className={styles.menuItemSmall}
                 >
-                  What is starknet.id ?
+                  What is starknet.id?
                 </li>
               </Link>
               <Link href="#roadmap">
@@ -120,7 +120,7 @@ const Navbar: FunctionComponent = () => {
                 </div>
                 <div className="text-beige ml-3">
                   <Button
-                    onClick={() => window.open("https://app.starknet.id/")}
+                    onClick={() => window.open("https://goerli.app.starknet.id/")}
                   >
                     Launch App
                   </Button>
