@@ -69,3 +69,13 @@ a {
     background: var(--beige);
   }
 }
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: var(--brown);
+    background: var(--beige);
+  }
+}

@@ -27,3 +27,12 @@
   right: 0%;
   bottom: 0%;
 }
+
+@media (max-width: 768px) {
+  .secondTitle {
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
