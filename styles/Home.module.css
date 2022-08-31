@@ -1,6 +1,6 @@
 .section1 {
-  height: 100%;
-  padding: 4rem 0rem;
+  height: 100vh;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
