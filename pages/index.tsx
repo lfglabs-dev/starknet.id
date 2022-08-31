@@ -2,7 +2,7 @@
 import type { NextPage } from "next";
 import Footer from "../components/footer";
 import Roadmap from "../components/roadmap";
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
