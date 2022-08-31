@@ -7,13 +7,13 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.firstLeaf}>
-        <img width="100%" alt="leaf" src="/leaves/leaf_2.png" />
-      </div>
-      <div className={styles.secondLeaf}>
-        <img width="100%" alt="leaf" src="/leaves/leaf_1.png" />
-      </div>
       <div className={styles.section1}>
+        <div className={styles.firstLeaf}>
+          <img width="100%" alt="leaf" src="/leaves/leaf_2.png" />
+        </div>
+        <div className={styles.secondLeaf}>
+          <img width="100%" alt="leaf" src="/leaves/leaf_1.png" />
+        </div>
         <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
           <h1 className={styles.title}>Starknet.id</h1>
           <h3 className={styles.subtitle}>
@@ -37,8 +37,8 @@ const Home: NextPage = () => {
             </h2>
             <div className="text-md max-w-3xl mt-4 sm:mt-10">
               <p className="text-xl">
-                Mint your starknet identity for free and connect it to
-                your twitter, discord or github account.
+                Mint your starknet identity for free and connect it to your
+                twitter, discord or github account.
               </p>
             </div>
           </div>
@@ -97,12 +97,11 @@ const Home: NextPage = () => {
               you&rsquo;ll be able to get rewarded for your off-chain
               contributions (retweet something, invite people on discord ...)
               but also for your on-chain actions (testing an alpha game, minting
-              an NFT ...). In that sense, starknet.id is a tool that
-              enables all starknet protocols to reward their true community by
-              making the difference between engaged users and airdrop farmers or
-              bots. Therefore If you want to contribute to the starknet
-              ecosystem and be rewarded to do so, you should mint a starknet
-              identity now!
+              an NFT ...). In that sense, starknet.id is a tool that enables all
+              starknet protocols to reward their true community by making the
+              difference between engaged users and airdrop farmers or bots.
+              Therefore If you want to contribute to the starknet ecosystem and
+              be rewarded to do so, you should mint a starknet identity now!
             </p>
           </div>
         </div>
