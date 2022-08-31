@@ -20,7 +20,7 @@ const Home: NextPage = () => {
             &rdquo;All in one identity service on starknet&rdquo;
           </h3>
         </div>
-      </div>
+      </div> 
       <div id="info" className={styles.section2}>
         <div className={styles.subsection}>
           <div className={styles.card}>
