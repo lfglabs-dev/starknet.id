@@ -75,7 +75,7 @@ const Home: NextPage = () => {
             <div className="text-md max-w-3xl mt-4 sm:mt-10">
               <p className="text-xl">
                 We&rsquo;ll implement a bridging system to allow each .stark
-                domain owner to get a free .starknet.eth domain on Ethereum.
+                domain owner to get a free .eth domain on Ethereum.
               </p>
             </div>
           </div>
