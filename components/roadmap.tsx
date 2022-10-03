@@ -21,6 +21,7 @@ const Roadmap: FunctionComponent = () => {
           New partnerships (cartridge, Imperium Wars, Only Dust, Matchbox ...)
         </p>
         <p className="text-center text-xl">ENS bridge (free .eth domain)</p>
+        <p className="text-center text-xl">New Starknet SFT implementation</p>
       </div>
       <div className="my-5">
         <h2 className={styles.secondTitle}>Phase 3 : Maturation</h2>
