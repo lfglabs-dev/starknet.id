@@ -71,11 +71,12 @@ const Home: NextPage = () => {
                 src="/identicons/identicon_5.svg"
               />
             </div>
-            <h2 className={styles.secondTitle}>#3 Get a free .eth domain</h2>
+            <h2 className={styles.secondTitle}>#3 ENS Bridge</h2>
             <div className="text-md max-w-3xl mt-4 sm:mt-10">
               <p className="text-xl">
                 We&rsquo;ll implement a bridging system to allow each .stark
-                domain owner to get a free .eth domain on Ethereum.
+                domain owner to get a free .eth domain on Ethereum but also each
+                .eth owner to get a free .stark domain on starknet.
               </p>
             </div>
           </div>
