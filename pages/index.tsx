@@ -3,6 +3,11 @@ import type { NextPage } from "next";
 import Footer from "../components/footer";
 import Roadmap from "../components/roadmap";
 import styles from "../styles/Home.module.css";
+import CarbonableIcon from "../components/icons/carbonable";
+import MintsquareIcon from "../components/icons/mintsquare";
+import FocusTreeIcon from "../components/icons/focustree";
+import CartridgeIcon from "../components/icons/cartridge";
+import RealmsIcon from "../components/icons/realms";
 
 const Home: NextPage = () => {
   return (
@@ -76,34 +81,88 @@ const Home: NextPage = () => {
               <p className="text-xl">
                 We&rsquo;ll implement a bridging system to allow each .stark
                 domain owner to get a free .eth domain on Ethereum but also each
-                .eth owner to get a free .stark domain on starknet.
+                .eth owner to get a free .stark domain on Starknet.
               </p>
             </div>
           </div>
         </div>
         <div className={styles.subsection}>
           <div className={styles.card2}>
-            <div className="flex justify-center w-full my-5">
-              <img
-                className="md:w-1/2"
-                alt="identicon"
-                src="/visuals/Partners.png"
-              />
+            <h2 className={styles.secondTitle}>They are already using us</h2>
+            <div className={styles.partners}>
+              {/* <BriqIcon /> */}
+              {/* <StarkwareIcon /> */}
+              <a href="https://carbonable.io/">
+                <CarbonableIcon />
+              </a>
+
+              <a href="https://onlydust.xyz/">
+                <img
+                  height={100}
+                  width={100}
+                  src="/visuals/OnlyDustLogo.png"
+                  alt="only dust logo"
+                  className="m-5"
+                />
+              </a>
+
+              <a href="https://mintsquare.io/">
+                <div className="flex items-center justify-center m-5">
+                  <MintsquareIcon />
+                  <h3 className={styles.mintsquareTitle}>Mintsquare</h3>
+                </div>
+              </a>
+              <a href="https://eykar.org/">
+                <img
+                  className="m-5"
+                  height={100}
+                  width={100}
+                  src="/visuals/EykarLogo.svg"
+                  alt="Eykar logo"
+                />
+              </a>
+
+              <a href="https://focustree.app/">
+                <FocusTreeIcon />
+              </a>
+
+              <a href="https://cartridge.gg/">
+                <CartridgeIcon />
+              </a>
+              <a href="https://imperiumwars.xyz/">
+                <img
+                  className="m-5 rounded-xl"
+                  height={100}
+                  width={100}
+                  src="/visuals/ImperiumWarsLogo.png"
+                  alt="Imperium Wars logo"
+                />
+              </a>
+
+              <a href="https://www.frenslands.xyz/">
+                <img
+                  className="m-5 rounded-xl"
+                  height={120}
+                  width={120}
+                  src="/visuals/FrenslandsLogo.png"
+                  alt="Frenslands logo"
+                />
+              </a>
+
+              <a href="https://www.earlystarkers.io/">
+                <img
+                  className="m-5 rounded-xl"
+                  height={180}
+                  width={180}
+                  src="/visuals/EarlyStarkersLogo.svg"
+                  alt="Early Starkers logo"
+                />
+              </a>
+
+              <a href="https://realmseternum.com/">
+                <RealmsIcon />
+              </a>
             </div>
-            <h2 className={styles.secondTitle}>
-              #4 Contribute and get rewarded
-            </h2>
-            <p className="text-justify text-xl mt mt-4 sm:mt-10">
-              By connecting your starknet.id to one of our partner protocols,
-              you&rsquo;ll be able to get rewarded for your off-chain
-              contributions (retweet something, invite people on discord ...)
-              but also for your on-chain actions (testing an alpha game, minting
-              an NFT ...). In that sense, starknet.id is a tool that enables all
-              starknet protocols to reward their true community by making the
-              difference between engaged users and airdrop farmers or bots.
-              Therefore If you want to contribute to the starknet ecosystem and
-              be rewarded to do so, you should mint a starknet identity now!
-            </p>
           </div>
         </div>
       </div>

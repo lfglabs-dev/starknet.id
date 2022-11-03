@@ -58,6 +58,13 @@
   text-transform: uppercase;
 }
 
+.mintsquareTitle {
+  font-family: "Montserrat-ExtraBold";
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: black;
+}
+
 .thirdTitle {
   font-family: "Montserrat-ExtraBold";
   font-size: 4rem;
@@ -167,6 +174,14 @@
   overflow: hidden;
 }
 
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .title {
     font-size: 6rem;
@@ -195,6 +210,10 @@
     padding: 1rem 1rem;
   }
   .subsection {
+    flex-direction: column;
+  }
+
+  .partners {
     flex-direction: column;
   }
   .firstLeaf,
