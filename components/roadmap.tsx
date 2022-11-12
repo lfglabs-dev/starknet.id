@@ -8,26 +8,29 @@ const Roadmap: FunctionComponent = () => {
       <div className="my-5">
         <h2 className={styles.secondTitle}>Phase 1 : Genesis</h2>
         <p className="text-center text-xl">Recruitment</p>
-        <p className="text-center text-xl">
+        <p className="text-center text-xl	">
           First partnership with Eykar Quest
         </p>
-        <p className="text-center text-xl">Live testnet</p>
+        <p className="text-center text-xl">Application live on testnet</p>
+        <p className="text-center text-xl">
+          Protocol partnerships (Eykar, Realms, Carbonable, Focus Tree ...)
+        </p>
       </div>
       <div className="my-5">
         <h2 className={styles.secondTitle}>Phase 2 : Growth</h2>
-        <p className="text-center text-xl">Live mainnet</p>
-        <p className="text-center text-xl">Wallets .stark support</p>
+
+        <p className="text-center text-xl">Application live on mainnet</p>
+        <p className="text-center text-xl">New Starknet SBT implementation</p>
         <p className="text-center text-xl">
-          New partnerships (cartridge, Imperium Wars, Only Dust, Matchbox ...)
+          Ecosystem domain support (wallets, protocols, starknet.js ...)
         </p>
-        <p className="text-center text-xl">ENS bridges</p>
-        <p className="text-center text-xl">New Starknet SFT implementation</p>
+        <p className="text-center text-xl">Affiliation system</p>
       </div>
       <div className="my-5">
-        <h2 className={styles.secondTitle}>Phase 3 : Maturation</h2>
-        <p className="text-center text-xl">
-          Eternal contract (deletion of upgradable functions)
-        </p>
+        <h2 className={styles.secondTitle}>Phase 3 : MATURATION</h2>
+        <p className="text-center text-xl">ENS Bridges</p>
+        <p className="text-center text-xl">Starknet id Dashboard</p>
+        <p className="text-center text-xl">More features around identity</p>
         <p className="text-center text-xl">
           New DAO system based on game theory and identities
         </p>
