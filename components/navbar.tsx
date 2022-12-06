@@ -43,7 +43,7 @@ const Navbar: FunctionComponent = () => {
               </li>
             </Link>
             <div className="text-beige mr-5">
-              <Button onClick={() => window.open("https://goerli.app.starknet.id")}>
+              <Button onClick={() => window.open("https://app.starknet.id")}>
                 Launch App
               </Button>
             </div>
@@ -120,7 +120,7 @@ const Navbar: FunctionComponent = () => {
                 </div>
                 <div className="text-beige ml-3">
                   <Button
-                    onClick={() => window.open("https://goerli.app.starknet.id/")}
+                    onClick={() => window.open("https://app.starknet.id/")}
                   >
                     Launch App
                   </Button>
