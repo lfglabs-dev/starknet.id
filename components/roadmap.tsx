@@ -7,19 +7,23 @@ const Roadmap: FunctionComponent = () => {
       <h1 className={styles.title}>Roadmap</h1>
       <div className="my-5">
         <h2 className={styles.secondTitle}>Phase 1 : Genesis</h2>
-        <p className="text-center text-xl">Recruitment</p>
-        <p className="text-center text-xl	">
+        <p className="text-center text-xl  line-through">Recruitment</p>
+        <p className="text-center text-xl	 line-through">
           First partnership with Eykar Quest
         </p>
-        <p className="text-center text-xl">Application live on testnet</p>
-        <p className="text-center text-xl">
+        <p className="text-center text-xl line-through">
+          Application live on testnet
+        </p>
+        <p className="text-center text-xl line-through">
           Protocol partnerships (Eykar, Realms, Carbonable, Focus Tree ...)
         </p>
       </div>
       <div className="my-5">
         <h2 className={styles.secondTitle}>Phase 2 : Growth</h2>
 
-        <p className="text-center text-xl">Application live on mainnet</p>
+        <p className="text-center text-xl line-through">
+          Application live on mainnet
+        </p>
         <p className="text-center text-xl">New Starknet SBT implementation</p>
         <p className="text-center text-xl">
           Ecosystem domain support (wallets, protocols, starknet.js ...)
