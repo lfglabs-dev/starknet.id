@@ -32,18 +32,19 @@ const Home: NextPage = () => {
             <div className="flex justify-center">
               <img
                 alt="identicon"
-                height={250}
-                width={250}
-                src="/identicons/identicon_3.svg"
+                height={300}
+                width={300}
+                src="/visuals/passeport.png"
               />
             </div>
             <h2 className={styles.secondTitle}>
-              #1 Claim your on-chain identity
+              #1 Claim your Starknet identity
             </h2>
             <div className="text-md max-w-3xl mt-4 sm:mt-10">
               <p className="text-xl">
-                Mint your starknet identity for free and connect it to your
-                twitter, discord or github account.
+                You can already mint your starknet identity for free, it&apos;ll
+                act as your starknet passeport and represent you during your
+                on-chain interactions.
               </p>
             </div>
           </div>
@@ -51,19 +52,18 @@ const Home: NextPage = () => {
             <div className="flex justify-center">
               <img
                 alt="identicon"
-                height={250}
-                width={250}
-                src="/identicons/identicon_4.svg"
+                height={300}
+                width={300}
+                src="/visuals/passeportWithUsername.png"
               />
             </div>
             <h2 className={styles.secondTitle}>
-              #2 Claim your .stark username
+              #2 Register your .stark domain
             </h2>
             <div className="text-md max-w-3xl mt-4 sm:mt-10">
               <p className="text-xl">
-                You’re not 0x072d4…b2Be7, transact directly from domain to
-                domain instead of a cryptic key by claiming your unique .stark
-                domain linked to your starknet identity.
+                You’re not 0x072d4…b2Be7, you can already register your .stark
+                domain and link it with your starknet identity.
               </p>
             </div>
           </div>
@@ -71,17 +71,17 @@ const Home: NextPage = () => {
             <div className="flex justify-center">
               <img
                 alt="identicon"
-                height={250}
-                width={250}
-                src="/identicons/identicon_5.svg"
+                height={300}
+                width={300}
+                src="/visuals/passeportWithEverything.png"
               />
             </div>
-            <h2 className={styles.secondTitle}>#3 ENS Bridge</h2>
+            <h2 className={styles.secondTitle}>#3 Build your identity</h2>
             <div className="text-md max-w-3xl mt-4 sm:mt-10">
               <p className="text-xl">
-                We&rsquo;ll implement a bridging system to allow each .stark
-                domain owner to get a free .eth domain on Ethereum but also each
-                .eth owner to get a free .stark domain on Starknet.
+                You&apos;ll also able to attach any data to your starknet
+                identity, from web2 with social media accounts to web3 with ENS
+                domains.
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
                 <img
                   height={100}
                   width={100}
-                  src="/visuals/OnlyDustLogo.png"
+                  src="/visuals/partners/OnlyDustLogo.png"
                   alt="only dust logo"
                   className="m-5"
                 />
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
                   className="m-5"
                   height={100}
                   width={100}
-                  src="/visuals/EykarLogo.svg"
+                  src="/visuals/partners/EykarLogo.svg"
                   alt="Eykar logo"
                 />
               </a>
@@ -134,7 +134,7 @@ const Home: NextPage = () => {
                   className="m-5 rounded-xl"
                   height={100}
                   width={100}
-                  src="/visuals/ImperiumWarsLogo.png"
+                  src="/visuals/partners/ImperiumWarsLogo.png"
                   alt="Imperium Wars logo"
                 />
               </a>
@@ -144,7 +144,7 @@ const Home: NextPage = () => {
                   className="m-5 rounded-xl"
                   height={120}
                   width={120}
-                  src="/visuals/FrenslandsLogo.png"
+                  src="/visuals/partners/FrenslandsLogo.png"
                   alt="Frenslands logo"
                 />
               </a>
@@ -154,7 +154,7 @@ const Home: NextPage = () => {
                   className="m-5 rounded-xl"
                   height={180}
                   width={180}
-                  src="/visuals/EarlyStarkersLogo.svg"
+                  src="/visuals/partners/EarlyStarkersLogo.svg"
                   alt="Early Starkers logo"
                 />
               </a>
