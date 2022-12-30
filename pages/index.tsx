@@ -123,7 +123,13 @@ const Home: NextPage = () => {
               </a>
 
               <a href="https://focustree.app/">
-                <FocusTreeIcon />
+                <img
+                  className="m-5 rounded-xl"
+                  height={100}
+                  width={100}
+                  src="/visuals/partners/focustreeLogo.png"
+                  alt="Imperium Wars logo"
+                />{" "}
               </a>
 
               <a href="https://cartridge.gg/">
