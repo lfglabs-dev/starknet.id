@@ -1,0 +1,163 @@
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.pfp {
+  margin-bottom: 10px;
+}
+.title {
+  font-family: "Montserrat-ExtraBold";
+  color: var(--brown);
+}
+
+.section1 {
+  padding: 4rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.elemContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  padding: 10px 0;
+}
+
+.network {
+  background-color: var(--gray);
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--brown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.network p {
+  margin: 0px 5px;
+}
+.icon {
+  height: 28px;
+  width: 28px;
+}
+.contentCopy {
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.social {
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: var(--soft-brown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--soft-brown);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.social p {
+  margin: 0 15px 0 10px;
+  font-weight: 700;
+}
+
+.walletAddress {
+  font-size: 2rem;
+  color: var(--brown);
+}
+
+.SbtContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.activityContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.activity {
+  border: 2px solid var(--soft-brown);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+.activity p {
+  flex: 3;
+  justify-content: flex-start;
+  text-align: left;
+  color: var(--soft-brown);
+  font-weight: 700;
+  font-family: "Montserrat-ExtraBold";
+  font-size: 1.5rem;
+}
+
+.firstLeaf {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 200px;
+  z-index: -1000;
+  overflow: hidden;
+  transform: rotate(90deg);
+}
+
+.secondLeaf {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 200px;
+  z-index: -1000;
+  overflow: hidden;
+  transform: rotate(90deg);
+}
+
+.thirdLeaf {
+  position: absolute;
+  bottom: 0%;
+  width: 200px;
+  z-index: -1000;
+  overflow: hidden;
+  transform: rotate(90deg);
+}
+
+.fourthLeaf {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 200px;
+  z-index: -1000;
+  overflow: hidden;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 500px) {
+  .elemContainer {
+    flex-direction: column;
+  }
+  .social {
+    margin: 5px 0;
+  }
+  .SbtContainer {
+    flex-direction: column;
+  }
+}

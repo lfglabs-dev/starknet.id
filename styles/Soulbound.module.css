@@ -1,0 +1,45 @@
+.SbtCard {
+  border-radius: 20px;
+  margin: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.SbtImage {
+  height: 500px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 45px;
+}
+
+.cardInfo {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(7.5px);
+  border-radius: 45px;
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 40px;
+}
+
+.cardName {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--brown);
+}
+
+.cardDescription {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brown);
+  font-family: "Montserrat-ExtraBold";
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .SbtImage {
+    width: 100%;
+  }
+}
