@@ -4,19 +4,12 @@ import { useStarknetIdContract } from "../../hooks/contracts";
 import { stringToHex } from "../../utils/felt";
 import styles from "../../styles/Profile.module.css";
 import TwitterIcon from "../icons/twitterIcon";
+import { ClickableIconProps } from "../../types";
 
-type ClickableTwitterIconProps = {
-  color?: string;
-  width: string;
-  tokenId: string;
-  domain?: string;
-};
-
-const ClickableTwitterIcon: FunctionComponent<ClickableTwitterIconProps> = ({
+const ClickableTwitterIcon: FunctionComponent<ClickableIconProps> = ({
   width,
   color,
   tokenId,
-  domain,
 }) => {
   const contract = useStarknetIdContract();
   const [twitterId, setTwitterId] = useState<string | undefined>();
@@ -41,7 +34,7 @@ const ClickableTwitterIcon: FunctionComponent<ClickableTwitterIconProps> = ({
   }, [tokenId]);
 
   useEffect(() => {
-    if (twitterId) {
+    if (twitterId && twitterId !== "0") {
       fetch(`/api/twitter/get_username?id=${twitterId}`)
         .then((response) => response.json())
         // TO DO : Find how to import the twitter response type

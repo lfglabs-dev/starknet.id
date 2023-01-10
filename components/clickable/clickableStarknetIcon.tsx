@@ -3,15 +3,9 @@ import React, { FunctionComponent, useEffect, useState } from "react";
 import styles from "../../styles/Profile.module.css";
 import StarknetIcon from "../icons/starknetIcon";
 import { ContentCopy } from "@mui/icons-material";
+import { ClickableChainIconProps } from "../../types";
 
-type ClickableStarknetIconProps = {
-  color?: string;
-  width: string;
-  addr: string;
-};
-
-const ClickableStarknetIcon: FunctionComponent<ClickableStarknetIconProps> = ({
-  width,
+const ClickableStarknetIcon: FunctionComponent<ClickableChainIconProps> = ({
   color,
   addr,
 }) => {
@@ -19,7 +13,7 @@ const ClickableStarknetIcon: FunctionComponent<ClickableStarknetIconProps> = ({
     navigator.clipboard.writeText(addr as string);
   };
 
-  return addr ? (
+  return addr && Number(addr) !== 0 ? (
     <div className={styles.network}>
       <StarknetIcon width="20" height="20" color={color ? color : "#402D28"} />
       <p>

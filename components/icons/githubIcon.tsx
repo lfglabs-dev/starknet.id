@@ -1,10 +1,5 @@
 import React, { FunctionComponent } from "react";
-
-export type IconProps = {
-  height?: string;
-  width?: string;
-  color?: string;
-};
+import { IconProps } from "../../types";
 
 const GitHubIcon: FunctionComponent<IconProps> = ({ width, color }) => {
   return (

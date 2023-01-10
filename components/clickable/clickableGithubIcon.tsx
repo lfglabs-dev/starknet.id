@@ -4,19 +4,12 @@ import { useStarknetIdContract } from "../../hooks/contracts";
 import { stringToHex } from "../../utils/felt";
 import GitHubIcon from "../../components/icons/githubIcon";
 import styles from "../../styles/Profile.module.css";
+import { ClickableIconProps } from "../../types";
 
-type ClickableGithubIconProps = {
-  color?: string;
-  width: string;
-  tokenId: string;
-  domain?: string;
-};
-
-const ClickableGithubIcon: FunctionComponent<ClickableGithubIconProps> = ({
+const ClickableGithubIcon: FunctionComponent<ClickableIconProps> = ({
   width,
   color,
   tokenId,
-  domain,
 }) => {
   const contract = useStarknetIdContract();
   const [githubId, setGithubId] = useState<string | undefined>();
@@ -41,7 +34,7 @@ const ClickableGithubIcon: FunctionComponent<ClickableGithubIconProps> = ({
   }, [tokenId]);
 
   useEffect(() => {
-    if (githubId) {
+    if (githubId && githubId !== "0") {
       fetch(`https://api.github.com/user/${githubId}`)
         .then((response) => response.json())
         // TO DO : Find how to import the github response type

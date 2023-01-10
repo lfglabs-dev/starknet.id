@@ -1,31 +1,53 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent } from "react";
 import styles from "../styles/Profile.module.css";
 import MintsquareIcon from "../components/icons/mintsquare";
-import BriqIcon from "../components/icons/briq";
+import { ActivityProps } from "../types";
+import { projectNames } from "../constants";
+import StarknetIcon from "./icons/starknetIcon";
 
-export type ActivityData = {
-  type: string;
-  description: string;
-  timestamp: string;
-};
-
-const Activity: FunctionComponent<ActivityData> = (props) => {
-  const { type, description, timestamp } = props;
-  const [url, setUrl] = useState("");
-  const [showInfo, setShowInfo] = useState(false);
-
+const Activity: FunctionComponent<ActivityProps> = ({
+  type,
+  date,
+  transaction_hash,
+}) => {
   return (
-    <div className={styles.activity} onClick={() => console.log("open")}>
-      {type === "briq" ? (
-        <BriqIcon width="20" height="20" />
+    <div
+      className={styles.activity}
+      onClick={() => window.open(`https://starkscan.co/tx/${transaction_hash}`)}
+    >
+      {type === "StarknetId" ||
+      type === "StarknetIdNaming" ||
+      type === "StarknetIdPricing" ||
+      type === "StarknetIdVerifier" ? (
+        <img
+          className="cursor-pointer"
+          src="/visuals/StarknetIdLogo.png"
+          alt="Starknet.id Logo"
+          width={60}
+          height={60}
+        />
       ) : type === "mintsquare" ? (
         <MintsquareIcon />
       ) : type === "aspect" ? (
         <></>
+      ) : type === "Starkgate" ? (
+        <StarknetIcon />
+      ) : type === "JediSwap" ? (
+        <></>
+      ) : type === "10KSwap" ? (
+        <></>
+      ) : type === "Myswap" ? (
+        <></>
+      ) : type === "Orbiter" ? (
+        <></>
+      ) : type === "Nostra" ? (
+        <></>
       ) : (
         <></>
       )}
-      <p>{description}</p>
+      <p>
+        Interacted with {projectNames[type]} contract on {date}
+      </p>
     </div>
   );
 };

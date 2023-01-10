@@ -1,14 +1,14 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
 import styles from "../styles/Soulbound.module.css";
 
-export type SoulBoundData = {
+export type SoulboundProps = {
   tokenId: string;
   imageUri: string;
   name: string;
   description: string;
 };
 
-const Soulbound: FunctionComponent<SoulBoundData> = (props) => {
+const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
   const { tokenId, imageUri, name, description } = props;
   const [url, setUrl] = useState("");
   const [showInfo, setShowInfo] = useState(false);
@@ -26,7 +26,6 @@ const Soulbound: FunctionComponent<SoulBoundData> = (props) => {
       className={styles.SbtCard}
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
-      onClick={() => console.log("open")}
     >
       <img src={url} alt={name} className={styles.SbtImage} />
       {showInfo && (

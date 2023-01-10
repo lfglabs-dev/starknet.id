@@ -92,13 +92,14 @@
 
 .activity {
   border: 2px solid var(--soft-brown);
-  padding: 5px;
+  padding: 5px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   border-radius: 15px;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 .activity p {
@@ -108,7 +109,23 @@
   color: var(--soft-brown);
   font-weight: 700;
   font-family: "Montserrat-ExtraBold";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding-left: 10px;
+}
+
+.activityBtn {
+  background: rgba(191, 158, 122, 0.3);
+  border-radius: 20px;
+  font-family: "Montserrat-ExtraBold";
+  font-weight: 700;
+  color: var(--brown);
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.openInNew {
+  margin-right: 10px;
 }
 
 .firstLeaf {

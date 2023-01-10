@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { IconProps } from "./briq";
 
 const mintSquareIcon: FunctionComponent = () => {
   return (

@@ -11,6 +11,8 @@ import ClickableStarknetIcon from "../components/clickable/clickableStarknetIcon
 import Activity from "../components/activity";
 import { ThreeDots } from "react-loader-spinner";
 import { BN } from "bn.js";
+import { getLastBlockNumber, retrieveActivities } from "../utils/profile";
+import { OpenInNew } from "@mui/icons-material";
 
 export type Identity = {
   id: string;
@@ -44,58 +46,41 @@ const dataTest = [
   },
 ];
 
-const activityTest = [
-  {
-    type: "briq",
-    description: "listed #123 from Pxls for 0.04 eth on 30 dec 2022",
-    timestamp: "test",
-  },
-  {
-    type: "mintsquare",
-    timestamp: "test2",
-    description: "listed #123 from Pxls for 0.04 eth on 30 dec 2022",
-  },
-  {
-    type: "briq",
-    timestamp: "test3",
-    description: "listed #123 from Pxls for 0.04 eth on 30 dec 2022",
-  },
-];
-
 const Profile: NextPage = () => {
   const router = useRouter();
-  const { id } = router.query;
+  const { idOrUsername } = router.query;
   const [initProfile, setInitProfile] = useState(false);
   const [identity, setIdentity] = useState<Identity>();
+  const [activities, setActivities] = useState<any>();
+  const [lastBlock, setLastBlock] = useState(0);
 
   useEffect(() => {
     setInitProfile(false);
   }, [router]);
 
   useEffect(() => {
-    if (id?.toString().toLowerCase().endsWith(".stark")) {
-      useTokenIdFromDomain(id?.toString().replace(".stark", "")).then(
+    if (idOrUsername?.toString().toLowerCase().endsWith(".stark")) {
+      useTokenIdFromDomain(idOrUsername?.toString().replace(".stark", "")).then(
         (tokenId) => {
           fetch(
-            `https://app.starknet.id/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
+            `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
           )
             .then((response) => response.json())
             .then((data: Identity) => {
-              console.log("data fetched", data);
               if (data.error) {
                 return;
               }
               setIdentity({
                 ...data,
                 id: tokenId.tokenId?.["owner"],
-                hexAddr: parseInt(data.addr).toString(16),
+                hexAddr: "0x0" + new BN(data.addr as string, 10).toString(16),
               });
               setInitProfile(true);
             });
         }
       );
-    } else if (!isNaN(parseInt(id as string))) {
-      fetch(`https://app.starknet.id/api/indexer/id_to_data?id=${id}`)
+    } else if (!isNaN(parseInt(idOrUsername as string))) {
+      fetch(`https://app.starknet.id/api/indexer/id_to_data?id=${idOrUsername}`)
         .then((response) => response.json())
         .then((data: Identity) => {
           if (data.error) {
@@ -103,14 +88,28 @@ const Profile: NextPage = () => {
           }
           setIdentity({
             ...data,
-            id: id as string,
-            hexAddr: parseInt(data.addr).toString(16),
+            id: idOrUsername as string,
+            hexAddr: "0x0" + new BN(data.addr as string, 10).toString(16),
           });
           setInitProfile(true);
         });
     } else {
     }
-  }, [id]);
+  }, [idOrUsername]);
+
+  useEffect(() => {
+    // fetch Activity
+    if (identity && identity.hexAddr) {
+      getLastBlockNumber().then((block) => {
+        retrieveActivities(block as number, identity.hexAddr as string).then(
+          (data) => {
+            setLastBlock(data?.lastBlock as number);
+            setActivities(data?.activities);
+          }
+        );
+      });
+    }
+  }, [identity]);
 
   return initProfile && identity ? (
     <div className={styles.container}>
@@ -179,7 +178,7 @@ const Profile: NextPage = () => {
             }
           >
             {" "}
-            NFTs & Soulbound tokens
+            Soulbound tokens
           </h2>
           <div className={styles.SbtContainer}>
             {dataTest.map((item, index) => {
@@ -196,11 +195,19 @@ const Profile: NextPage = () => {
           >
             Activity
           </h2>
-          <div className={styles.activityContainer}>
-            {activityTest.map((item, index) => {
-              return <Activity {...item} key={index} />;
-            })}
-          </div>
+          {activities && activities.length > 0 ? (
+            <div className={styles.activityContainer}>
+              {activities.map((item, index) => {
+                return <Activity {...item} key={index} />;
+              })}
+              <a className={styles.activityBtn}>
+                <OpenInNew className={styles.openInNew} />
+                See more
+              </a>
+            </div>
+          ) : (
+            <p className="text-2xl">No activity yet</p>
+          )}
         </div>
       </div>
     </div>

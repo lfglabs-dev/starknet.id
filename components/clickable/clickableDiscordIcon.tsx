@@ -4,22 +4,17 @@ import { useStarknetIdContract } from "../../hooks/contracts";
 import { stringToHex } from "../../utils/felt";
 import DiscordIcon from "../../components/icons/discordIcon";
 import styles from "../../styles/Profile.module.css";
+import { ClickableIconProps } from "../../types";
 
-type ClickableDiscordIconProps = {
-  color?: string;
-  width: string;
-  tokenId: string;
-  domain?: string;
-};
-
-const ClickableDiscordIcon: FunctionComponent<ClickableDiscordIconProps> = ({
+const ClickableDiscordIcon: FunctionComponent<ClickableIconProps> = ({
   width,
   color,
   tokenId,
   domain,
 }) => {
   const contract = useStarknetIdContract();
-  const [DiscordId, setDiscordId] = useState<string | undefined>();
+  const [discordId, setDiscordId] = useState<string | undefined>();
+  const [discordUsername, setDiscordUsername] = useState<string | undefined>();
 
   useEffect(() => {
     if (tokenId) {
@@ -39,16 +34,32 @@ const ClickableDiscordIcon: FunctionComponent<ClickableDiscordIconProps> = ({
     }
   }, [tokenId]);
 
-  return DiscordId ? (
+  // useEffect(() => {
+  //   if (discordId) {
+  //     fetch(`https://discord.com/api/users/${discordId}`, {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         "Authorization ": `Bot ${process.env.NEXT_PUBLIC_DISCORD_TOKEN}`,
+  //       },
+  //     })
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         setDiscordUsername(data.username);
+  //       });
+  //   }
+  // }, [discordId]);
+
+  return discordId && discordId !== "0" ? (
     <Tooltip title="Check Discord" arrow>
       <div
         className={styles.social}
         onClick={() =>
-          window.open(`https://discord.com/channels/@me/${DiscordId}`)
+          window.open(`https://discord.com/channels/@me/${discordId}`)
         }
       >
         <DiscordIcon width={width} color={color ? color : "#7289d9"} />
-        <p>{DiscordId}</p>
+        <p>{discordId}</p>
       </div>
     </Tooltip>
   ) : null;
