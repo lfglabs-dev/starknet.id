@@ -4,6 +4,9 @@ import MintsquareIcon from "../components/icons/mintsquare";
 import { ActivityProps } from "../types";
 import { projectNames } from "../utils/constants";
 import StarknetIcon from "./icons/starknetIcon";
+import AspectIcon from "./icons/aspect";
+import JediswapIcon from "./icons/jediswap";
+import NostraIcon from "./icons/nostra";
 
 const Activity: FunctionComponent<ActivityProps> = ({
   type,
@@ -35,11 +38,11 @@ const Activity: FunctionComponent<ActivityProps> = ({
       ) : type === "mintsquare" ? (
         <MintsquareIcon />
       ) : type === "aspect" ? (
-        <></>
+        <AspectIcon width="60" />
       ) : type === "Starkgate" ? (
-        <StarknetIcon />
+        <StarknetIcon width="50" />
       ) : type === "JediSwap" ? (
-        <></>
+        <JediswapIcon width="60" />
       ) : type === "10KSwap" ? (
         <></>
       ) : type === "Myswap" ? (
@@ -47,7 +50,7 @@ const Activity: FunctionComponent<ActivityProps> = ({
       ) : type === "Orbiter" ? (
         <></>
       ) : type === "Nostra" ? (
-        <></>
+        <NostraIcon width="50" />
       ) : (
         <></>
       )}
