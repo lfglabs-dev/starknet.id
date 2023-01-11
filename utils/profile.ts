@@ -1,5 +1,5 @@
 import { Provider } from "starknet";
-import { activityContractsTestnet } from "../constants";
+import { activityContractsTestnet } from "../utils/constants";
 import { ActivityProps, TransactionObject } from "../types";
 
 export async function getLastBlockNumber() {
@@ -47,6 +47,7 @@ export async function retrieveActivities(
     const dataToJson = await data.json();
     activities.push(...buildActivities(dataToJson.data));
     if (activities.length >= 3) {
+      if (activities.length > 3) activities.splice(3 - activities.length);
       needFetch = false;
       return { activities, lastBlock: fromBlock };
     }

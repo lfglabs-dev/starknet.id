@@ -60,25 +60,25 @@ const Profile: NextPage = () => {
 
   useEffect(() => {
     if (idOrUsername?.toString().toLowerCase().endsWith(".stark")) {
-      useTokenIdFromDomain(idOrUsername?.toString().replace(".stark", "")).then(
-        (tokenId) => {
-          fetch(
-            `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
-          )
-            .then((response) => response.json())
-            .then((data: Identity) => {
-              if (data.error) {
-                return;
-              }
-              setIdentity({
-                ...data,
-                id: tokenId.tokenId?.["owner"],
-                hexAddr: "0x0" + new BN(data.addr as string, 10).toString(16),
-              });
-              setInitProfile(true);
+      useTokenIdFromDomain(
+        idOrUsername?.toString().replace(".stark", "") as string
+      ).then((tokenId) => {
+        fetch(
+          `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
+        )
+          .then((response) => response.json())
+          .then((data: Identity) => {
+            if (data.error) {
+              return;
+            }
+            setIdentity({
+              ...data,
+              id: tokenId.tokenId?.["owner"],
+              hexAddr: "0x0" + new BN(data.addr as string, 10).toString(16),
             });
-        }
-      );
+            setInitProfile(true);
+          });
+      });
     } else if (!isNaN(parseInt(idOrUsername as string))) {
       fetch(`https://app.starknet.id/api/indexer/id_to_data?id=${idOrUsername}`)
         .then((response) => response.json())
@@ -198,9 +198,16 @@ const Profile: NextPage = () => {
           {activities && activities.length > 0 ? (
             <div className={styles.activityContainer}>
               {activities.map((item, index) => {
-                return <Activity {...item} key={index} />;
+                return <Activity {...item} key={index} index={index} />;
               })}
-              <a className={styles.activityBtn}>
+              <a
+                className={styles.activityBtn}
+                onClick={() =>
+                  window.open(
+                    `https://voyager.online/contract/${identity.hexAddr}`
+                  )
+                }
+              >
                 <OpenInNew className={styles.openInNew} />
                 See more
               </a>

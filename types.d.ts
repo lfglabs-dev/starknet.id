@@ -50,4 +50,5 @@ export type ActivityProps = {
   type: string;
   timestamp: number;
   date: string;
+  index?: number;
 };
