@@ -2,6 +2,7 @@ import { Abi, Contract } from "starknet";
 
 import naming_abi from "../abi/naming_abi.json";
 import starknet_id_abi from "../abi/starknet_id_abi.json";
+import soulbound_abi from "../abi/soulbound_abi.json";
 import { Provider } from "starknet";
 
 export function useNamingContract() {
@@ -28,4 +29,17 @@ export function useStarknetIdContract() {
     })
   );
   return StarknetId;
+}
+
+export function useSoulboundContract(contractAddress: string) {
+  const Soulbound = new Contract(
+    soulbound_abi as Abi,
+    contractAddress,
+    new Provider({
+      sequencer: {
+        network: "goerli-alpha",
+      },
+    })
+  );
+  return Soulbound;
 }

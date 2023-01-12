@@ -1,0 +1,149 @@
+[
+    {
+        "data": [
+            {
+                "name": "sbt",
+                "type": "felt"
+            },
+            {
+                "name": "source",
+                "type": "felt"
+            },
+            {
+                "name": "target",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "sbt_transfer",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "starknet_id_contract",
+                "type": "felt"
+            },
+            {
+                "name": "whitelisting_key",
+                "type": "felt"
+            },
+            {
+                "name": "uri_base_len",
+                "type": "felt"
+            },
+            {
+                "name": "uri_base",
+                "type": "felt*"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "sbt_id",
+                "type": "felt"
+            },
+            {
+                "name": "starknet_id",
+                "type": "felt"
+            },
+            {
+                "name": "sbt_key",
+                "type": "felt"
+            },
+            {
+                "name": "sbt_key_proof",
+                "type": "(felt, felt)"
+            },
+            {
+                "name": "whitelist_sig",
+                "type": "(felt, felt)"
+            }
+        ],
+        "name": "claim",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "sbt_id",
+                "type": "felt"
+            }
+        ],
+        "name": "get_uri",
+        "outputs": [
+            {
+                "name": "uri_len",
+                "type": "felt"
+            },
+            {
+                "name": "uri",
+                "type": "felt*"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "sbt_id",
+                "type": "felt"
+            }
+        ],
+        "name": "get_sbt_key",
+        "outputs": [
+            {
+                "name": "public_key",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "sbt_id",
+                "type": "felt"
+            }
+        ],
+        "name": "get_inft_owner",
+        "outputs": [
+            {
+                "name": "starknet_id",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "sbt_id",
+                "type": "felt"
+            },
+            {
+                "name": "starknet_id",
+                "type": "felt"
+            },
+            {
+                "name": "salt",
+                "type": "felt"
+            },
+            {
+                "name": "signature",
+                "type": "(felt, felt)"
+            }
+        ],
+        "name": "sbt_transfer",
+        "outputs": [],
+        "type": "function"
+    }
+]

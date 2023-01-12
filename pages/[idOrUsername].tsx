@@ -13,6 +13,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { BN } from "bn.js";
 import { getLastBlockNumber, retrieveActivities } from "../utils/profile";
 import { OpenInNew } from "@mui/icons-material";
+import { SoulboundProps } from "../types";
 
 export type Identity = {
   id: string;
@@ -24,28 +25,6 @@ export type Identity = {
   hexAddr?: string;
 };
 
-const dataTest = [
-  {
-    tokenId: "1",
-    imageUri:
-      "ipfs://bafybeidshkkyv7ta4sph6am7bn6usgxmn5e7mcw3af2kknayrlqcowcsfa/373.jpg",
-    name: "test",
-    description: "test",
-  },
-  {
-    tokenId: "2",
-    imageUri: "ipfs://QmPBFN6oHb8vZzYNnZyjaH34XqezbBRJLdrXhk4wmCMSMy/963.gif",
-    name: "test2",
-    description: "test",
-  },
-  {
-    tokenId: "3",
-    imageUri: "ipfs://Qmba4N9uddmBPpZrvYvaf384qfXWKpHFFtERWc6mLUoRXK/76.png",
-    name: "test3",
-    description: "test",
-  },
-];
-
 const Profile: NextPage = () => {
   const router = useRouter();
   const { idOrUsername } = router.query;
@@ -53,6 +32,7 @@ const Profile: NextPage = () => {
   const [identity, setIdentity] = useState<Identity>();
   const [activities, setActivities] = useState<any>();
   const [lastBlock, setLastBlock] = useState(0);
+  const [soulbounds, setSoulbounds] = useState<Array<SoulboundProps>>();
 
   useEffect(() => {
     setInitProfile(false);
@@ -71,6 +51,7 @@ const Profile: NextPage = () => {
             if (data.error) {
               return;
             }
+            console.log("data", data);
             setIdentity({
               ...data,
               id: tokenId.tokenId?.["owner"],
@@ -80,7 +61,9 @@ const Profile: NextPage = () => {
           });
       });
     } else if (!isNaN(parseInt(idOrUsername as string))) {
-      fetch(`https://app.starknet.id/api/indexer/id_to_data?id=${idOrUsername}`)
+      fetch(
+        `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${idOrUsername}`
+      )
         .then((response) => response.json())
         .then((data: Identity) => {
           if (data.error) {
@@ -99,7 +82,7 @@ const Profile: NextPage = () => {
 
   useEffect(() => {
     // fetch Activity
-    if (identity && identity.hexAddr) {
+    if (identity && identity.hexAddr && Number(identity.hexAddr) !== 0) {
       getLastBlockNumber().then((block) => {
         retrieveActivities(block as number, identity.hexAddr as string).then(
           (data) => {
@@ -108,6 +91,20 @@ const Profile: NextPage = () => {
           }
         );
       });
+    }
+  }, [identity]);
+
+  useEffect(() => {
+    // Fetch soulbounds
+    if (identity) {
+      fetch(
+        `https://goerli.app.starknet.id/api/indexer/id_to_infts?id=${identity.id}`
+      )
+        .then((response) => response.json())
+        .then((data: Array<SoulboundProps>) => {
+          if (data.length === 0) return;
+          setSoulbounds(data);
+        });
     }
   }, [identity]);
 
@@ -180,11 +177,15 @@ const Profile: NextPage = () => {
             {" "}
             Soulbound tokens
           </h2>
-          <div className={styles.SbtContainer}>
-            {dataTest.map((item, index) => {
-              return <Soulbound {...item} key={index} />;
-            })}
-          </div>
+          {soulbounds && soulbounds.length > 0 ? (
+            <div className={styles.SbtContainer}>
+              {soulbounds.map((item, index) => {
+                return <Soulbound {...item} key={index} />;
+              })}
+            </div>
+          ) : (
+            <p className="text-2xl">No soulbound token yet</p>
+          )}
         </div>
 
         <div className={styles.section1}>

@@ -52,3 +52,14 @@ export type ActivityProps = {
   date: string;
   index?: number;
 };
+
+export type SoulboundProps = {
+  contract: string;
+  inft_id: string;
+};
+
+export type MetadataProps = {
+  name: string;
+  desc: string;
+  image: string;
+};
