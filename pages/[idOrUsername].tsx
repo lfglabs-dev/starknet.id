@@ -51,7 +51,6 @@ const Profile: NextPage = () => {
             if (data.error) {
               return;
             }
-            console.log("data", data);
             setIdentity({
               ...data,
               id: tokenId.tokenId?.["owner"],
