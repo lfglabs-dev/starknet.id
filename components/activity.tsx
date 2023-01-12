@@ -46,7 +46,12 @@ const Activity: FunctionComponent<ActivityProps> = ({
       ) : type === "10KSwap" ? (
         <></>
       ) : type === "Myswap" ? (
-        <></>
+        <img
+          src="/visuals/myswap.jpg"
+          alt="MySwap Logo"
+          width={40}
+          height={40}
+        />
       ) : type === "Orbiter" ? (
         <></>
       ) : type === "Nostra" ? (
