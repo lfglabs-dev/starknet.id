@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import { useSoulboundDataFromId } from "../hooks/soulbound";
+import { fetchSoulbounds } from "../hooks/soulbound";
 import styles from "../styles/Soulbound.module.css";
 import { MetadataProps, SoulboundProps } from "../types";
 
@@ -9,14 +9,14 @@ const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
   const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
-    useSoulboundDataFromId(contract, id).then((data) => {
+    fetchSoulbounds(contract, id).then((data) => {
       let metedataId = String.fromCharCode(data.data[0].slice(-1));
       let dataUri = "";
       data.data[0].slice(0, -1).forEach((c) => {
         dataUri += String.fromCharCode(c);
       });
       const metadataUri =
-        dataUri.replace("ipfs://", "https://ipfs.io/ipfs/") +
+        dataUri.replace("ipfs://", "https://gateway.pinata.cloud/ipfs/") +
         "?id=" +
         metedataId;
       fetch(metadataUri)
@@ -25,7 +25,7 @@ const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
           setSoulboundData(metadata);
         });
     });
-  }, [id]);
+  }, [id, contract]);
 
   return (
     <div

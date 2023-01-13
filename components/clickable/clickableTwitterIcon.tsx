@@ -31,7 +31,7 @@ const ClickableTwitterIcon: FunctionComponent<ClickableIconProps> = ({
           return;
         });
     }
-  }, [tokenId]);
+  }, [tokenId, contract]);
 
   useEffect(() => {
     if (twitterId && twitterId !== "0") {

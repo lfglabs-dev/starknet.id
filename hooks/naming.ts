@@ -124,7 +124,7 @@ export async function useTokenIdFromDomain(
   domain: string
 ): Promise<TokenIdData> {
   const namingContract = useNamingContract();
-  const encoded = [];
+  const encoded: any = [];
   for (const subdomain of domain.split("."))
     encoded.push(useEncoded(subdomain));
 
@@ -132,7 +132,6 @@ export async function useTokenIdFromDomain(
   return { tokenId: data as any, error: "error" };
 }
 
-type ExpiryData = {
-  expiry?: any;
-  error?: string;
-};
+export async function fetchIdentity(domain: string): Promise<TokenIdData> {
+  return await useTokenIdFromDomain(domain);
+}

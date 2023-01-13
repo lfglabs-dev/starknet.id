@@ -29,6 +29,12 @@ export const activityContractsMainnet = {
   Myswap: "0x010884171baf1914edc28d7afb619b40a4051cfae78a094a55d230f19e944a28",
   StarknetId:
     "0x05dbdedc203e92749e2e746e2d40a768d966bd243df04a6b712e222bc040a9af",
+  StarknetIdNaming:
+    "0x6ac597f8116f886fa1c97a23fa4e08299975ecaf6b598873ca6792b9bbfb678",
+  StarknetIdPricing:
+    "0x2383504fa1365cf31921c1411e14ea45b6376e9a0da8890d51359fd05575f48",
+  StarknetIdVerifier:
+    "0x0480258f58d43fb73936f803780047a0f6d0a563697d80bd3f95b603f9c8b1c8",
   Aspect: "0x02a92f0f860bf7c63fb9ef42cff4137006b309e0e6e1484e42d0b5511959414d",
   Starkgate:
     "0x073314940630fd6dcda0d772d4c972c4e0a9946bef9dabf4ef84eda8ef542b82",

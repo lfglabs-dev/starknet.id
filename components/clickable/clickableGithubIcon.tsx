@@ -31,7 +31,7 @@ const ClickableGithubIcon: FunctionComponent<ClickableIconProps> = ({
           return;
         });
     }
-  }, [tokenId]);
+  }, [tokenId, contract]);
 
   useEffect(() => {
     if (githubId && githubId !== "0") {

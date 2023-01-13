@@ -13,3 +13,10 @@ export async function useSoulboundDataFromId(
   const data = await soulboundContract.call("get_uri", [Number(id)]);
   return { data, error: "error" };
 }
+
+export async function fetchSoulbounds(
+  contractAddress: string,
+  id: string
+): Promise<SoulboundData> {
+  return await useSoulboundDataFromId(contractAddress, id);
+}

@@ -31,7 +31,7 @@ const ClickableDiscordIcon: FunctionComponent<ClickableIconProps> = ({
           return;
         });
     }
-  }, [tokenId]);
+  }, [tokenId, contract]);
 
   useEffect(() => {
     if (discordId) {

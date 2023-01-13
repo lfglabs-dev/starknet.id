@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Profile.module.css";
-import { useTokenIdFromDomain } from "../hooks/naming";
+import { fetchIdentity } from "../hooks/naming";
 import Soulbound from "../components/soulbound";
 import ClickableTwitterIcon from "../components/clickable/clickableTwitterIcon";
 import ClickableGithubIcon from "../components/clickable/clickableGithubIcon";
@@ -31,8 +31,11 @@ const Profile: NextPage = () => {
   const [initProfile, setInitProfile] = useState(false);
   const [identity, setIdentity] = useState<Identity>();
   const [activities, setActivities] = useState<any>();
-  const [lastBlock, setLastBlock] = useState(0);
   const [soulbounds, setSoulbounds] = useState<Array<SoulboundProps>>();
+  const [notFound, setNotFound] = useState(false);
+  const dynamicRoute = useRouter().asPath;
+
+  useEffect(() => setNotFound(false), [dynamicRoute]);
 
   useEffect(() => {
     setInitProfile(false);
@@ -40,15 +43,20 @@ const Profile: NextPage = () => {
 
   useEffect(() => {
     if (idOrUsername?.toString().toLowerCase().endsWith(".stark")) {
-      useTokenIdFromDomain(
+      fetchIdentity(
         idOrUsername?.toString().replace(".stark", "") as string
       ).then((tokenId) => {
+        if (Number(tokenId.tokenId?.["owner"]) === 0) {
+          setNotFound(true);
+          return;
+        }
         fetch(
           `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
         )
           .then((response) => response.json())
           .then((data: Identity) => {
             if (data.error) {
+              setNotFound(true);
               return;
             }
             setIdentity({
@@ -66,6 +74,7 @@ const Profile: NextPage = () => {
         .then((response) => response.json())
         .then((data: Identity) => {
           if (data.error) {
+            setNotFound(true);
             return;
           }
           setIdentity({
@@ -74,8 +83,12 @@ const Profile: NextPage = () => {
             hexAddr: "0x0" + new BN(data.addr as string, 10).toString(16),
           });
           setInitProfile(true);
+        })
+        .catch((err) => {
+          setNotFound(true);
         });
     } else {
+      setNotFound(true);
     }
   }, [idOrUsername]);
 
@@ -85,7 +98,6 @@ const Profile: NextPage = () => {
       getLastBlockNumber().then((block) => {
         retrieveActivities(block as number, identity.hexAddr as string).then(
           (data) => {
-            setLastBlock(data?.lastBlock as number);
             setActivities(data?.activities);
           }
         );
@@ -106,6 +118,10 @@ const Profile: NextPage = () => {
         });
     }
   }, [identity]);
+
+  if (notFound) {
+    return <h2 className={styles.notFound}>Profile not found</h2>;
+  }
 
   return initProfile && identity ? (
     <div className={styles.container}>

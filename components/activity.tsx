@@ -20,7 +20,7 @@ const Activity: FunctionComponent<ActivityProps> = ({
     if ((index as number) % 2 === 0)
       setUrl(`https://starkscan.co/tx/${transaction_hash}`);
     else setUrl(`https://voyager.online/tx/${transaction_hash}`);
-  }, [index]);
+  }, [index, transaction_hash]);
 
   return (
     <div className={styles.activity} onClick={() => window.open(url)}>
