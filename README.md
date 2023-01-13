@@ -8,7 +8,7 @@ The grand vision behind starknet.id is that someday, in a society where web3 has
 
 Currently, we want to focus on the starknet ecosystem, our goal is to build a decentralized identity service that can be used by all the starknet protocols as an on-chain profile where you can find all the information concerning a person's identity on Starknet.
 
-![Starknet.id identity examples!](/visuals/identityVersus.png "Starknet.id identity examples")
+![Starknet.id identity examples!](./public/visuals/identityVersus.png "Starknet.id identity examples")
 
 **Let’s take an example :**
 The developer bobby.stark contributes to the starknet ecosystem by writing some useful code.
