@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## What is Starknet.ID?
 
-## Getting Started
+Starknet.ID is an identity provider on Starknet. The protocol allows you to create your Starknet Identity (that can be seen as your on-chain passport) and to attach things to it. You can already you can register ".stark" human-readable domains that will be used as your Starknet username.
 
-First, run the development server:
+## The Grand Vision
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The grand vision behind starknet.id is that someday, in a society where web3 has permeated the mainstream, a person’s starknet.id can provide a reliable and comprehensive “digital identity”, in contrast to the unreliable self-issued credentials that we decorate our LinkedIn pages and job resumes with.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Currently, we want to focus on the starknet ecosystem, our goal is to build a decentralized identity service that can be used by all the starknet protocols as an on-chain profile where you can find all the information concerning a person's identity on Starknet.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+![Starknet.id identity examples!](/visuals/identityVersus.png "Starknet.id identity examples")
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**Let’s take an example :**
+The developer bobby.stark contributes to the starknet ecosystem by writing some useful code.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To reward him the foundation can give him money, but can also give him a SBT (non-transferrable NFT) that proves that his work was a success. This SBT could then act as reference on his digital resume for him to find jobs on other starknet projects.
 
-## Learn More
+It works with dev contributions but the possibilities are endless :
 
-To learn more about Next.js, take a look at the following resources:
+🎓**Education:** Those who cannot afford an expensive university degree can prove their educational credentials through SBTs displayed on their starknet.id and obtained from avenues of informal learning.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🏛️**Banking:** Loan applicants can prove their trustworthiness through the absence of bad credit history, or by showcasing their good reputation through an SBT collection, removing the need for capital-inefficient overcollaterization models commonly used in DeFi (Upon repayment of the loan, another SBT could be issued as proof of repayment).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+🎟️**Governance:** DAOs can improve their collective decision-making systems by safeguarding against whales (you can’t buy a SBT). DAOs can also avert a tyranny of the majority consensus through a more inclusive voting system design by issuing SBTs to trusted outsiders.
 
-## Deploy on Vercel
+## Check your starknet.id Profile
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This is website is the Presentation website of the starknet.id project. On it, you can also check your starknet.id profile here on [https://www.starknet.id/yourname.stark](https://www.starknet.id/yourname.stark).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Twitter](https://twitter.com/Starknet_id), [Discord](http://discord.gg/8uS2Mgcsza), [App](https://app.starknet.id/)
