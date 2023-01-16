@@ -5,7 +5,7 @@ import { ActivityProps, TransactionObject } from "../types";
 export async function getLastBlockNumber() {
   const provider = new Provider({
     sequencer: {
-      network: "mainnet-alpha",
+      network: "goerli-alpha",
     },
   });
   let hasBlockNb = false;
@@ -30,7 +30,7 @@ export async function retrieveActivities(
   let activities: ActivityProps[] = [];
   let fromBlock = 0;
   let toBlock = 0;
-  while (needFetch && fromBlock >= 17000) {
+  while (needFetch && fromBlock >= 0) {
     toBlock = toBlock === 0 ? block : toBlock - 10000;
     fromBlock = fromBlock === 0 ? block - 10000 : fromBlock - 10000;
     const data = await fetch(
