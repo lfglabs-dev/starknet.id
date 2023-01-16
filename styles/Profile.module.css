@@ -17,15 +17,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
   position: relative;
+  min-height: 100vh;
 }
 
 .elemContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
   position: relative;
   padding: 10px 0;
 }
