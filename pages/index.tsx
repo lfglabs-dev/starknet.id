@@ -45,7 +45,7 @@ const Home: NextPage = () => {
               <div className="text-md max-w-3xl mt-4 sm:mt-10">
                 <p className="text-xl">
                   You can already mint your starknet identity for free,
-                  it&apos;ll act as your starknet passeport and represent you
+                  it&apos;ll act as your starknet passport and represent you
                   during your on-chain interactions.
                 </p>
               </div>
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
               <h2 className={styles.secondTitle}>#3 Build your identity</h2>
               <div className="text-md max-w-3xl mt-4 sm:mt-10">
                 <p className="text-xl">
-                  You&apos;ll also able to attach any data to your starknet
+                  You&apos;ll also be able to attach any data to your starknet
                   identity, from web2 with social media accounts to web3 with
                   ENS domains.
                 </p>

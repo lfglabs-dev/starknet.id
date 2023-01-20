@@ -24,16 +24,16 @@ const Roadmap: FunctionComponent = () => {
         <p className="text-center text-xl line-through">
           Application live on mainnet
         </p>
-        <p className="text-center text-xl">New Starknet SBT implementation</p>
-        <p className="text-center text-xl">
-          Ecosystem domain support (wallets, protocols, starknet.js ...)
+        <p className="text-center text-xl line-through">
+          Starknet id Dashboard
         </p>
+        <p className="text-center text-xl">New Starknet SBT implementation</p>
+        <p className="text-center text-xl">First wallet integration</p>
         <p className="text-center text-xl">Affiliation system</p>
       </div>
       <div className="my-5">
         <h2 className={styles.secondTitle}>Phase 3 : MATURATION</h2>
         <p className="text-center text-xl">ENS Bridges</p>
-        <p className="text-center text-xl">Starknet id Dashboard</p>
         <p className="text-center text-xl">More features around identity</p>
         <p className="text-center text-xl">
           New DAO system based on game theory and identities
