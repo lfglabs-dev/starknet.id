@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { IconProps } from "./briq";
+import { IconProps } from "../../types";
 
 const starknetIcon: FunctionComponent<IconProps> = ({
   color,

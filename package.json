@@ -6,15 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write '**/*.{ts,tsx,css}'"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.4",
     "@nimiq/identicons": "^1.6.2",
     "@nimiq/style": "^0.8.4",
+    "bn.js": "^5.2.1",
     "next": "12.2.5",
+    "prettier": "^2.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-loader-spinner": "^5.3.4",
+    "starknet": "^4.17.1",
+    "twitter-api-sdk": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "18.7.8",
