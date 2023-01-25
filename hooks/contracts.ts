@@ -11,7 +11,7 @@ export function useNamingContract() {
     process.env.NEXT_PUBLIC_NAMING_CONTRACT as string,
     new Provider({
       sequencer: {
-        network: "goerli-alpha", // "mainnet-alpha"
+        network: "mainnet-alpha", // "mainnet-alpha"
       },
     })
   );
@@ -24,7 +24,7 @@ export function useStarknetIdContract() {
     process.env.NEXT_PUBLIC_STARKNETID_CONTRACT as string,
     new Provider({
       sequencer: {
-        network: "goerli-alpha",
+        network: "mainnet-alpha",
       },
     })
   );
@@ -37,7 +37,7 @@ export function useSoulboundContract(contractAddress: string) {
     contractAddress,
     new Provider({
       sequencer: {
-        network: "goerli-alpha",
+        network: "mainnet-alpha",
       },
     })
   );

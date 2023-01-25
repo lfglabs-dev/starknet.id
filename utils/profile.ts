@@ -1,5 +1,5 @@
 import { Provider } from "starknet";
-import { activityContractsTestnet } from "../utils/constants";
+import { activityContractsMainnet } from "../utils/constants";
 import { ActivityProps, TransactionObject } from "../types";
 
 export async function getLastBlockNumber() {
@@ -34,22 +34,21 @@ export async function retrieveActivities(
     toBlock = toBlock === 0 ? block : toBlock - 10000;
     fromBlock = fromBlock === 0 ? block - 10000 : fromBlock - 10000;
     const data = await fetch(
-      `https://api-testnet.starkscan.co/api/v0/transactions?from_block=${fromBlock}&to_block=${toBlock}&contract_address=${contractAddress}`,
+      `https://api.starkscan.co/api/v0/transactions?from_block=${fromBlock}&to_block=${toBlock}&contract_address=${contractAddress}`,
       {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": `${process.env.NEXT_PUBLIC_ASPECT_TESTNET}`,
+          "x-api-key": `${process.env.NEXT_PUBLIC_ASPECT_MAINNET}`,
         },
       }
     );
-
     const dataToJson = await data.json();
     activities.push(...buildActivities(dataToJson.data));
     if (activities.length >= 3) {
-      if (activities.length > 3) activities.splice(3 - activities.length);
+      const threeActivities = activities.slice(-3);
       needFetch = false;
-      return { activities, lastBlock: fromBlock };
+      return { activities: threeActivities, lastBlock: fromBlock };
     }
   }
 }
@@ -61,9 +60,10 @@ export function buildActivities(data: TransactionObject[]) {
       const n = Number(tx.calldata[0]);
       for (let i = 0; i < n; i++) {
         const contractAddr = tx.calldata[1 + i * 4];
-        let key = Object.entries(activityContractsTestnet).find(
+        let key = Object.entries(activityContractsMainnet).find(
           ([k, v]) => v === contractAddr
         );
+
         if (key) {
           activities.push({
             transaction_hash: tx.transaction_hash,

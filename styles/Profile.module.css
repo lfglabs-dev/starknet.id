@@ -99,6 +99,7 @@
   border-radius: 15px;
   margin: 10px 0;
   cursor: pointer;
+  min-height: 5rem;
 }
 
 .activity p {
@@ -186,5 +187,12 @@
   }
   .SbtContainer {
     flex-direction: column;
+  }
+
+  .firstLeaf,
+  .secondLeaf,
+  .thirdLeaf,
+  .fourthLeaf {
+    width: 150px;
   }
 }

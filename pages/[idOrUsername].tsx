@@ -51,7 +51,7 @@ const Profile: NextPage = () => {
           return;
         }
         fetch(
-          `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
+          `https://${process.env.NEXT_PUBLIC_APP_LINK}/api/indexer/id_to_data?id=${tokenId.tokenId?.["owner"]}`
         )
           .then((response) => response.json())
           .then((data: Identity) => {
@@ -69,7 +69,7 @@ const Profile: NextPage = () => {
       });
     } else if (!isNaN(parseInt(idOrUsername as string))) {
       fetch(
-        `https://goerli.app.starknet.id/api/indexer/id_to_data?id=${idOrUsername}`
+        `https://${process.env.NEXT_PUBLIC_APP_LINK}/api/indexer/id_to_data?id=${idOrUsername}`
       )
         .then((response) => response.json())
         .then((data: Identity) => {
@@ -98,6 +98,7 @@ const Profile: NextPage = () => {
       getLastBlockNumber().then((block) => {
         retrieveActivities(block as number, identity.hexAddr as string).then(
           (data) => {
+            console.log("data", data?.activities);
             setActivities(data?.activities);
           }
         );
@@ -109,7 +110,7 @@ const Profile: NextPage = () => {
     // Fetch soulbounds
     if (identity) {
       fetch(
-        `https://goerli.app.starknet.id/api/indexer/id_to_infts?id=${identity.id}`
+        `https://${process.env.NEXT_PUBLIC_APP_LINK}/api/indexer/id_to_infts?id=${identity.id}`
       )
         .then((response) => response.json())
         .then((data: Array<SoulboundProps>) => {
@@ -164,7 +165,7 @@ const Profile: NextPage = () => {
           <div className={styles.elemContainer}>
             <ClickableTwitterIcon
               width="20"
-              color="#7289da"
+              color="#1DA1F2"
               tokenId={identity?.id as string}
               domain={identity?.domain as string}
             />
@@ -235,15 +236,17 @@ const Profile: NextPage = () => {
       </div>
     </div>
   ) : (
-    <ThreeDots
-      wrapperClass="flex justify-center"
-      height="100"
-      width="100"
-      radius="9"
-      color="#19AA6E"
-      ariaLabel="three-dots-loading"
-      visible={true}
-    />
+    <div className="h-screen flex justify-center items-center">
+      <ThreeDots
+        wrapperClass="flex justify-center"
+        height="100"
+        width="100"
+        radius="9"
+        color="#19AA6E"
+        ariaLabel="three-dots-loading"
+        visible={true}
+      />
+    </div>
   );
 };
 
