@@ -191,7 +191,7 @@ const Profile: NextPage = () => {
             }
           >
             {" "}
-            Soulbound tokens
+            Identity tokens
           </h2>
           {soulbounds && soulbounds.length > 0 ? (
             <div className={styles.SbtContainer}>
@@ -200,7 +200,7 @@ const Profile: NextPage = () => {
               })}
             </div>
           ) : (
-            <p className="text-2xl">No soulbound token yet</p>
+            <p className="text-2xl">No identity token yet</p>
           )}
         </div>
 
