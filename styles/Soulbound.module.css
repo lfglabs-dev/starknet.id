@@ -31,14 +31,22 @@
 .cardDescription {
   margin-top: 20px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--brown);
   font-family: "Montserrat-ExtraBold";
   text-align: left;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .SbtImage {
     width: 100%;
+  }
+
+  .cardName {
+    font-size: 1.3rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
   }
 }

@@ -5,9 +5,10 @@ import Roadmap from "../components/roadmap";
 import styles from "../styles/Home.module.css";
 import CarbonableIcon from "../components/icons/carbonable";
 import MintsquareIcon from "../components/icons/mintsquare";
-import CartridgeIcon from "../components/icons/cartridge";
+import BriqIcon from "../components/icons/briq";
 import RealmsIcon from "../components/icons/realms";
 import Navbar from "../components/navbar";
+import NostraIcon from "../components/icons/nostra";
 
 const Home: NextPage = () => {
   return (
@@ -90,85 +91,86 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.subsection}>
             <div className={styles.card2}>
-              <h2 className={styles.secondTitle}>They are already using us</h2>
+              <h2 className={styles.secondTitle}>They already integrated us</h2>
               <div className={styles.partners}>
                 {/* <BriqIcon /> */}
                 {/* <StarkwareIcon /> */}
-                <a href="https://carbonable.io/">
-                  <CarbonableIcon />
-                </a>
 
-                <a href="https://onlydust.xyz/">
-                  <img
-                    height={100}
-                    width={100}
-                    src="/visuals/partners/OnlyDustLogo.png"
-                    alt="only dust logo"
-                    className="m-5"
-                  />
-                </a>
-
-                <a href="https://mintsquare.io/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://mintsquare.io/"
+                >
                   <div className="flex items-center justify-center m-5">
                     <MintsquareIcon />
                     <h3 className={styles.mintsquareTitle}>Mintsquare</h3>
                   </div>
                 </a>
-                <a href="https://eykar.org/">
+                <a target="_blank" rel="noreferrer" href="https://braavos.app/">
                   <img
                     className="m-5"
-                    height={100}
-                    width={100}
-                    src="/visuals/partners/EykarLogo.svg"
-                    alt="Eykar logo"
+                    width={200}
+                    src="/visuals/partners/braavos.svg"
+                    alt="Braavos logo"
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://starkscan.co/"
+                >
+                  <img
+                    className="m-5"
+                    width={200}
+                    src="/visuals/partners/starkscan.svg"
+                    alt="Braavos logo"
                   />
                 </a>
 
-                <a href="https://focustree.app/">
-                  <img
-                    className="m-5 rounded-xl"
-                    height={100}
-                    width={100}
-                    src="/visuals/partners/focustreeLogo.png"
-                    alt="Imperium Wars logo"
-                  />{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://briq.construction/"
+                >
+                  <BriqIcon />
                 </a>
 
-                <a href="https://cartridge.gg/">
-                  <CartridgeIcon />
-                </a>
-                <a href="https://imperiumwars.xyz/">
-                  <img
-                    className="m-5 rounded-xl"
-                    height={100}
-                    width={100}
-                    src="/visuals/partners/ImperiumWarsLogo.png"
-                    alt="Imperium Wars logo"
-                  />
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://carbonable.io/"
+                >
+                  <CarbonableIcon />
                 </a>
 
-                <a href="https://www.frenslands.xyz/">
-                  <img
-                    className="m-5 rounded-xl"
-                    height={120}
-                    width={120}
-                    src="/visuals/partners/FrenslandsLogo.png"
-                    alt="Frenslands logo"
-                  />
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  className="m-5"
+                  href="https://www.nostra.finance"
+                >
+                  <NostraIcon height="50px" />
                 </a>
 
-                <a href="https://www.earlystarkers.io/">
-                  <img
-                    className="m-5 rounded-xl"
-                    height={180}
-                    width={180}
-                    src="/visuals/partners/EarlyStarkersLogo.svg"
-                    alt="Early Starkers logo"
-                  />
-                </a>
-
-                <a href="https://realmseternum.com/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://realmseternum.com/"
+                >
                   <RealmsIcon />
+                </a>
+
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://voyager.online/"
+                >
+                  <img
+                    className="m-5 rounded-xl"
+                    width={200}
+                    src="/visuals/partners/voyager.png"
+                    alt="Voyager logo"
+                  />
                 </a>
               </div>
             </div>

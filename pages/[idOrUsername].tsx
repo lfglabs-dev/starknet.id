@@ -190,7 +190,6 @@ const Profile: NextPage = () => {
               "sm:text-5xl text-4xl my-5 break-all mx-3 " + styles.title
             }
           >
-            {" "}
             Identity tokens
           </h2>
           {soulbounds && soulbounds.length > 0 ? (

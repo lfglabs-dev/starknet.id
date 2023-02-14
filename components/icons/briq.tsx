@@ -4,7 +4,7 @@ import { IconProps } from "../../types";
 const briqIcon: FunctionComponent<IconProps> = ({ color, width, height }) => {
   return (
     <svg
-      fill={color}
+      fill={color ?? "#FF701E"}
       viewBox="0 0 190 94.4"
       height={height}
       width={width}

@@ -2,11 +2,13 @@ import React, { FunctionComponent, useEffect, useState } from "react";
 import { fetchSoulbounds } from "../hooks/soulbound";
 import styles from "../styles/Soulbound.module.css";
 import { MetadataProps, SoulboundProps } from "../types";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
   const { inft_id: id, contract } = props;
   const [soulboundData, setSoulboundData] = useState<MetadataProps>();
   const [showInfo, setShowInfo] = useState(false);
+  const matches = useMediaQuery("(max-width:800px)");
 
   useEffect(() => {
     fetchSoulbounds(contract, id).then((data) => {
@@ -41,12 +43,12 @@ const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
         alt={soulboundData?.name}
         className={styles.SbtImage}
       />
-      {showInfo && (
+      {showInfo || matches ? (
         <div className={styles.cardInfo}>
           <h3 className={styles.cardName}>{soulboundData?.name}</h3>
           <p className={styles.cardDescription}>{soulboundData?.desc}</p>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };
