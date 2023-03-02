@@ -1,13 +1,14 @@
 .container {
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .pfp {
   margin-bottom: 10px;
 }
 .title {
-  font-family: "Montserrat-ExtraBold";
+  font-family: "QuickZap";
   color: var(--brown);
 }
 
@@ -109,7 +110,7 @@
   text-align: left;
   color: var(--soft-brown);
   font-weight: 700;
-  font-family: "Montserrat-ExtraBold";
+  font-family: "QuickZap";
   font-size: 1.3rem;
   padding-left: 10px;
 }
@@ -117,7 +118,7 @@
 .activityBtn {
   background: rgba(191, 158, 122, 0.3);
   border-radius: 20px;
-  font-family: "Montserrat-ExtraBold";
+  font-family: "QuickZap";
   font-weight: 700;
   color: var(--brown);
   padding: 10px 20px;
@@ -129,48 +130,68 @@
   margin-right: 10px;
 }
 
-.firstLeaf {
+.firstLeavesGroup {
   position: absolute;
-  left: 0%;
-  top: 0%;
-  width: 200px;
+  top: -7%;
+  left: -120px;
+  width: 300px;
   z-index: -1000;
+  transform: rotate(130deg);
   overflow: hidden;
-  transform: rotate(90deg);
 }
 
-.secondLeaf {
+.secondLeavesGroup {
   position: absolute;
-  right: 0%;
-  top: 0%;
-  width: 200px;
+  top: -7%;
+  right: -90px;
+  width: 190px;
+  transform: rotate(-130deg);
   z-index: -1000;
   overflow: hidden;
-  transform: rotate(90deg);
 }
 
-.thirdLeaf {
+.thirdLeavesGroup {
   position: absolute;
-  bottom: 0%;
-  width: 200px;
+  left: -120px;
+  bottom: -7%;
+  width: 300px;
   z-index: -1000;
   overflow: hidden;
-  transform: rotate(90deg);
 }
 
-.fourthLeaf {
+.fourthLeavesGroup {
   position: absolute;
-  right: 0%;
-  bottom: 0%;
-  width: 200px;
+  right: -90px;
+  bottom: -7%;
+  width: 190px;
   z-index: -1000;
   overflow: hidden;
-  transform: rotate(-90deg);
 }
+
+/* ----- Other leaves  ------  */
+
+/* .leaf1 {
+  position: absolute;
+  right: -160px;
+  bottom: 45%;
+  width: 340px;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.leaf2 {
+  position: absolute;
+  left: -110px;
+  bottom: 25%;
+  width: 240px;
+  transform: rotate(10deg);
+  z-index: -1000;
+  overflow: hidden;
+} */
 
 .notFound {
   text-align: center;
-  font-family: "Montserrat-ExtraBold";
+  font-family: "QuickZap";
   font-size: 1.5rem;
   color: var(--brown);
   top: 50%;
@@ -190,10 +211,16 @@
     flex-direction: column;
   }
 
-  .firstLeaf,
-  .secondLeaf,
-  .thirdLeaf,
-  .fourthLeaf {
-    width: 150px;
+  .firstLeavesGroup {
+    width: 200px;
+  }
+
+  .secondLeavesGroup {
+    width: 120px;
+  }
+
+  .thirdLeavesGroup,
+  .fourthLeavesGroup {
+    visibility: hidden;
   }
 }

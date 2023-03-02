@@ -126,18 +126,25 @@ const Profile: NextPage = () => {
 
   return initProfile && identity ? (
     <div className={styles.container}>
-      <div className={styles.firstLeaf}>
-        <img alt="leaf" src="/leaves/leaf_2.png" />
+      <div className={styles.firstLeavesGroup}>
+        <img width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
       </div>
-      <div className={styles.secondLeaf}>
-        <img alt="leaf" src="/leaves/leaf_3.png" />
+      <div className={styles.secondLeavesGroup}>
+        <img width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
       </div>
-      <div className={styles.thirdLeaf}>
-        <img alt="leaf" src="/leaves/leaf_1.png" />
+      <div className={styles.thirdLeavesGroup}>
+        <img width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
       </div>
-      <div className={styles.fourthLeaf}>
-        <img alt="leaf" src="/leaves/leaf_2.png" />
+      <div className={styles.fourthLeavesGroup}>
+        <img width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
       </div>
+      {/* ----- Other leaves  ------  */}
+      {/* <div className={styles.leaf1}>
+        <img width="100%" alt="leaf" src="/leaves/leaf01.svg" />
+      </div>
+      <div className={styles.leaf2}>
+        <img width="100%" alt="leaf" src="/leaves/leaf03.svg" />
+      </div> */}
       <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
         <div className={styles.section1}>
           <div className={styles.pfp}>

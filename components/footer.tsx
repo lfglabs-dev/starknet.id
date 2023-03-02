@@ -4,17 +4,15 @@ import styles from "../styles/footer.module.css";
 
 const Footer: FunctionComponent = () => {
   return (
-    <div className="relative">
-      <div className={styles.fifthLeaf}>
-        <img width={"100%"} alt="leaf" src="/leaves/leaf_3.png" />
+    <footer className={styles.footer}>
+      <div className={styles.fifthLeavesGroup}>
+        <img width={"100%"} alt="leaf" src="/leaves/leavesGroup02.svg" />
       </div>
-      <div className={styles.sixthLeaf}>
-        <img width={"100%"} alt="leaf" src="/leaves/leaf_1.png" />
+      <div className={styles.sixthLeavesGroup}>
+        <img width={"100%"} alt="leaf" src="/leaves/leavesGroup01.svg" />
       </div>
-      <footer className={styles.footer}>
-        Powered by&nbsp;<strong>Starknet</strong>
-      </footer>
-    </div>
+      Powered by&nbsp;<strong>Starknet</strong>
+    </footer>
   );
 };
 
