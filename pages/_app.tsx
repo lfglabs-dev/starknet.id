@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Use your Starknet ID to prove your identity on-chain."
         />
       </Head>
-      <Component {...pageProps} />
+      <Component className="overflow-hidden" {...pageProps} />
     </>
   );
 }

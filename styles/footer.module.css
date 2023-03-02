@@ -4,6 +4,7 @@
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .footer a {
@@ -13,26 +14,28 @@
   flex-grow: 1;
 }
 
-.fifthLeaf {
+.fifthLeavesGroup {
   position: absolute;
-  transform: rotate(270deg);
-  bottom: 0%;
-  left: 0%;
+  bottom: -160px;
+  left: -10%;
   width: 300px;
   z-index: -1000;
+  transform: rotate(15deg);
+  overflow: hidden;
 }
 
-.sixthLeaf {
+.sixthLeavesGroup {
   position: absolute;
-  right: 0%;
-  bottom: 0%;
-  width: 300px;
+  right: -3%;
+  bottom: -160px;
+  width: 180px;
   z-index: -1000;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
-  .fifthLeaf,
-  .sixthLeaf {
-    width: 100px;
+  .fifthLeavesGroup,
+  .sixthLeavesGroup {
+    visibility: hidden;
   }
 }

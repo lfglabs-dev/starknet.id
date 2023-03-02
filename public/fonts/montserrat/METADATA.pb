@@ -133,8 +133,8 @@ fonts {
   name: "Montserrat"
   style: "normal"
   weight: 800
-  filename: "Montserrat-ExtraBold.ttf"
-  post_script_name: "Montserrat-ExtraBold"
+  filename: "QuickZap.ttf"
+  post_script_name: "QuickZap"
   full_name: "Montserrat ExtraBold"
   copyright: "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
 }
@@ -142,8 +142,8 @@ fonts {
   name: "Montserrat"
   style: "italic"
   weight: 800
-  filename: "Montserrat-ExtraBoldItalic.ttf"
-  post_script_name: "Montserrat-ExtraBoldItalic"
+  filename: "QuickZapItalic.ttf"
+  post_script_name: "QuickZapItalic"
   full_name: "Montserrat ExtraBold Italic"
   copyright: "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
 }

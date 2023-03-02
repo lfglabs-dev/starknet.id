@@ -12,15 +12,15 @@ import NostraIcon from "../components/icons/nostra";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Navbar />
       <div className={styles.container}>
         <div className={styles.section1}>
-          <div className={styles.firstLeaf}>
-            <img width="100%" alt="leaf" src="/leaves/leaf_2.png" />
+          <div className={styles.firstLeavesGroup}>
+            <img width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
           </div>
-          <div className={styles.secondLeaf}>
-            <img width="100%" alt="leaf" src="/leaves/leaf_1.png" />
+          <div className={styles.secondLeavesGroup}>
+            <img width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
           </div>
           <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
             <h1 className={styles.title}>Starknet.id</h1>
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://braavos.app/">
                   <img
-                    className="m-5"
+                    className="m-10"
                     width={200}
                     src="/visuals/partners/braavos.svg"
                     alt="Braavos logo"
@@ -120,10 +120,10 @@ const Home: NextPage = () => {
                   href="https://starkscan.co/"
                 >
                   <img
-                    className="m-5"
+                    className="m-10"
                     width={200}
-                    src="/visuals/partners/starkscan.svg"
-                    alt="Braavos logo"
+                    src="/visuals/partners/starkscan.png"
+                    alt="Starkscan logo"
                   />
                 </a>
 
@@ -139,6 +139,7 @@ const Home: NextPage = () => {
                   target="_blank"
                   rel="noreferrer"
                   href="https://carbonable.io/"
+                  className="m-10"
                 >
                   <CarbonableIcon />
                 </a>
@@ -146,16 +147,17 @@ const Home: NextPage = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="m-5"
+                  className="m-10"
                   href="https://www.nostra.finance"
                 >
-                  <NostraIcon height="50px" />
+                  <NostraIcon height="40px" />
                 </a>
 
                 <a
                   target="_blank"
                   rel="noreferrer"
                   href="https://realmseternum.com/"
+                  className="m-10"
                 >
                   <RealmsIcon />
                 </a>
@@ -164,9 +166,9 @@ const Home: NextPage = () => {
                   target="_blank"
                   rel="noreferrer"
                   href="https://voyager.online/"
+                  className="m-10"
                 >
                   <img
-                    className="m-5 rounded-xl"
                     width={200}
                     src="/visuals/partners/voyager.png"
                     alt="Voyager logo"
@@ -177,17 +179,17 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className={styles.section3}>
-          <div className={styles.thirdLeaf}>
-            <img width={"100%"} alt="leaf" src="/leaves/leaf_2.png" />
+          <div className={styles.thirdLeavesGroup}>
+            <img width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
           </div>
-          <div className={styles.fourthLeaf}>
-            <img width={"100%"} alt="leaf" src="/leaves/leaf_1.png" />
+          <div className={styles.fourthLeavesGroup}>
+            <img width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
           </div>
           <Roadmap />
         </div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
