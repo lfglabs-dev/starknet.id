@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://starknet.id
+
+# Sitemaps
+Sitemap: https://starknet.id/sitemap.xml
