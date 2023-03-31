@@ -130,7 +130,7 @@ const Home: NextPage = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://briq.construction/"
+                  href="https://www.everai.xyz/"
                   className="m-10"
                 >
                   <EveraiIcon width={"100"} color="black" />
