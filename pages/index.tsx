@@ -9,6 +9,7 @@ import BriqIcon from "../components/icons/briq";
 import RealmsIcon from "../components/icons/realms";
 import Navbar from "../components/navbar";
 import NostraIcon from "../components/icons/nostra";
+import EveraiIcon from "../components/icons/everai";
 
 const Home: NextPage = () => {
   return (
@@ -126,7 +127,14 @@ const Home: NextPage = () => {
                     alt="Starkscan logo"
                   />
                 </a>
-
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://briq.construction/"
+                  className="m-10"
+                >
+                  <EveraiIcon width={"100"} color="black" />
+                </a>
                 <a
                   target="_blank"
                   rel="noreferrer"
