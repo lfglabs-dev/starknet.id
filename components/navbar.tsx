@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState, FunctionComponent } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaTwitter } from "react-icons/fa";
 import styles from "../styles/navbar.module.css";
 import Button from "./button";
 
@@ -37,11 +37,26 @@ const Navbar: FunctionComponent = () => {
             <Link href="#roadmap">
               <li className={styles.menuItem}>Roadmap</li>
             </Link>
-            <Link href="https://twitter.com/starknet_id">
-              <li className="ml-10 mr-10 text-sm uppercase cursor-pointer">
-                <FaTwitter color={green} size={"30px"} />
-              </li>
-            </Link>
+            <li
+              onClick={() => window.open("https://docs.starknet.id/")}
+              className={styles.menuItem}
+            >
+              Documentation
+            </li>
+            <li
+              onClick={() => window.open("https://twitter.com/starknet_id")}
+              className="ml-10 mr-5 text-sm uppercase cursor-pointer"
+            >
+              <FaTwitter color={green} size="30px" />
+            </li>
+            <li
+              onClick={() =>
+                window.open("https://discord.com/invite/8uS2Mgcsza")
+              }
+              className="mr-10 text-sm uppercase cursor-pointer"
+            >
+              <FaDiscord color={green} size="30px" />
+            </li>
             <div className="text-beige mr-5">
               <Button onClick={() => window.open("https://app.starknet.id")}>
                 Launch App
@@ -96,7 +111,7 @@ const Navbar: FunctionComponent = () => {
                   onClick={() => setNav(false)}
                   className={styles.menuItemSmall}
                 >
-                  What is starknet.id?
+                  What is Starknet ID ?
                 </li>
               </Link>
               <Link href="#roadmap">
@@ -107,10 +122,18 @@ const Navbar: FunctionComponent = () => {
                   Roadmap
                 </li>
               </Link>
+              <Link href="https://docs.starknet.id">
+                <li
+                  onClick={() => setNav(false)}
+                  className={styles.menuItemSmall}
+                >
+                  Documentation
+                </li>
+              </Link>
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest white">
-                Claim your starknet identity
+                Claim your starknet passport
               </p>
               <div className="flex items-center my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
@@ -118,6 +141,12 @@ const Navbar: FunctionComponent = () => {
                     <FaTwitter size={20} color={green} />
                   </Link>
                 </div>
+                <div className="rounded-full shadow-gray-400  cursor-pointer hover:scale-105 ease-in duration-300">
+                  <Link href="https://discord.com/invite/8uS2Mgcsza">
+                    <FaDiscord size={20} color={green} />
+                  </Link>
+                </div>
+
                 <div className="text-beige ml-3">
                   <Button
                     onClick={() => window.open("https://app.starknet.id/")}
