@@ -11,7 +11,18 @@ const Footer: FunctionComponent = () => {
       <div className={styles.sixthLeavesGroup}>
         <img width={"100%"} alt="leaf" src="/leaves/leavesGroup01.svg" />
       </div>
-      Powered by&nbsp;<strong>Starknet</strong>
+      <div className="my-4">
+        Powered by&nbsp;<strong>Starknet</strong>
+      </div>
+      <div className="flex text-s">
+        <a className="underline" href="/pdfs/PrivacyPolicy.pdf">
+          Privacy policy
+        </a>
+        &nbsp;-&nbsp;
+        <a className="underline" href="/pdfs/Terms.pdf">
+          Terms of use
+        </a>
+      </div>
     </footer>
   );
 };
