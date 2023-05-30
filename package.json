@@ -16,7 +16,6 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
-    "@nimiq/identicons": "^1.6.2",
     "@nimiq/style": "^0.8.4",
     "bn.js": "^5.2.1",
     "next": "12.2.5",
@@ -27,6 +26,7 @@
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.3.4",
     "starknet": "^4.17.1",
+    "starknetid-identicons": "^1.6.0",
     "twitter-api-sdk": "^1.2.1"
   },
   "devDependencies": {
