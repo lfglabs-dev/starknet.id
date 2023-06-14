@@ -107,12 +107,16 @@ const Home: NextPage = () => {
                     <h3 className={styles.mintsquareTitle}>Mintsquare</h3>
                   </div>
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://braavos.app/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.argent.xyz/"
+                >
                   <img
                     className="m-10"
                     width={200}
-                    src="/visuals/partners/braavos.svg"
-                    alt="Braavos logo"
+                    src="/visuals/partners/argent-logo-colour.svg"
+                    alt="Argent logo"
                   />
                 </a>
                 <a
@@ -127,6 +131,15 @@ const Home: NextPage = () => {
                     alt="Starkscan logo"
                   />
                 </a>
+                <a target="_blank" rel="noreferrer" href="https://braavos.app/">
+                  <img
+                    className="m-10"
+                    width={200}
+                    src="/visuals/partners/braavos.svg"
+                    alt="Braavos logo"
+                  />
+                </a>
+
                 <a
                   target="_blank"
                   rel="noreferrer"
