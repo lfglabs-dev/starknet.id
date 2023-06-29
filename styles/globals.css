@@ -20,10 +20,11 @@
 }
 
 :root {
-  --green: #19aa6e;
-  --brown: #402d28;
-  --soft-brown: #bf9e7b;
-  --beige: #fff9f0;
+  --primary: #19aa6e;
+  --secondary: #402d28;
+  --tertiary: #bf9e7b;
+  --tertiary600: #ccb297;
+  --background: #fff9f0;
   --nimiq-ease: cubic-bezier(0.25, 0, 0, 1);
   --gray: rgba(0, 0, 0, 0.11);
 }
@@ -38,8 +39,8 @@ body {
 h1 {
   font-family: "QuickZap";
   font-size: 8em;
-  color: var(--green);
-  text-shadow: 4px 4px var(--soft-brown);
+  color: var(--primary);
+  text-shadow: 4px 4px var(--tertiary);
 }
 
 a {
@@ -53,7 +54,7 @@ a {
   padding: 10px 25px;
   font-family: "Lato", sans-serif;
   font-weight: 500;
-  background: var(--green);
+  background: var(--primary);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -75,8 +76,8 @@ strong {
     color-scheme: dark;
   }
   body {
-    color: var(--brown);
-    background: var(--beige);
+    color: var(--secondary);
+    background: var(--background);
   }
 }
 
@@ -85,7 +86,7 @@ strong {
     color-scheme: light;
   }
   body {
-    color: var(--brown);
-    background: var(--beige);
+    color: var(--secondary);
+    background: var(--background);
   }
 }

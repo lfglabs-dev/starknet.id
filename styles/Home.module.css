@@ -1,6 +1,5 @@
 .section1 {
   height: 100vh;
-  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +11,7 @@
   min-height: 80vh;
   flex-direction: column;
   padding: 4rem 4rem;
-  background-color: var(--soft-brown);
+  background-color: var(--tertiary600);
 }
 
 .section3 {
@@ -39,22 +38,22 @@
 .title {
   font-family: "QuickZap";
   font-size: 8rem;
-  color: var(--green);
-  text-shadow: 4px 4px var(--soft-brown);
+  color: var(--primary);
+  text-shadow: 4px 4px var(--tertiary);
   text-transform: uppercase;
 }
 
 .subtitle {
   font-size: 1.5rem;
   text-align: center;
-  color: var(--soft-brown);
+  color: var(--tertiary);
 }
 
 .secondTitle {
   font-family: "QuickZap";
   font-size: 2rem;
   margin-top: 0.5rem;
-  color: var(--brown);
+  color: var(--secondary);
   text-transform: uppercase;
 }
 
@@ -77,11 +76,22 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 4px solid var(--beige);
+  border: 4px solid var(--background);
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 33%;
-  background-color: var(--beige);
+  background-color: var(--background);
+}
+
+.card h2 .card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .card2 {
@@ -90,41 +100,14 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 4px solid var(--beige);
+  border: 4px solid var(--background);
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--beige);
+  background-color: var(--background);
   justify-content: center;
-}
-
-.card2:active,
-.card2:hover,
-.card2:focus,
-.card:hover,
-.card:focus,
-.card:active {
-  border-color: var(--green);
-}
-.card h2 .card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-.card2:hover h2,
-.card2:focus h2,
-.card2:active h2,
-.card:hover h2,
-.card:focus h2,
-.card:active h2 {
-  color: var(--green);
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
 }
 
 .firstLeavesGroup {
@@ -191,7 +174,7 @@
 @media (max-width: 768px) {
   .title {
     font-size: 3rem;
-    text-shadow: 2px 2px var(--soft-brown);
+    text-shadow: 2px 2px var(--tertiary);
   }
   .card {
     width: 90%;
