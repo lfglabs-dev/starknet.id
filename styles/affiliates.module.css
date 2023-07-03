@@ -1,0 +1,101 @@
+.title {
+  font-family: "QuickZap";
+  font-size: 3rem;
+  color: var(--secondary);
+  text-shadow: 1px 1px var(--tertiary);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: "Poppins-Regular";
+  font-size: 1.5rem;
+  color: var(--secondary);
+  text-shadow: none;
+  text-align: center;
+}
+
+.thirdTitle {
+  font-family: "Poppins-Bold";
+  font-size: 1.5rem;
+  color: var(--secondary);
+  text-shadow: none;
+  text-align: center;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.card2 {
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 4px solid var(--background);
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 100%;
+  background-color: var(--background);
+}
+
+.affiliateCard {
+  margin: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 4px solid var(--background);
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 350px;
+  background-color: var(--background);
+}
+
+.affiliateCard h2 .affiliateCard h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.affiliateCard p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.section3 {
+  padding: 4rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .card {
+    width: 90%;
+  }
+  .card2 {
+    width: 90%;
+    gap: 1rem;
+  }
+  .section2 {
+    padding: 1rem 1rem;
+  }
+  .subsection {
+    flex-direction: column;
+  }
+
+  .firstLeavesGroup,
+  .secondLeavesGroup {
+    visibility: hidden;
+  }
+  .thirdLeavesGroup,
+  .fourthLeavesGroup {
+    visibility: hidden;
+  }
+}

@@ -9,7 +9,7 @@
 }
 .title {
   font-family: "QuickZap";
-  color: var(--brown);
+  color: var(--secondary);
 }
 
 .section1 {
@@ -34,7 +34,7 @@
   background-color: var(--gray);
   border-radius: 20px;
   padding: 10px;
-  color: var(--brown);
+  color: var(--secondary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,11 +56,11 @@
 .social {
   border-radius: 20px;
   padding: 10px 15px;
-  color: var(--soft-brown);
+  color: var(--tertiary);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid var(--soft-brown);
+  border: 3px solid var(--tertiary);
   margin: 0 5px;
   cursor: pointer;
 }
@@ -72,7 +72,7 @@
 
 .walletAddress {
   font-size: 2rem;
-  color: var(--brown);
+  color: var(--secondary);
 }
 
 .SbtContainer {
@@ -92,7 +92,7 @@
 }
 
 .activity {
-  border: 2px solid var(--soft-brown);
+  border: 2px solid var(--tertiary);
   padding: 5px 25px;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@
   flex: 3;
   justify-content: flex-start;
   text-align: left;
-  color: var(--soft-brown);
+  color: var(--tertiary);
   font-weight: 700;
   font-family: "QuickZap";
   font-size: 1.3rem;
@@ -120,7 +120,7 @@
   border-radius: 20px;
   font-family: "QuickZap";
   font-weight: 700;
-  color: var(--brown);
+  color: var(--secondary);
   padding: 10px 20px;
   margin-top: 20px;
   cursor: pointer;
@@ -193,7 +193,7 @@
   text-align: center;
   font-family: "QuickZap";
   font-size: 1.5rem;
-  color: var(--brown);
+  color: var(--secondary);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -8,15 +8,15 @@ import Button from "./button";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);
-  const green = "#19AA6E";
-  const brown = "#402d28";
+  const primary = "#19AA6E";
+  const secondary = "#402d28";
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className={"fixed w-full h-20 z-[100] bg-beige"}>
+    <div className="fixed w-full h-20 z-[100] bg-background">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <div className="ml-4">
           <Link href="/" className="cursor-pointer">
@@ -31,12 +31,10 @@ const Navbar: FunctionComponent = () => {
         </div>
         <div>
           <ul className="hidden md:flex uppercase items-center">
-            <Link href="#info">
-              <li className={styles.menuItem}>What is Starknet.id?</li>
-            </Link>
-            <Link href="#roadmap">
-              <li className={styles.menuItem}>Roadmap</li>
-            </Link>
+            {/* <Link href="/affiliates/individual-program">
+              <li className={styles.menuItem}> Become an affiliate</li>
+            </Link> */}
+
             <li
               onClick={() => window.open("https://docs.starknet.id/")}
               className={styles.menuItem}
@@ -47,7 +45,7 @@ const Navbar: FunctionComponent = () => {
               onClick={() => window.open("https://twitter.com/starknet_id")}
               className="ml-10 mr-5 text-sm uppercase cursor-pointer"
             >
-              <FaTwitter color={green} size="30px" />
+              <FaTwitter color={primary} size="30px" />
             </li>
             <li
               onClick={() =>
@@ -55,16 +53,16 @@ const Navbar: FunctionComponent = () => {
               }
               className="mr-10 text-sm uppercase cursor-pointer"
             >
-              <FaDiscord color={green} size="30px" />
+              <FaDiscord color={primary} size="30px" />
             </li>
-            <div className="text-beige mr-5">
+            <div className="mr-5">
               <Button onClick={() => window.open("https://app.starknet.id")}>
                 Launch App
               </Button>
             </div>
           </ul>
           <div onClick={handleNav} className="md:hidden">
-            <AiOutlineMenu color={brown} size={25} className="mr-3" />
+            <AiOutlineMenu color={secondary} size={25} className="mr-3" />
           </div>
         </div>
       </div>
@@ -77,7 +75,7 @@ const Navbar: FunctionComponent = () => {
         <div
           className={
             nav
-              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-beige p-10 ease-in duration-500"
+              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-background p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
@@ -86,7 +84,7 @@ const Navbar: FunctionComponent = () => {
               <div className="">
                 <Link href="/">
                   <img
-                    src="/visuals/StarknetIdLongLogo.png"
+                    src="/visuals/StarknetIDLongLogo.png"
                     alt="Starknet.id Logo"
                     width={250}
                     height={100}
@@ -95,10 +93,10 @@ const Navbar: FunctionComponent = () => {
               </div>
 
               <div onClick={handleNav} className="rounded-fullcursor-pointer">
-                <AiOutlineClose color={brown} />
+                <AiOutlineClose color={secondary} />
               </div>
             </div>
-            <div className="border-b border-soft-brown-300 my-4">
+            <div className="border-b border-tertiary-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4 text-babe-blue">
                 Own your on-chain identity
               </p>
@@ -106,22 +104,14 @@ const Navbar: FunctionComponent = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase text-babe-blue">
-              <Link href="#info">
+              {/* <Link href="/affiliates/individual-program">
                 <li
                   onClick={() => setNav(false)}
                   className={styles.menuItemSmall}
                 >
-                  What is Starknet ID ?
+                  Become an affiliate
                 </li>
-              </Link>
-              <Link href="#roadmap">
-                <li
-                  onClick={() => setNav(false)}
-                  className={styles.menuItemSmall}
-                >
-                  Roadmap
-                </li>
-              </Link>
+              </Link> */}
               <Link href="https://docs.starknet.id">
                 <li
                   onClick={() => setNav(false)}
@@ -138,16 +128,16 @@ const Navbar: FunctionComponent = () => {
               <div className="flex items-center my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <Link href="https://twitter.com/Starknet_id">
-                    <FaTwitter size={20} color={green} />
+                    <FaTwitter size={20} color={primary} />
                   </Link>
                 </div>
                 <div className="rounded-full shadow-gray-400  cursor-pointer hover:scale-105 ease-in duration-300">
                   <Link href="https://discord.com/invite/8uS2Mgcsza">
-                    <FaDiscord size={20} color={green} />
+                    <FaDiscord size={20} color={primary} />
                   </Link>
                 </div>
 
-                <div className="text-beige ml-3">
+                <div className="text-background ml-3">
                   <Button
                     onClick={() => window.open("https://app.starknet.id/")}
                   >

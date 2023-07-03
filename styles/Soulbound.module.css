@@ -25,14 +25,14 @@
 .cardName {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--brown);
+  color: var(--secondary);
 }
 
 .cardDescription {
   margin-top: 20px;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--brown);
+  color: var(--secondary);
   text-align: left;
 }
 
