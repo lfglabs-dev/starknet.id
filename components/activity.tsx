@@ -44,10 +44,14 @@ const Activity: FunctionComponent<ActivityProps> = ({
       ) : type === "JediSwap" ? (
         <JediswapIcon width="60" />
       ) : type === "_10KSwap" ? (
-        <img src="/visuals/10Kswap.png" alt="10Kswap Logo" width={100} />
+        <img
+          src="/visuals/partners/10Kswap.png"
+          alt="10Kswap Logo"
+          width={100}
+        />
       ) : type === "Myswap" ? (
         <img
-          src="/visuals/myswap.jpg"
+          src="/visuals/partners/myswap.jpg"
           alt="MySwap Logo"
           width={40}
           height={40}
