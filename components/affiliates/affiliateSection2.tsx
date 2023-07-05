@@ -10,7 +10,7 @@ const AffiliateSection2: FunctionComponent = () => {
       <AffiliationDefinition />
       <div className={homeStyles.subsection}>
         <HomeCard
-          img="/visuals/affiliates/gate-logo.webp"
+          img="/visuals/affiliates/affiliationIllu1.webp"
           title="Permissionless and Trustless"
           description="The particularity of our program is that it is
           completely trustless and permissionless, everyone can participate by
@@ -18,12 +18,12 @@ const AffiliateSection2: FunctionComponent = () => {
           you don't have to trust any centralized entity."
         />
         <HomeCard
-          img="/visuals/affiliates/search-logo.webp"
+          img="/visuals/affiliates/searchIllu.webp"
           title="Track and Grow your performances"
           description="As an affiliate you'll get access to ready to use designs, news in advance, a special analytics dashboard and a dedicated affiliate manager to optimize your campaigns as much as possible."
         />
         <HomeCard
-          img="/visuals/affiliates/money-logo.webp"
+          img="/visuals/affiliates/moneyIllu.webp"
           title="Get paid in Crypto (ETH & STRK)"
           description="We share revenue fairly. Every eligible sale made earns you at least 30% commissions. And this is just the start because you could go bigger if you are a top performer."
         />

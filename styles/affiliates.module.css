@@ -94,8 +94,4 @@
   .secondLeavesGroup {
     visibility: hidden;
   }
-  .thirdLeavesGroup,
-  .fourthLeavesGroup {
-    visibility: hidden;
-  }
 }

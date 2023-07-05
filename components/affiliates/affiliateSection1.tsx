@@ -8,9 +8,9 @@ const AffiliateSection1: FunctionComponent = () => {
     <div className={homeStyles.section1}>
       <div className="flex flex-col items-center justify-center min-h-screen mx-10">
         <img
-          width={200}
-          alt="affiliate logo"
-          src="/visuals/affiliates/gate-logo.webp"
+          width={300}
+          alt="affiliation illustration"
+          src="/visuals/affiliates/affiliationIllu.webp"
         />
 
         <h1 className={styles.title}>The Stark Affiliate Program</h1>
