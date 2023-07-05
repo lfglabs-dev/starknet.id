@@ -9,9 +9,9 @@
 
 .title {
   font-family: "QuickZap";
-  font-size: 5rem;
-  color: var(--primary);
-  text-shadow: 2px 2px var(--tertiary);
+  font-size: 4rem;
+  color: var(--secondary);
+  text-shadow: 1px 1px var(--tertiary);
   text-transform: uppercase;
   text-align: center;
 }
