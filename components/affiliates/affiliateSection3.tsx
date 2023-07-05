@@ -11,7 +11,7 @@ const AffiliateSection3: FunctionComponent = () => {
         <img
           width={300}
           alt="affiliate logo"
-          src="/visuals/affiliates/gate-logo.webp"
+          src="/visuals/affiliates/growIllu.webp"
         />
         <div className={styles.affiliateCard}>
           <p className="text-justify">

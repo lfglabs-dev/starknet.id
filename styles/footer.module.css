@@ -13,29 +13,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.fifthLeavesGroup {
-  position: absolute;
-  bottom: -160px;
-  left: -10%;
-  width: 300px;
-  z-index: -1000;
-  transform: rotate(15deg);
-  overflow: hidden;
-}
-
-.sixthLeavesGroup {
-  position: absolute;
-  right: -3%;
-  bottom: -160px;
-  width: 180px;
-  z-index: -1000;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .fifthLeavesGroup,
-  .sixthLeavesGroup {
-    visibility: hidden;
-  }
-}

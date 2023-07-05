@@ -5,13 +5,7 @@ import styles from "../styles/footer.module.css";
 const Footer: FunctionComponent = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.fifthLeavesGroup}>
-        <img width={"100%"} alt="leaf" src="/leaves/leavesGroup02.svg" />
-      </div>
-      <div className={styles.sixthLeavesGroup}>
-        <img width={"100%"} alt="leaf" src="/leaves/leavesGroup01.svg" />
-      </div>
-      <div className="my-4">
+      <div className="mb-4">
         Powered by&nbsp;<strong>Starknet</strong>
       </div>
       <div className="flex text-s">

@@ -15,7 +15,7 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
   return (
     <div className={styles.card}>
       <div className="flex justify-center">
-        <img alt="identicon" height={300} width={300} src={img} />
+        <img alt="illustration" height={300} width={300} src={img} />
       </div>
       <h2 className={styles.secondTitle}>{title}</h2>
       <div className="text-md max-w-3xl mt-4 sm:mt-10">

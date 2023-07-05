@@ -16,7 +16,7 @@
 
 .section3 {
   min-height: 120vh;
-  padding: 4rem 0rem;
+  padding: 4rem 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,26 +129,6 @@
   overflow: hidden;
 }
 
-.thirdLeavesGroup {
-  position: absolute;
-  right: -12%;
-  top: -20%;
-  transform: rotate(180deg);
-  width: 300px;
-  z-index: -1000;
-  overflow: hidden;
-}
-
-.fourthLeavesGroup {
-  position: absolute;
-  transform: rotate(180deg);
-  left: -5%;
-  top: -20%;
-  width: 190px;
-  z-index: -1000;
-  overflow: hidden;
-}
-
 .partners {
   display: flex;
   justify-content: center;
@@ -197,10 +177,6 @@
   }
   .firstLeavesGroup,
   .secondLeavesGroup {
-    visibility: hidden;
-  }
-  .thirdLeavesGroup,
-  .fourthLeavesGroup {
     visibility: hidden;
   }
 }
