@@ -125,7 +125,7 @@ const Navbar: FunctionComponent = () => {
               <p className="uppercase tracking-widest white">
                 Claim your starknet passport
               </p>
-              <div className="flex items-center my-4 w-full sm:w-[80%]">
+              <div className="flex items-center justify-end my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <Link href="https://twitter.com/Starknet_id">
                     <FaTwitter size={20} color={primary} />
@@ -136,8 +136,7 @@ const Navbar: FunctionComponent = () => {
                     <FaDiscord size={20} color={primary} />
                   </Link>
                 </div>
-
-                <div className="text-background ml-3">
+                <div className="ml-3">
                   <Button
                     onClick={() => window.open("https://app.starknet.id/")}
                   >
