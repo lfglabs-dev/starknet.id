@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { FunctionComponent } from "react";
 import styles from "../styles/footer.module.css";
+import ScrollUp from "./scrollUp";
 
 const Footer: FunctionComponent = () => {
   return (
     <footer className={styles.footer}>
+      <ScrollUp />
       <div className="mb-4">
         Powered by&nbsp;<strong>Starknet</strong>
       </div>
