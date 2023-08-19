@@ -22,11 +22,15 @@ const Footer: FunctionComponent = () => {
           Powered by&nbsp;<strong>Starknet</strong>
         </div>
         <div className="flex text-s">
-          <a className="underline" href="/pdfs/PrivacyPolicy.pdf">
+          <a
+            className="underline"
+            href="/pdfs/PrivacyPolicy.pdf"
+            target="_blank"
+          >
             Privacy policy
           </a>
           &nbsp;-&nbsp;
-          <a className="underline" href="/pdfs/Terms.pdf">
+          <a className="underline" href="/pdfs/Terms.pdf" target="_blank">
             Terms of use
           </a>
         </div>

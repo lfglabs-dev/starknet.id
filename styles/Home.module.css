@@ -5,6 +5,57 @@
 
 .section1 {
   padding: 8rem 5rem 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContent {
+  margin: 0 auto;
+  padding: 22px 39px;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.headerBanner {
+  width: 50%;
+  max-width: 680px;
+}
+
+.buttonContainer {
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+.mainTitle {
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary);
+  text-align: left;
+  /* Title/H1 */
+  font-family: QuickZap;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px;
+}
+
+.mainTitle strong {
+  font-family: QuickZap;
+  color: var(--primary);
+}
+
+.mainSubtitle {
+  display: flex;
+  width: 487px;
+  flex-direction: column;
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: 32px;
 }
 
 .section2 {
@@ -80,6 +131,7 @@
   width: 33%;
   background-color: var(--background-light);
   box-shadow: var(--shadow);
+  z-index: 10;
 }
 
 .card h2 .card h2 {
@@ -138,6 +190,9 @@ div:has(> .lilLeaf04) {
   .section2 {
     padding: 2rem 2rem;
   }
+  .headerBanner {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -177,5 +232,27 @@ div:has(> .lilLeaf04) {
   }
   .leaf05 {
     display: block;
+  }
+  .mainTitle {
+    width: 100%;
+    font-size: max(min(7vw, 34px), 24px);
+    line-height: max(8vw, 25px);
+    margin-top: 24px;
+  }
+  .mainSubtitle {
+    width: 100%;
+    font-size: max(3vw, 16px);
+    margin-top: 16px;
+    line-height: max(4vw, 19px);
+  }
+  .headerContent {
+    position: relative;
+    padding: 0 !important;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+  }
+  .headerBanner {
+    display: none;
   }
 }

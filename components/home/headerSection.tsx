@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
-import styles from "../../../styles/components/titles.module.css";
-import Button from "../../button";
+import styles from "../../styles/Home.module.css";
+import Button from "../button";
 
-type MainTitleProps = {
+type HeaderSectionProps = {
   title: string;
   highlighted: string;
   subtitle: string;
@@ -10,7 +10,7 @@ type MainTitleProps = {
   buttonLink: string;
 };
 
-const MainTitle: FunctionComponent<MainTitleProps> = ({
+const HeaderSection: FunctionComponent<HeaderSectionProps> = ({
   title,
   highlighted,
   subtitle,
@@ -18,7 +18,7 @@ const MainTitle: FunctionComponent<MainTitleProps> = ({
   buttonLink,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.headerContent}>
       <h2 className={styles.mainTitle}>
         {title} <strong>{highlighted}</strong>
       </h2>
@@ -31,4 +31,4 @@ const MainTitle: FunctionComponent<MainTitleProps> = ({
     </div>
   );
 };
-export default MainTitle;
+export default HeaderSection;
