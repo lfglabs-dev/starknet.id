@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import styles from "../styles/components/scrollUp.module.css";
 import ArrowUpIcon from "./UI/iconsComponents/icons/arrowUpIcon";
 

@@ -1,22 +1,21 @@
+.page {
+  overflow: hidden;
+  background: linear-gradient(0deg, #eae0d5 0%, #fff9f0 100%);
+}
+
 .section1 {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  position: relative;
+  padding: 8rem 5rem 1rem 5rem;
 }
 
 .section2 {
   min-height: 80vh;
   flex-direction: column;
   padding: 4rem 4rem;
-  background-color: var(--tertiary600);
 }
 
 .section3 {
   min-height: 120vh;
-  padding: 4rem 4rem;
+  padding: 4rem 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,16 +70,16 @@
 }
 
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
+  margin: 0 1rem 3rem 1rem;
+  padding: 3rem 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 4px solid var(--background);
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 33%;
-  background-color: var(--background);
+  background-color: var(--background-light);
+  box-shadow: var(--shadow);
 }
 
 .card h2 .card h2 {
@@ -100,33 +99,14 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 4px solid var(--background);
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--background);
   justify-content: center;
-}
-
-.firstLeavesGroup {
-  position: absolute;
-  bottom: -20%;
-  left: -8%;
-  width: 270px;
-  z-index: -1000;
-  transform: rotate(15deg);
-  overflow: hidden;
-}
-
-.secondLeavesGroup {
-  position: absolute;
-  right: -3%;
-  bottom: -20%;
-  width: 170px;
-  z-index: -1000;
-  overflow: hidden;
+  background-color: var(--background-light);
+  box-shadow: var(--shadow);
 }
 
 .partners {
@@ -134,7 +114,16 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+}
+
+div:has(> .lilLeaf04) {
+  position: absolute;
+  left: 16%;
+  bottom: -12rem;
+}
+
+.leaf05 {
+  display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -157,10 +146,14 @@
     text-shadow: 2px 2px var(--tertiary);
   }
   .card {
-    width: 90%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .card2 {
-    width: 90%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,8 +168,14 @@
   .partners {
     flex-direction: column;
   }
-  .firstLeavesGroup,
-  .secondLeavesGroup {
-    visibility: hidden;
+  .section1 {
+    padding: 8rem 1rem 1rem;
+    margin-bottom: 4rem;
+  }
+  .section3 {
+    padding: 1rem 1rem;
+  }
+  .leaf05 {
+    display: block;
   }
 }

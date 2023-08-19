@@ -2,11 +2,29 @@ import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
 import HomePartners from "./homePartners";
 import HomeCard from "./homeCard";
+import CategoryTitle from "../UI/titles/categoryTitle";
+import { Parallax } from "react-scroll-parallax";
 
 const HomeSection2: FunctionComponent = () => {
   return (
     <div id="info" className={styles.section2}>
-      <div className={styles.subsection}>
+      <Parallax speed={-5}>
+        <img src="/leaves/lilLeaf01.svg" alt="leaf" width={20} height={20} />
+      </Parallax>
+      <CategoryTitle
+        title="Forge Your Unique StarkNet Identity"
+        subtitle="Seamlessly Claim, Personalize, and Elevate"
+      />
+      <Parallax speed={-10}>
+        <img
+          src="/leaves/lilLeaf02.svg"
+          alt="leaf"
+          className="absolute right-3"
+          width={20}
+          height={20}
+        />
+      </Parallax>
+      <div className={`${styles.subsection} mt-8`}>
         <HomeCard
           img="/visuals/home/passport.png"
           title="#1 Claim your Starknet identity"
@@ -28,6 +46,15 @@ const HomeSection2: FunctionComponent = () => {
           domains."
         />
       </div>
+      <Parallax speed={-10}>
+        <img
+          src="/leaves/lilLeaf02.svg"
+          alt="leaf"
+          className={`${styles.leaf05} absolute right-3`}
+          width={20}
+          height={20}
+        />
+      </Parallax>
       <HomePartners />
     </div>
   );

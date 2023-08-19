@@ -11,11 +11,9 @@ const HomePartners: FunctionComponent = () => {
   return (
     <div className={styles.subsection}>
       <div className={styles.card2}>
+        <p className="text-center">Our partners</p>
         <h2 className={styles.secondTitle}>They already integrated us</h2>
         <div className={styles.partners}>
-          {/* <BriqIcon /> */}
-          {/* <StarkwareIcon /> */}
-
           <a target="_blank" rel="noreferrer" href="https://mintsquare.io/">
             <div className="flex items-center justify-center m-5">
               <MintsquareIcon />
@@ -24,7 +22,7 @@ const HomePartners: FunctionComponent = () => {
           </a>
           <a target="_blank" rel="noreferrer" href="https://www.argent.xyz/">
             <img
-              className="m-10"
+              className="mx-10"
               width={200}
               src="/visuals/partners/argent-logo-colour.svg"
               alt="Argent logo"
@@ -32,7 +30,7 @@ const HomePartners: FunctionComponent = () => {
           </a>
           <a target="_blank" rel="noreferrer" href="https://starkscan.co/">
             <img
-              className="m-10"
+              className="mx-10"
               width={200}
               src="/visuals/partners/starkscan.png"
               alt="Starkscan logo"
@@ -40,7 +38,7 @@ const HomePartners: FunctionComponent = () => {
           </a>
           <a target="_blank" rel="noreferrer" href="https://braavos.app/">
             <img
-              className="m-10"
+              className="mx-10"
               width={200}
               src="/visuals/partners/braavos.svg"
               alt="Braavos logo"
@@ -51,7 +49,7 @@ const HomePartners: FunctionComponent = () => {
             target="_blank"
             rel="noreferrer"
             href="https://www.everai.xyz/"
-            className="m-10"
+            className="mx-10"
           >
             <EveraiIcon width={"100"} color="black" />
           </a>
@@ -63,7 +61,7 @@ const HomePartners: FunctionComponent = () => {
             target="_blank"
             rel="noreferrer"
             href="https://carbonable.io/"
-            className="m-10"
+            className="mx-10"
           >
             <CarbonableIcon />
           </a>
@@ -71,7 +69,7 @@ const HomePartners: FunctionComponent = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            className="m-10"
+            className="mx-10"
             href="https://www.nostra.finance"
           >
             <NostraIcon height="40px" />
@@ -81,7 +79,7 @@ const HomePartners: FunctionComponent = () => {
             target="_blank"
             rel="noreferrer"
             href="https://realmseternum.com/"
-            className="m-10"
+            className="mx-10"
           >
             <RealmsIcon />
           </a>
@@ -90,7 +88,7 @@ const HomePartners: FunctionComponent = () => {
             target="_blank"
             rel="noreferrer"
             href="https://voyager.online/"
-            className="m-10"
+            className="mx-10"
           >
             <img
               width={200}

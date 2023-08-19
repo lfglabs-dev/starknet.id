@@ -5,11 +5,10 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 import styles from "../styles/navbar.module.css";
 import Button from "./button";
+import theme from "../styles/theme";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);
-  const primary = "#19AA6E";
-  const secondary = "#402d28";
 
   const handleNav = () => {
     setNav(!nav);
@@ -45,7 +44,7 @@ const Navbar: FunctionComponent = () => {
               onClick={() => window.open("https://twitter.com/starknet_id")}
               className="ml-10 mr-5 text-sm uppercase cursor-pointer"
             >
-              <FaTwitter color={primary} size="30px" />
+              <FaTwitter color={theme.palette.secondary.main} size="30px" />
             </li>
             <li
               onClick={() =>
@@ -53,7 +52,7 @@ const Navbar: FunctionComponent = () => {
               }
               className="mr-10 text-sm uppercase cursor-pointer"
             >
-              <FaDiscord color={primary} size="30px" />
+              <FaDiscord color={theme.palette.secondary.main} size="30px" />
             </li>
             <div className="mr-5">
               <Button onClick={() => window.open("https://app.starknet.id")}>
@@ -62,7 +61,11 @@ const Navbar: FunctionComponent = () => {
             </div>
           </ul>
           <div onClick={handleNav} className="md:hidden">
-            <AiOutlineMenu color={secondary} size={25} className="mr-3" />
+            <AiOutlineMenu
+              color={theme.palette.secondary.main}
+              size={25}
+              className="mr-3"
+            />
           </div>
         </div>
       </div>
@@ -93,7 +96,7 @@ const Navbar: FunctionComponent = () => {
               </div>
 
               <div onClick={handleNav} className="rounded-fullcursor-pointer">
-                <AiOutlineClose color={secondary} />
+                <AiOutlineClose color={theme.palette.secondary.main} />
               </div>
             </div>
             <div className="border-b border-tertiary-300 my-4">
@@ -128,12 +131,12 @@ const Navbar: FunctionComponent = () => {
               <div className="flex items-center justify-end my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <Link href="https://twitter.com/Starknet_id">
-                    <FaTwitter size={20} color={primary} />
+                    <FaTwitter size={20} color={theme.palette.secondary.main} />
                   </Link>
                 </div>
                 <div className="rounded-full shadow-gray-400  cursor-pointer hover:scale-105 ease-in duration-300">
                   <Link href="https://discord.com/invite/8uS2Mgcsza">
-                    <FaDiscord size={20} color={primary} />
+                    <FaDiscord size={20} color={theme.palette.secondary.main} />
                   </Link>
                 </div>
                 <div className="ml-3">
