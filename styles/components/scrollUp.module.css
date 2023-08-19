@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+
+.container svg {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.text {
+  color: var(--primary-700, #19aa6e);
+  font-family: QuickZap;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 75% */
+  margin-top: 0.7em;
+}
