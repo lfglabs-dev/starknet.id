@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: calc(100vh - 4rem);
 }
 
 .headerContent {
@@ -21,6 +22,7 @@
 .headerBanner {
   width: 50%;
   max-width: 680px;
+  max-height: calc(100vh - 8rem);
 }
 
 .buttonContainer {
