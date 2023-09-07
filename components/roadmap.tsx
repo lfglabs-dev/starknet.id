@@ -1,68 +1,115 @@
 import React, { FunctionComponent } from "react";
-import styles from "../styles/roadmap.module.css";
+import Steps from "./steps/steps";
+import ParagraphWithIcon from "./UI/paragraphWithIcon";
 
 const Roadmap: FunctionComponent = () => {
   return (
-    <div id="roadmap" className="flex flex-col relative">
-      <h2 className={styles.title}>Roadmap</h2>
-      <div className="my-5 flex justify-center items-center gap-5 flex-wrap">
-        <img src="/visuals/home/roadmapillu1.webp" alt="Genesis" width={400} />
-        <div>
-          <h2 className={styles.secondTitle}>Genesis</h2>
-          <p className="text-center text-xl  line-through">Recruitment</p>
-          <p className="text-center text-xl	 line-through">
-            First partnership with Eykar Quest
-          </p>
-          <p className="text-center text-xl line-through">
-            Application live on testnet
-          </p>
-          <p className="text-center text-xl line-through">
-            First app integrations
-          </p>
-        </div>
-      </div>
-      <div className="my-5 flex justify-center items-center gap-5 flex-wrap-reverse">
-        <div>
-          <h2 className={styles.secondTitle}>Growth</h2>
-
-          <p className="text-center text-xl line-through">
-            Application live on mainnet
-          </p>
-          <p className="text-center text-xl line-through">
-            Starknet id Dashboard
-          </p>
-          <p className="text-center text-xl line-through">
-            First wallet integration
-          </p>
-          <p className="text-center text-xl line-through">
-            First block explorer integration
-          </p>
-          <p className="text-center text-xl line-through">
-            Massive Subdomain distribution (free)
-          </p>
-          <p className="text-center text-xl line-through">
-            Starknetid SDK for developers
-          </p>
-          <p className="text-center text-xl">The Stark Tribe Campaign</p>
-          <p className="text-center text-xl">Automatic Renewal Feature</p>
-          <p className="text-center text-xl">
-            Proof of PersonHood/KYC features
-          </p>
-        </div>
-        <img src="/visuals/home/roadmapillu2.webp" alt="Genesis" width={400} />
-      </div>
-      <div className="my-5 flex justify-center items-center gap-5 flex-wrap">
-        <img src="/visuals/home/roadmapillu3.webp" alt="Genesis" width={400} />
-        <div>
-          <h2 className={styles.secondTitle}>MATURATION</h2>
-          <p className="text-center text-xl">Cairo 1 migration</p>
-          <p className="text-center text-xl">ENS Bridging</p>
-          <p className="text-center text-xl">NFT Profile pic linking</p>
-          <p className="text-center text-xl">On-chain resolving</p>
-          <p className="text-center text-xl">Affiliation system</p>
-        </div>
-      </div>
-    </div>
+    <Steps
+      steps={[
+        {
+          title: "2022 - GENESIS",
+          banner: "/visuals/home/roadmapillu1.webp",
+          icon: "/icons/starknet.svg",
+          content: (
+            <>
+              <ParagraphWithIcon
+                title="Recruitment"
+                description="Assemble a talented team passionate about the StarkNet ID vision, setting the foundation for an innovative journey."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="First partnership with Eykar Quest"
+                description="Forge a strategic alliance with Eykar Quest, marking the initial step towards impactful collaborations within the StarkNet ecosystem."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Application live on testnet"
+                description="Launch the StarkNet ID application on the testnet, enabling thorough testing and refinement of the user experience and functionality."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="First app integrations"
+                description="Seamlessly integrate StarkNet ID with the first wave of applications, marking the beginning of a unified blockchain identity experience across various platforms."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Application live on mainnet"
+                description="Transition the StarkNet ID application to the mainnet, enabling users to harness its capabilities in a live, decentralized environment."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Starknet id Dashboard"
+                description="Launch an intuitive dashboard, offering users seamless control over their StarkNet ID, domains, and associated data."
+                icon="/icons/checkMark.svg"
+              />
+            </>
+          ),
+        },
+        {
+          title: "2023 - GROWTH",
+          banner: "/visuals/home/roadmapillu2.webp",
+          icon: "/icons/rocket.svg",
+          content: (
+            <>
+              <ParagraphWithIcon
+                title="Wallets & block explorers integration"
+                description="Facilitate a user-friendly integration of StarkNet ID with the first wallets, streamlining the process of managing identities and domains. "
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Massive Subdomain distribution (free)"
+                description="Initiate a widespread distribution of subdomains for free, empowering users to personalize their StarkNet IDs extensively."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Starknetid SDK for developers"
+                description="Launch the StarkNet ID software development kit (SDK), enabling developers to easily integrate and harness its capabilities within their applications."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Automatic Renewal Feature"
+                description="Implement an automatic renewal feature for domain ownership, ensuring a seamless and continuous user experience."
+                icon="/icons/clock.svg"
+              />
+              <ParagraphWithIcon
+                title="Proof of PersonHood/KYC features"
+                description="Introduce advanced features for proving personhood and KYC compliance, bolstering the security and authenticity of StarkNet IDs."
+                icon="/icons/clock.svg"
+              />
+              <ParagraphWithIcon
+                title="Cairo 1 migration"
+                description="Transition to Cairo 1, the next level of StarkWare's technological advancements, enhancing the scalability and capabilities of StarkNet ID."
+                icon="/icons/clock.svg"
+              />
+            </>
+          ),
+        },
+        {
+          title: "2024 - MATURATION",
+          banner: "/visuals/home/roadmapillu3.webp",
+          icon: "/icons/crown.svg",
+          content: (
+            <>
+              <ParagraphWithIcon
+                title="ENS Bridging"
+                description="Enable seamless integration with Ethereum Name Service (ENS), bridging the decentralized identity experience between StarkNet and the Ethereum ecosystem."
+                icon="/icons/clock.svg"
+              />
+              <ParagraphWithIcon
+                title="On-chain resolving"
+                description="Implement on-chain resolving of StarkNet IDs and domains, ensuring a robust and reliable identity verification process."
+                icon="/icons/clock.svg"
+              />
+              <ParagraphWithIcon
+                title="Affiliation system"
+                description="Introduce an innovative affiliation system, empowering users to establish meaningful connections within the StarkNet ecosystem."
+                icon="/icons/clock.svg"
+              />
+            </>
+          ),
+        },
+      ]}
+    />
   );
 };
 

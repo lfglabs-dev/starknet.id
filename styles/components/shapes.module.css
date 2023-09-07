@@ -1,0 +1,13 @@
+.verticalBar {
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  margin: auto;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  background-color: var(--primary);
+  -webkit-mask-image: url("/masks/verticalBarMask.png");
+  mask-image: url("/masks/verticalBarMask.png");
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+}

@@ -6,16 +6,19 @@ import Navbar from "../components/navbar";
 import HomeSection1 from "../components/home/homeSection1";
 import HomeSection2 from "../components/home/homeSection2";
 import HomeSection3 from "../components/home/homeSection3";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const Home: NextPage = () => {
   return (
-    <div className="overflow-hidden">
+    <div className={styles.page}>
       <Navbar />
       <div className={styles.container}>
-        <HomeSection1 />
-        <HomeSection2 />
-        <HomeSection3 />
-        <Footer />
+        <ParallaxProvider>
+          <HomeSection1 />
+          <HomeSection2 />
+          <HomeSection3 />
+          <Footer />
+        </ParallaxProvider>
       </div>
     </div>
   );
