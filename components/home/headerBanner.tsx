@@ -5,7 +5,7 @@ const HeaderBanner: FunctionComponent = () => {
   return (
     <img
       alt="Header banner"
-      src="https://www.starknet.id/visuals/affiliates/affiliationIllu.webp"
+      src="/visuals/home/visualEverai1.webp"
       className={styles.headerBanner}
     />
   );
