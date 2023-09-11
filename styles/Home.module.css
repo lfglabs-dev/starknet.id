@@ -33,7 +33,7 @@
 .mainTitle {
   display: flex;
   flex-direction: column;
-  color: var(--secondary);
+  color: var(--primary);
   text-align: left;
   /* Title/H1 */
   font-family: QuickZap;
@@ -45,7 +45,7 @@
 
 .mainTitle strong {
   font-family: QuickZap;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .mainSubtitle {
