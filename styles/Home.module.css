@@ -168,6 +168,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 div:has(> .lilLeaf04) {
@@ -224,6 +226,7 @@ div:has(> .lilLeaf04) {
 
   .partners {
     flex-direction: column;
+    gap: 3rem;
   }
   .section1 {
     padding: 8rem 1rem 1rem;
