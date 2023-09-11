@@ -26,20 +26,20 @@ const HomeSection2: FunctionComponent = () => {
       </Parallax>
       <div className={`${styles.subsection} mt-8`}>
         <HomeCard
-          img="/visuals/home/passport.png"
+          img="/visuals/home/visualEverai2.webp"
           title="#1 Claim your Starknet identity"
           description="You can already mint your starknet identity for free, it'll
           act as your starknet passport and represent you during your
           on-chain interactions."
         />
         <HomeCard
-          img="/visuals/home/passportWithUsername.png"
+          img="/visuals/home/visualEverai3.webp"
           title="#2 Register your .stark domain"
           description="You’re not 0x072d4…b2Be7, you can already register your .stark
               domain and link it with your starknet identity."
         />
         <HomeCard
-          img="/visuals/home/passportWithEverything.png"
+          img="/visuals/home/visualEverai4.webp"
           title="#3 Build your identity"
           description="You'll also be able to attach any data to your starknet
           identity, from web2 with social media accounts to web3 with ENS
