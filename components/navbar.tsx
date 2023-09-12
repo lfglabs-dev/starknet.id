@@ -124,11 +124,11 @@ const Navbar: FunctionComponent = () => {
                 </li>
               </Link>
             </ul>
-            <div className="pt-40">
+            <div className="pt-40 flex flex-col justify-start">
               <p className="uppercase tracking-widest white">
-                Claim your starknet passport
+                Your starknet passport
               </p>
-              <div className="flex items-center justify-end my-4 w-full sm:w-[80%]">
+              <div className="flex items-center justify-start my-1 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <Link href="https://twitter.com/Starknet_id">
                     <FaTwitter size={20} color={theme.palette.secondary.main} />
@@ -139,13 +139,11 @@ const Navbar: FunctionComponent = () => {
                     <FaDiscord size={20} color={theme.palette.secondary.main} />
                   </Link>
                 </div>
-                <div className="ml-3">
-                  <Button
-                    onClick={() => window.open("https://app.starknet.id/")}
-                  >
-                    Launch App
-                  </Button>
-                </div>
+              </div>
+              <div className="self-start">
+                <Button onClick={() => window.open("https://app.starknet.id/")}>
+                  Launch App
+                </Button>
               </div>
             </div>
           </div>

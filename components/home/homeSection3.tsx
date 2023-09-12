@@ -8,7 +8,7 @@ const HomeSection3: FunctionComponent = () => {
   return (
     <div className={styles.section3}>
       <CategoryTitle
-        title="StarkNet ID Evolution Roadmap"
+        title="Evolution Roadmap"
         subtitle="Navigating the Future of Your Blockchain Identity"
       />
       <Roadmap />

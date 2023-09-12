@@ -194,6 +194,7 @@ div:has(> .lilLeaf04) {
   .section2 {
     padding: 2rem 2rem;
   }
+
   .headerBanner {
     display: none;
   }
@@ -231,9 +232,10 @@ div:has(> .lilLeaf04) {
   .section1 {
     padding: 8rem 1rem 1rem;
     margin-bottom: 4rem;
+    min-height: 90vh;
   }
   .section3 {
-    padding: 1rem 1rem;
+    padding: 5rem 1rem;
   }
   .leaf05 {
     display: block;
