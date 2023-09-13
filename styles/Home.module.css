@@ -109,13 +109,6 @@
   text-transform: uppercase;
 }
 
-.mintsquareTitle {
-  font-family: "QuickZap";
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-  color: black;
-}
-
 .title,
 .secondTitle,
 .description {
