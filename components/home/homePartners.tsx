@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
 import CarbonableIcon from "../icons/carbonable";
-import MintsquareIcon from "../icons/mintsquare";
 import BriqIcon from "../icons/briq";
 import RealmsIcon from "../icons/realms";
 import NostraIcon from "../icons/nostra";
 import EveraiIcon from "../icons/everai";
+import AvnuIcon from "../icons/avnu";
 
 const HomePartners: FunctionComponent = () => {
   return (
@@ -14,11 +14,13 @@ const HomePartners: FunctionComponent = () => {
         <p className="text-center">Our partners</p>
         <h2 className={styles.secondTitle}>They already integrated us</h2>
         <div className={styles.partners}>
-          <a target="_blank" rel="noreferrer" href="https://mintsquare.io/">
-            <div className="flex items-center justify-center m-5">
-              <MintsquareIcon />
-              <h3 className={styles.mintsquareTitle}>Mintsquare</h3>
-            </div>
+          <a
+            className="mx-10"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.everai.xyz/"
+          >
+            <AvnuIcon width="100" color="black" />
           </a>
           <a target="_blank" rel="noreferrer" href="https://www.argent.xyz/">
             <img

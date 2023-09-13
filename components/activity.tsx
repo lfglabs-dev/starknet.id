@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
 import styles from "../styles/Profile.module.css";
-import MintsquareIcon from "../components/icons/mintsquare";
+import AvnuIcon from "./icons/avnu";
 import { ActivityProps } from "../types";
 import { projectNames } from "../utils/constants";
 import StarknetIcon from "./icons/starknetIcon";
@@ -35,8 +35,8 @@ const Activity: FunctionComponent<ActivityProps> = ({
           width={60}
           height={60}
         />
-      ) : type === "mintsquare" ? (
-        <MintsquareIcon />
+      ) : type === "avnu" ? (
+        <AvnuIcon />
       ) : type === "aspect" ? (
         <AspectIcon width="60" />
       ) : type === "Starkgate" ? (
