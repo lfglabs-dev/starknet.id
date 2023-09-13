@@ -1,8 +1,6 @@
 export const activityContractsTestnet = {
   JediSwap: "0x2bcc885342ebbcbcd170ae6cafa8a4bed22bb993479f49806e72d96af94c965",
   _10KSwap: "0x975910cd99bc56bd289eaaa5cee6cd557f0ddafdb2ce6ebea15b158eb2c664",
-  Mintsquare:
-    "0x29fd090a27fc937b6328c89c1a228811c3b221ef5ed19186e08a368de72a2f",
   Myswap: "0x18a439bcbb1b3535a6145c1dc9bc6366267d923f60a84bd0c7618f33c81d334",
   StarknetId:
     "0x798e884450c19e072d6620fefdbeb7387d0453d3fd51d95f5ace1f17633d88b",
@@ -22,8 +20,6 @@ export const activityContractsTestnet = {
 export const activityContractsMainnet = {
   JediSwap: "0x41fd22b238fa21cfcf5dd45a8548974d8263b3a531a60388411c5e230f97023",
   _10KSwap: "0x7a6f98c03379b9513ca84cca1373ff452a7462a3b61598f0af5bb27ad7f76d1",
-  Mintsquare:
-    "0x79b882cb8200c1c1d20e849a2ef19124b0b8985358c1313ea6af588cfe4fec8",
   Myswap: "0x10884171baf1914edc28d7afb619b40a4051cfae78a094a55d230f19e944a28",
   StarknetId:
     "0x5dbdedc203e92749e2e746e2d40a768d966bd243df04a6b712e222bc040a9af",
@@ -43,7 +39,7 @@ export const activityContractsMainnet = {
 export const projectNames = {
   JediSwap: "Jedi Swap",
   _10KSwap: "10K Swap",
-  Mintsquare: "Mintsquare",
+  Avnu: "Avnu",
   Myswap: "Myswap",
   StarknetId: "Starknet.id",
   StarknetIdNaming: "Starknet.id",
