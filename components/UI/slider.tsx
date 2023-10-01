@@ -39,7 +39,7 @@ const Slider: FunctionComponent<SliderProps> = ({
     let value = selectedValue;
     if (range >= 1000) {
       const logValue = Math.E ** (((value - range) / range) * 5);
-      value = Math.round(logValue * selectedValue);
+      value = Math.ceil(logValue * selectedValue);
     }
     onChange(value);
   }, [selectedValue, range]);

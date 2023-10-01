@@ -30,7 +30,9 @@ const AffiliationEarnings: FunctionComponent = () => {
       </div>
       <div className={styles.resultContainer}>
         <p className={styles.resultTitle}>Affiliate earnings</p>
-        <p className={styles.result}>948$</p>
+        <p className={styles.result}>
+          {Math.round((directReferrals * indirectReferrals) / 100)}$
+        </p>
         <Button
           onClick={() =>
             window.open(
