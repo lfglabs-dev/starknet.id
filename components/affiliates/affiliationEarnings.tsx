@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import styles from "../../styles/affiliates.module.css";
 import Button from "../button";
 import Slider from "../UI/slider";
