@@ -55,6 +55,7 @@ const Slider: FunctionComponent<SliderProps> = ({
         style={{
           "--progress": selectedValue / max,
         }}
+        value={selectedValue}
       />
       <label htmlFor="directReferrals">{renderValue(value, range)}</label>
     </div>

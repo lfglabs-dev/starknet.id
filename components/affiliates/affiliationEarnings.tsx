@@ -4,8 +4,8 @@ import Button from "../button";
 import Slider from "../UI/slider";
 
 const AffiliationEarnings: FunctionComponent = () => {
-  const [directReferrals, setDirectReferrals] = useState(8);
-  const [indirectReferrals, setIndirectReferrals] = useState(8);
+  const [directReferrals, setDirectReferrals] = useState(5000);
+  const [indirectReferrals, setIndirectReferrals] = useState(5000);
   return (
     <div className={styles.earningsCard}>
       <div className={styles.sliders}>
