@@ -11,7 +11,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 const IndividualProgram: NextPage = () => {
   return (
     <ParallaxProvider>
-      <div className="overflow-hidden">
+      <div className={homeStyles.page}>
         <Navbar />
         <div className={homeStyles.container}>
           <AffiliateSection1 />

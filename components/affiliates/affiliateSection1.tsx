@@ -21,7 +21,11 @@ const AffiliateSection1: FunctionComponent = () => {
             &nbsp;by promoting stark domains.
           </h3>
           <div className={styles.button}>
-            <Button onClick={() => window.open("")}>Join now</Button>
+            <Button
+              onClick={() => window.open("https://affiliate.starknet.id/")}
+            >
+              Join now
+            </Button>
           </div>
         </div>
         <img
