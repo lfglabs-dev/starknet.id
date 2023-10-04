@@ -78,6 +78,14 @@
   background-color: var(--background);
 }
 
+.cardTitle {
+  font-family: "QuickZap";
+  font-size: 2.4rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .affiliateCard h2 .affiliateCard h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;

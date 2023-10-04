@@ -6,7 +6,7 @@ const IntegratedBySection: FunctionComponent = () => {
   return (
     <div className={homeStyles.subsection}>
       <div className={styles.card2}>
-        <h2 className={homeStyles.secondTitle}>Integrated in</h2>
+        <h2 className={styles.cardTitle}>Integrated in</h2>
         <div className="flex items-center justify-evenly flex-wrap w-full">
           <div className="flex flex-col">
             <div className={styles.partners}>
