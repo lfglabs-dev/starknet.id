@@ -6,9 +6,9 @@
 .section1 {
   padding: 8rem 5rem 1rem 5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  max-height: calc(100vh - 4rem);
+  justify-content: center;
+  min-height: calc(100vh - 4rem);
 }
 
 .headerContent {
@@ -103,7 +103,14 @@
 
 .secondTitle {
   font-family: "QuickZap";
-  font-size: 2rem;
+  font-size: 2.4rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.thirdTitle {
+  font-family: "QuickZap";
+  font-size: 1.5rem;
   margin-top: 0.5rem;
   color: var(--secondary);
   text-transform: uppercase;
@@ -202,6 +209,7 @@ div:has(> .lilLeaf04) {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 2rem;
   }
   .card2 {
     width: 100%;
@@ -224,7 +232,7 @@ div:has(> .lilLeaf04) {
   }
   .section1 {
     padding: 8rem 1rem 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     min-height: 90vh;
   }
   .section3 {
