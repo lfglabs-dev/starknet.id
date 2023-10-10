@@ -28,6 +28,11 @@ const Roadmap: FunctionComponent = () => {
                 icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
+                title="Proof of PersonHood/KYC features"
+                description="Introduce advanced features for proving personhood and KYC compliance, bolstering the security and authenticity of StarkNet IDs."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
                 title="Automatic Renewal Feature"
                 description="Implement an automatic renewal feature for domain ownership, ensuring a seamless and continuous user experience."
                 icon="/icons/clock.svg"
@@ -38,13 +43,8 @@ const Roadmap: FunctionComponent = () => {
                 icon="/icons/clock.svg"
               />
               <ParagraphWithIcon
-                title="Proof of PersonHood/KYC features"
-                description="Introduce advanced features for proving personhood and KYC compliance, bolstering the security and authenticity of StarkNet IDs."
-                icon="/icons/clock.svg"
-              />
-              <ParagraphWithIcon
                 title="Cairo 1 migration"
-                description="Transition to Cairo 1, the next level of StarkWare's technological advancements, enhancing the scalability and capabilities of StarkNet ID."
+                description="Transition to Cairo 1, the next level of Starknet's technological advancements, enhancing the scalability and capabilities of StarkNet ID."
                 icon="/icons/clock.svg"
               />
             </>

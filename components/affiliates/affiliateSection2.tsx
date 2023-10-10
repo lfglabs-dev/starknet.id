@@ -24,7 +24,7 @@ const AffiliateSection2: FunctionComponent = () => {
         />
         <HomeCard
           img="/visuals/affiliates/moneyIllu.webp"
-          title="Get paid in Crypto (ETH & STRK)"
+          title="Get paid in Crypto (ETH & STRK in the future)"
           description="We share revenue fairly. Every eligible sale made earns you at least 30% commissions. And this is just the start because you could go bigger if you are a top performer."
         />
       </div>
