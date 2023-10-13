@@ -4,8 +4,10 @@ import Button from "../button";
 import Slider from "../UI/slider";
 
 const AffiliationEarnings: FunctionComponent = () => {
-  const [directReferrals, setDirectReferrals] = useState(5000);
-  const [indirectReferrals, setIndirectReferrals] = useState(5000);
+  const [directReferrals, setDirectReferrals] = useState(2000);
+  const [indirectReferrals, setIndirectReferrals] = useState(0.7);
+  const averageDomainPrice = 20;
+
   return (
     <div className={styles.earningsCard}>
       <div className={styles.sliders}>
@@ -19,19 +21,23 @@ const AffiliationEarnings: FunctionComponent = () => {
           />
         </div>
         <div className={styles.sliderContainer}>
-          <p className={styles.sliderName}>Indirect Referrals Count</p>
+          <p className={styles.sliderName}>Each referral will refer</p>
           <Slider
             value={indirectReferrals}
             onChange={setIndirectReferrals}
-            min={1}
-            max={10000}
+            min={0.01}
+            max={1.99}
+            step={0.01}
           />
         </div>
       </div>
       <div className={styles.resultContainer}>
         <p className={styles.resultTitle}>Affiliate earnings</p>
         <p className={styles.result}>
-          {Math.round((directReferrals * indirectReferrals) / 100)}$
+          {Math.round(
+            (directReferrals * averageDomainPrice) / (4 - 2 * indirectReferrals)
+          )}
+          $
         </p>
         <Button
           onClick={() =>
