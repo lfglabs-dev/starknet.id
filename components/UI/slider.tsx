@@ -21,15 +21,8 @@ const computeValueWithUnit = (value) => {
   return value;
 };
 
-const pad = (string: string, range: number, step: number) => {
-  const decimals = step.toString().split(".")[1]?.length || 0;
-  if (decimals === 0)
-    return string.padStart(computeValueWithUnit(range).toString().length, "0");
-  else return string;
-};
-
-const renderValue = (value, range, step) => {
-  return pad(computeValueWithUnit(value).toString(), range, step);
+const renderValue = (value) => {
+  return computeValueWithUnit(value).toString();
 };
 const Slider: FunctionComponent<SliderProps> = ({
   value,
@@ -66,7 +59,7 @@ const Slider: FunctionComponent<SliderProps> = ({
         }}
         value={selectedValue}
       />
-      <label htmlFor="directReferrals">{renderValue(value, range, step)}</label>
+      <label htmlFor="directReferrals">{renderValue(value)}</label>
     </div>
   );
 };
