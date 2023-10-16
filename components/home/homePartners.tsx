@@ -18,7 +18,7 @@ const HomePartners: FunctionComponent = () => {
             className="mx-10"
             target="_blank"
             rel="noreferrer"
-            href="https://www.everai.xyz/"
+            href="https://www.avnu.if/"
           >
             <AvnuIcon width="100" color="black" />
           </a>
