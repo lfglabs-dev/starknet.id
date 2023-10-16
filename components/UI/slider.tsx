@@ -13,22 +13,23 @@ type SliderProps = {
   onChange: (value: number) => void;
   min: number;
   max: number;
+  step?: number;
 };
 
-const renderValue = (value, range) => {
-  const computeValueWithUnit = (value) => {
-    if (value >= 1000) return Math.round(value / 1000) + "K";
-    return value;
-  };
-  return computeValueWithUnit(value)
-    .toString()
-    .padStart(computeValueWithUnit(range).toString().length, "0");
+const computeValueWithUnit = (value) => {
+  if (value >= 1000) return Math.round(value / 1000) + "K";
+  return value;
+};
+
+const renderValue = (value) => {
+  return computeValueWithUnit(value).toString();
 };
 const Slider: FunctionComponent<SliderProps> = ({
   value,
   onChange,
   min,
   max,
+  step = 1,
 }) => {
   const [selectedValue, setSelectedValue] = useState(value);
   const range = max - min;
@@ -51,13 +52,14 @@ const Slider: FunctionComponent<SliderProps> = ({
         type="range"
         min={min}
         max={max}
+        step={step}
         onChange={(e) => setSelectedValue(e.target.valueAsNumber)}
         style={{
           "--progress": selectedValue / max,
         }}
         value={selectedValue}
       />
-      <label htmlFor="directReferrals">{renderValue(value, range)}</label>
+      <label htmlFor="directReferrals">{renderValue(value)}</label>
     </div>
   );
 };
