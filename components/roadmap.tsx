@@ -35,12 +35,12 @@ const Roadmap: FunctionComponent = () => {
               <ParagraphWithIcon
                 title="Automatic Renewal Feature"
                 description="Implement an automatic renewal feature for domain ownership, ensuring a seamless and continuous user experience."
-                icon="/icons/clock.svg"
+                icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
                 title="Profile pic integration"
                 description="Customize your StarkNet ID with an NFT profile picture, enhancing the uniqueness of your identity."
-                icon="/icons/clock.svg"
+                icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
                 title="Cairo 1 migration"
