@@ -6,6 +6,7 @@ import RealmsIcon from "../icons/realms";
 import NostraIcon from "../icons/nostra";
 import EveraiIcon from "../icons/everai";
 import AvnuIcon from "../icons/avnu";
+import EkuboIcon from "../icons/ekubo";
 
 const HomePartners: FunctionComponent = () => {
   return (
@@ -97,6 +98,14 @@ const HomePartners: FunctionComponent = () => {
               src="/visuals/partners/voyager.png"
               alt="Voyager logo"
             />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://ekubo.org/"
+            className="mx-10"
+          >
+            <EkuboIcon height="60" />
           </a>
         </div>
       </div>
