@@ -3,12 +3,13 @@ import React, { FunctionComponent } from "react";
 import styles from "../styles/footer.module.css";
 import ScrollUp from "./scrollUp";
 import { Parallax } from "react-scroll-parallax";
+import { CDNImg } from "./cdn/image";
 
 const Footer: FunctionComponent = () => {
   return (
     <>
       <Parallax speed={-20}>
-        <img
+        <CDNImg
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
           className="absolute right-10 mr-16"

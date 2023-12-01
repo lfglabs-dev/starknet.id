@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/components/paragraphWithIcon.module.css";
+import { CDNImg } from "../cdn/image";
 
 type ParagraphWithIconProps = {
   icon: string;
@@ -14,7 +15,7 @@ const ParagraphWithIcon: FunctionComponent<ParagraphWithIconProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <img src={icon} alt={title} className={styles.icon} />
+      <CDNImg src={icon} alt={title} className={styles.icon} />
       <div className={styles.paragraph}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>

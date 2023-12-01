@@ -3,6 +3,7 @@ import styles from "../../styles/Home.module.css";
 import Roadmap from "../roadmap";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
+import { CDNImg } from "../cdn/image";
 
 const HomeSection3: FunctionComponent = () => {
   return (
@@ -13,7 +14,7 @@ const HomeSection3: FunctionComponent = () => {
       />
       <Roadmap />
       <Parallax speed={-10}>
-        <img
+        <CDNImg
           src="/leaves/lilLeaf01.svg"
           alt="leaf"
           className={styles.lilLeaf04}

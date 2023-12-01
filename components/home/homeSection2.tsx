@@ -4,19 +4,20 @@ import HomePartners from "./homePartners";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
+import { CDNImg } from "../cdn/image";
 
 const HomeSection2: FunctionComponent = () => {
   return (
     <div id="info" className={styles.section2}>
       <Parallax speed={-5}>
-        <img src="/leaves/lilLeaf01.svg" alt="leaf" width={20} height={20} />
+        <CDNImg src="/leaves/lilLeaf01.svg" alt="leaf" width={20} height={20} />
       </Parallax>
       <CategoryTitle
         title="Forge Your Unique StarkNet Identity"
         subtitle="Seamlessly Claim, Personalize, and Elevate"
       />
       <Parallax speed={-10}>
-        <img
+        <CDNImg
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
           className="absolute right-3"
@@ -47,7 +48,7 @@ const HomeSection2: FunctionComponent = () => {
         />
       </div>
       <Parallax speed={-10}>
-        <img
+        <CDNImg
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
           className={`${styles.leaf05} absolute right-3`}
