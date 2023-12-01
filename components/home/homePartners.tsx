@@ -6,6 +6,7 @@ import RealmsIcon from "../icons/realms";
 import NostraIcon from "../icons/nostra";
 import EveraiIcon from "../icons/everai";
 import AvnuIcon from "../icons/avnu";
+import { CDNImg } from "../cdn/image";
 import EkuboIcon from "../icons/ekubo";
 
 const HomePartners: FunctionComponent = () => {
@@ -24,7 +25,7 @@ const HomePartners: FunctionComponent = () => {
             <AvnuIcon width="100" color="black" />
           </a>
           <a target="_blank" rel="noreferrer" href="https://www.argent.xyz/">
-            <img
+            <CDNImg
               className="mx-10"
               width={200}
               src="/visuals/partners/argent-logo-colour.svg"
@@ -32,7 +33,7 @@ const HomePartners: FunctionComponent = () => {
             />
           </a>
           <a target="_blank" rel="noreferrer" href="https://starkscan.co/">
-            <img
+            <CDNImg
               className="mx-10"
               width={200}
               src="/visuals/partners/starkscan.png"
@@ -40,7 +41,7 @@ const HomePartners: FunctionComponent = () => {
             />
           </a>
           <a target="_blank" rel="noreferrer" href="https://braavos.app/">
-            <img
+            <CDNImg
               className="mx-10"
               width={200}
               src="/visuals/partners/braavos.svg"
@@ -93,7 +94,7 @@ const HomePartners: FunctionComponent = () => {
             href="https://voyager.online/"
             className="mx-10"
           >
-            <img
+            <CDNImg
               width={200}
               src="/visuals/partners/voyager.png"
               alt="Voyager logo"

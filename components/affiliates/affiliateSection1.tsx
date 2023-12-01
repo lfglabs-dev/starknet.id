@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import homeStyles from "../../styles/Home.module.css";
 import styles from "../../styles/affiliates.module.css";
 import Button from "../button";
+import { CDNImg } from "../cdn/image";
 
 const AffiliateSection1: FunctionComponent = () => {
   return (
@@ -24,7 +25,7 @@ const AffiliateSection1: FunctionComponent = () => {
             </Button>
           </div>
         </div>
-        <img
+        <CDNImg
           alt="affiliation illustration"
           src="/visuals/affiliates/affiliationIllu.webp"
           className={styles.banner}

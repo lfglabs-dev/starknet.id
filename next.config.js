@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.VERCEL_ENV === "production";
+
 const nextConfig = {
   async headers() {
     return [
@@ -14,6 +16,7 @@ const nextConfig = {
     ];
   },
   reactStrictMode: true,
+  assetPrefix: isProd ? process.env.NEXT_PUBLIC_CDN_URL : undefined,
   swcMinify: true,
 };
 
