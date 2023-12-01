@@ -7,6 +7,7 @@ import NostraIcon from "../icons/nostra";
 import EveraiIcon from "../icons/everai";
 import AvnuIcon from "../icons/avnu";
 import { CDNImg } from "../cdn/image";
+import EkuboIcon from "../icons/ekubo";
 
 const HomePartners: FunctionComponent = () => {
   return (
@@ -19,7 +20,7 @@ const HomePartners: FunctionComponent = () => {
             className="mx-10"
             target="_blank"
             rel="noreferrer"
-            href="https://www.everai.xyz/"
+            href="https://www.avnu.fi/"
           >
             <AvnuIcon width="100" color="black" />
           </a>
@@ -98,6 +99,14 @@ const HomePartners: FunctionComponent = () => {
               src="/visuals/partners/voyager.png"
               alt="Voyager logo"
             />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://ekubo.org/"
+            className="mx-10"
+          >
+            <EkuboIcon height="60" />
           </a>
         </div>
       </div>
