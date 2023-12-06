@@ -14,6 +14,7 @@ import { BN } from "bn.js";
 import { getLastBlockNumber, retrieveActivities } from "../utils/profile";
 import { OpenInNew } from "@mui/icons-material";
 import { SoulboundProps } from "../types";
+import { CDNImg } from "../components/cdn/image";
 
 export type Identity = {
   id: string;
@@ -127,16 +128,16 @@ const Profile: NextPage = () => {
   return initProfile && identity ? (
     <div className={styles.container}>
       <div className={styles.firstLeavesGroup}>
-        <img width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
+        <CDNImg width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
       </div>
       <div className={styles.secondLeavesGroup}>
-        <img width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
+        <CDNImg width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
       </div>
       <div className={styles.thirdLeavesGroup}>
-        <img width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
+        <CDNImg width="100%" alt="leaf" src="/leaves/leavesGroup02.svg" />
       </div>
       <div className={styles.fourthLeavesGroup}>
-        <img width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
+        <CDNImg width="100%" alt="leaf" src="/leaves/leavesGroup01.svg" />
       </div>
       {/* ----- Other leaves  ------  */}
       {/* <div className={styles.leaf1}>
@@ -148,7 +149,7 @@ const Profile: NextPage = () => {
       <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
         <div className={styles.section1}>
           <div className={styles.pfp}>
-            <img
+            <CDNImg
               src={`/api/identicons/${identity?.id}`}
               height={200}
               width={200}

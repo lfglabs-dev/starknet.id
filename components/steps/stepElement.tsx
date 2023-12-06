@@ -2,6 +2,7 @@ import VerticalBar from "../shapes/verticalBar";
 import OnScrollIntoView from "../animations/onScrollIntoView";
 import styles from "../../styles/components/steps.module.css";
 import React, { FunctionComponent } from "react";
+import { CDNImg } from "../cdn/image";
 
 type StepElementProps = {
   index: number;
@@ -17,7 +18,7 @@ const StepElement: FunctionComponent<StepElementProps> = ({
   return (
     <div className={styles.cardContainer}>
       <div className={styles.barsContainer}>
-        <img alt="Card Icon" className={styles.icon} src={step.icon} />
+        <CDNImg alt="Card Icon" className={styles.icon} src={step.icon} />
       </div>
       <OnScrollIntoView animation="slideInFromTop">
         <div key={"step_card_" + index} className={styles.card}>
@@ -32,7 +33,7 @@ const StepElement: FunctionComponent<StepElementProps> = ({
             </h3>
             {step.content}
           </div>
-          <img alt="Card banner" className={styles.banner} src={step.banner} />
+          <CDNImg alt="Card banner" className={styles.banner} src={step.banner} />
         </div>
       </OnScrollIntoView>
     </div>

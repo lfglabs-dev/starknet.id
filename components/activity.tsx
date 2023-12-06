@@ -7,6 +7,7 @@ import StarknetIcon from "./icons/starknetIcon";
 import AspectIcon from "./icons/aspect";
 import JediswapIcon from "./icons/jediswap";
 import NostraIcon from "./icons/nostra";
+import { CDNImg } from "./cdn/image";
 
 const Activity: FunctionComponent<ActivityProps> = ({
   type,
@@ -28,7 +29,7 @@ const Activity: FunctionComponent<ActivityProps> = ({
       type === "StarknetIdNaming" ||
       type === "StarknetIdPricing" ||
       type === "StarknetIdVerifier" ? (
-        <img
+        <CDNImg
           className="cursor-pointer"
           src="/visuals/StarknetIdLogo.png"
           alt="Starknet.id Logo"
@@ -44,13 +45,13 @@ const Activity: FunctionComponent<ActivityProps> = ({
       ) : type === "JediSwap" ? (
         <JediswapIcon width="60" />
       ) : type === "_10KSwap" ? (
-        <img
+        <CDNImg
           src="/visuals/partners/10Kswap.png"
           alt="10Kswap Logo"
           width={100}
         />
       ) : type === "Myswap" ? (
-        <img
+        <CDNImg
           src="/visuals/partners/myswap.jpg"
           alt="MySwap Logo"
           width={40}

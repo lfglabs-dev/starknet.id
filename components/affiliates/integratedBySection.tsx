@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import homeStyles from "../../styles/Home.module.css";
 import styles from "../../styles/affiliates.module.css";
+import { CDNImg } from "../cdn/image";
 
 const IntegratedBySection: FunctionComponent = () => {
   return (
@@ -15,7 +16,7 @@ const IntegratedBySection: FunctionComponent = () => {
                 rel="noreferrer"
                 href="https://www.argent.xyz/"
               >
-                <img
+                <CDNImg
                   className="m-5"
                   width={150}
                   src="/visuals/partners/argent-logo-colour.svg"
@@ -23,7 +24,7 @@ const IntegratedBySection: FunctionComponent = () => {
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://starkscan.co/">
-                <img
+                <CDNImg
                   className="m-5"
                   width={150}
                   src="/visuals/partners/starkscan.png"
@@ -31,7 +32,7 @@ const IntegratedBySection: FunctionComponent = () => {
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://braavos.app/">
-                <img
+                <CDNImg
                   className="m-5"
                   width={150}
                   src="/visuals/partners/braavos.svg"

@@ -3,6 +3,7 @@ import { fetchSoulbounds } from "../hooks/soulbound";
 import styles from "../styles/Soulbound.module.css";
 import { MetadataProps, SoulboundProps } from "../types";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { CDNImg } from "./cdn/image";
 
 const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
   const { inft_id: id, contract } = props;
@@ -35,7 +36,7 @@ const Soulbound: FunctionComponent<SoulboundProps> = (props) => {
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
     >
-      <img
+      <CDNImg
         src={soulboundData?.image.replace(
           "ipfs://",
           "https://gateway.pinata.cloud/ipfs/"

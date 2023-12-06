@@ -6,6 +6,7 @@ import { FaDiscord, FaTwitter } from "react-icons/fa";
 import styles from "../styles/navbar.module.css";
 import Button from "./button";
 import theme from "../styles/theme";
+import { CDNImg } from "./cdn/image";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);
@@ -19,7 +20,7 @@ const Navbar: FunctionComponent = () => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <div className="ml-4">
           <Link href="/" className="cursor-pointer">
-            <img
+            <CDNImg
               className="cursor-pointer"
               src="/visuals/StarknetIdLogo.png"
               alt="Starknet.id Logo"
@@ -86,7 +87,7 @@ const Navbar: FunctionComponent = () => {
             <div className="flex w-full items-center justify-between">
               <div className="">
                 <Link href="/">
-                  <img
+                  <CDNImg
                     src="/visuals/StarknetIdLongLogo.png"
                     alt="Starknet.id Logo"
                     width={250}
