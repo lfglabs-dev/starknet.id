@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React, { useState, FunctionComponent } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FaDiscord, FaTwitter } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import styles from "../styles/navbar.module.css";
 import Button from "./button";
 import theme from "../styles/theme";
 import { CDNImg } from "./cdn/image";
+import CloseFilledIcon from "./icons/closeFilledIcon";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);
@@ -73,78 +74,97 @@ const Navbar: FunctionComponent = () => {
 
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/10" : ""
+          nav
+            ? "lg:hidden fixed left-0 top-0 w-full h-screen bg-black/10 z-10"
+            : ""
         }
       >
         <div
-          className={
-            nav
-              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-background p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-          }
+          className={`fixed left-0 top-0 w-full sm:w-[60%] lg:w-[45%] h-screen bg-background px-5 ease-in flex justify-between flex-col overflow-auto
+              ${nav ? styles.mobileNavbarShown : styles.mobileNavbarHidden}`}
         >
-          <div>
+          <div className="h-full flex flex-col">
             <div className="flex w-full items-center justify-between">
-              <div className="">
-                <Link href="/">
+              <div>
+                <Link href="/" className="cursor-pointer">
                   <CDNImg
-                    src="/visuals/StarknetIdLongLogo.png"
+                    className="cursor-pointer"
+                    src="/visuals/StarknetIdLogo.png"
                     alt="Starknet.id Logo"
-                    width={250}
-                    height={100}
+                    width={72}
+                    height={72}
                   />
                 </Link>
               </div>
 
-              <div onClick={handleNav} className="rounded-fullcursor-pointer">
-                <AiOutlineClose color={theme.palette.secondary.main} />
+              <div
+                onClick={handleNav}
+                className="cursor-pointer p-1 rounded-full"
+              >
+                <CloseFilledIcon
+                  width="32"
+                  color={theme.palette.background.default}
+                />
               </div>
             </div>
-            <div className="border-b border-tertiary-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4 text-babe-blue">
-                Own your on-chain identity
-              </p>
+            <div className="py-4 my-auto text-center font-extrabold">
+              <div>
+                <ul className="uppercase">
+                  <li className={styles.menuItemSmall} onClick={handleNav}>
+                    <a
+                      href="https://app.starknet.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Domains
+                    </a>
+                  </li>
+                  <li className={styles.menuItemSmall} onClick={handleNav}>
+                    <a
+                      href="https://docs.starknet.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documentation
+                    </a>
+                  </li>
+                  <li className={styles.menuItemSmall} onClick={handleNav}>
+                    <a
+                      href="/affiliates/individual-program"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Affiliation
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className="py-4 flex flex-col">
-            <ul className="uppercase text-babe-blue">
-              {/* <Link href="/affiliates/individual-program">
-                <li
-                  onClick={() => setNav(false)}
-                  className={styles.menuItemSmall}
-                >
-                  Become an affiliate
-                </li>
-              </Link> */}
-              <Link href="https://docs.starknet.id">
-                <li
-                  onClick={() => setNav(false)}
-                  className={styles.menuItemSmall}
-                >
-                  Documentation
-                </li>
-              </Link>
-            </ul>
-            <div className="pt-40 flex flex-col justify-start">
-              <p className="uppercase tracking-widest white">
-                Your starknet passport
-              </p>
-              <div className="flex items-center justify-start my-1 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href="https://twitter.com/Starknet_id">
-                    <FaTwitter size={20} color={theme.palette.secondary.main} />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-gray-400  cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href="https://discord.com/invite/8uS2Mgcsza">
-                    <FaDiscord size={20} color={theme.palette.secondary.main} />
-                  </Link>
-                </div>
+
+          <div className="flex flex-col items-center my-4 w-full">
+            <Button onClick={() => window.open("https://app.starknet.id/")}>
+              Launch App
+            </Button>
+
+            <div className="flex">
+              <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mt-2">
+                <Link href="https://twitter.com/Starknet_id" target="_blank">
+                  <FaTwitter size={28} color={theme.palette.grey[800]} />
+                </Link>
               </div>
-              <div className="self-start">
-                <Button onClick={() => window.open("https://app.starknet.id/")}>
-                  Launch App
-                </Button>
+              <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mt-2">
+                <Link
+                  href="https://discord.com/invite/8uS2Mgcsza"
+                  target="_blank"
+                >
+                  <FaDiscord size={28} color={theme.palette.grey[800]} />
+                </Link>
+              </div>
+              <div className="rounded-full shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 mt-2">
+                <Link href="https://github.com/starknet-id" target="_blank">
+                  <FaGithub size={28} color={theme.palette.grey[800]} />
+                </Link>
               </div>
             </div>
           </div>
