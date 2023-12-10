@@ -10,7 +10,13 @@ const HomeSection2: FunctionComponent = () => {
   return (
     <div id="info" className={styles.section2}>
       <Parallax speed={-5}>
-        <CDNImg src="/leaves/lilLeaf01.svg" alt="leaf" width={20} height={20} />
+        <CDNImg
+          src="/leaves/lilLeaf01.svg"
+          alt="leaf"
+          width={20}
+          height={20}
+          className="hidden md:block"
+        />
       </Parallax>
       <CategoryTitle
         title="Forge Your Unique StarkNet Identity"
@@ -20,7 +26,7 @@ const HomeSection2: FunctionComponent = () => {
         <CDNImg
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
-          className="absolute right-3"
+          className="absolute right-3 hidden md:block"
           width={20}
           height={20}
         />
@@ -47,15 +53,6 @@ const HomeSection2: FunctionComponent = () => {
           domains."
         />
       </div>
-      <Parallax speed={-10}>
-        <CDNImg
-          src="/leaves/lilLeaf02.svg"
-          alt="leaf"
-          className={`${styles.leaf05} absolute right-3`}
-          width={20}
-          height={20}
-        />
-      </Parallax>
       <HomePartners />
     </div>
   );

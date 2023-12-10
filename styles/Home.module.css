@@ -48,7 +48,8 @@
   color: var(--secondary);
 }
 
-.mainSubtitle {
+.mainSubtitle,
+.mainSubtitleMobile {
   display: flex;
   width: 487px;
   flex-direction: column;
@@ -58,6 +59,10 @@
   font-weight: 500;
   line-height: 32px;
   margin-top: 32px;
+}
+
+.mainSubtitleMobile {
+  display: none;
 }
 
 .section2 {
@@ -141,10 +146,10 @@
   font-size: 1.5rem;
 }
 
-.card p {
+.cardDescription {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
   margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.5;
 }
 
 .card2 {
@@ -172,14 +177,14 @@
   margin-bottom: 1rem;
 }
 
+.partnersSubtitle {
+  text-align: center;
+}
+
 div:has(> .lilLeaf04) {
   position: absolute;
   left: 16%;
   bottom: -12rem;
-}
-
-.leaf05 {
-  display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -213,11 +218,21 @@ div:has(> .lilLeaf04) {
   }
   .card2 {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .cardDescription {
+    color: var(--content-600);
+    text-align: center;
+
+    /* Body/small/regular */
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
   }
   .section2 {
     padding: 1rem 1rem;
@@ -231,28 +246,36 @@ div:has(> .lilLeaf04) {
     gap: 3rem;
     padding-top: 1rem;
   }
-  .section1 {
-    padding: 8rem 1rem 1rem;
-    margin-bottom: 2rem;
-    min-height: 90vh;
+  .partnersSubtitle {
+    font-size: 14px;
   }
   .section3 {
-    padding: 5rem 1rem;
+    padding: 4.5rem 1rem 24px 1rem;
   }
-  .leaf05 {
-    display: block;
+  .section1 {
+    padding: 7rem 1rem 1rem;
+    margin-bottom: 2rem;
+    min-height: fit-content;
+    flex-direction: column;
   }
   .mainTitle {
     width: 100%;
-    font-size: max(min(7vw, 34px), 24px);
+    font-size: 24px;
     line-height: max(8vw, 25px);
     margin-top: 24px;
+    text-align: center;
   }
   .mainSubtitle {
+    display: none;
+  }
+  .mainSubtitleMobile {
     width: 100%;
-    font-size: max(3vw, 16px);
-    margin-top: 16px;
+    font-size: 14px;
+    margin-top: 2rem;
     line-height: max(4vw, 19px);
+    text-align: center;
+    color: var(--content-600);
+    display: block;
   }
   .headerContent {
     position: relative;
@@ -261,7 +284,31 @@ div:has(> .lilLeaf04) {
     display: block;
     margin: 0 auto;
   }
+  .buttonContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buttonContainer button {
+    width: 281px;
+    box-shadow: none;
+    font-size: 18px;
+    font-family: QuickZap;
+    font-weight: lighter;
+  }
   .headerBanner {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: min(70%, 300px);
+  }
+  .secondTitle {
+    font-size: 24px;
+  }
+  .thirdTitle {
+    font-size: 18px;
+    text-align: center;
+  }
+  .lilLeaf04 {
     display: none;
   }
 }

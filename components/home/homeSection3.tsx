@@ -10,6 +10,7 @@ const HomeSection3: FunctionComponent = () => {
     <div className={styles.section3}>
       <CategoryTitle
         title="Evolution Roadmap"
+        mobileTitle="StarkNet ID Evolution Roadmap"
         subtitle="Navigating the Future of Your Blockchain Identity"
       />
       <Roadmap />

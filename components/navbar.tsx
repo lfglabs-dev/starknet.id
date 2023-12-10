@@ -22,7 +22,7 @@ const Navbar: FunctionComponent = () => {
         <div className="ml-4">
           <Link href="/" className="cursor-pointer">
             <CDNImg
-              className="cursor-pointer"
+              className={styles.starknetIdLogo}
               src="/visuals/StarknetIdLogo.png"
               alt="Starknet.id Logo"
               width={90}

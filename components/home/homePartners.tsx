@@ -13,7 +13,7 @@ const HomePartners: FunctionComponent = () => {
   return (
     <div className={styles.subsection}>
       <div className={styles.card2}>
-        <p className="text-center">Our partners</p>
+        <p className={styles.partnersSubtitle}>Our partners</p>
         <h2 className={styles.secondTitle}>They already integrated us</h2>
         <div className={styles.partners}>
           <a
