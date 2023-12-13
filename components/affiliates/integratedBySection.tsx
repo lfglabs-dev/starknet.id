@@ -40,7 +40,9 @@ const IntegratedBySection: FunctionComponent = () => {
                 />
               </a>
             </div>
-            <p className="text-center mt-3">And +20 other Starknet Apps</p>
+            <p className={styles.integratedBySubtile}>
+              And +20 other Starknet Apps
+            </p>
           </div>
         </div>
       </div>
