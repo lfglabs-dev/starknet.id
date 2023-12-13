@@ -234,8 +234,11 @@ div:has(> .lilLeaf04) {
     font-weight: 400;
     line-height: 20px; /* 142.857% */
   }
+  .homeCardBanner {
+    max-width: 100px;
+  }
   .section2 {
-    padding: 1rem 1rem;
+    padding: 1rem 1.5rem;
   }
   .subsection {
     flex-direction: column;
@@ -250,7 +253,7 @@ div:has(> .lilLeaf04) {
     font-size: 14px;
   }
   .section3 {
-    padding: 4.5rem 1rem 24px 1rem;
+    padding: 4.5rem 1.5rem 24px 1.5rem;
   }
   .section1 {
     padding: 7rem 1rem 1rem;
@@ -307,6 +310,7 @@ div:has(> .lilLeaf04) {
   .thirdTitle {
     font-size: 18px;
     text-align: center;
+    margin-top: 2rem;
   }
   .lilLeaf04 {
     display: none;

@@ -260,5 +260,7 @@
   }
   .earningsCard {
     margin-top: 2rem;
+    width: calc(100% - 3rem);
+    padding: 40px 24px;
   }
 }
