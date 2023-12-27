@@ -84,7 +84,7 @@ const Navbar: FunctionComponent = () => {
               ${nav ? styles.mobileNavbarShown : styles.mobileNavbarHidden}`}
         >
           <div className="h-full flex flex-col">
-            <div className="flex w-full items-center justify-between">
+            <div className={styles.mobileNavBarHeader}>
               <div>
                 <Link href="/" className="cursor-pointer">
                   <CDNImg
