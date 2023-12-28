@@ -5,8 +5,7 @@
   margin: 0 auto;
 }
 
-.categoryTitle,
-.categoryTitleMobile {
+.categoryTitle {
   color: var(--secondary);
 
   /* Title/H2 */
@@ -17,12 +16,6 @@
   line-height: 38px;
   margin-top: 8px;
   text-align: center;
-}
-
-.categoryTitleMobile {
-  font-size: 24px;
-  line-height: 28px;
-  display: none;
 }
 
 .categorySubtitle {
@@ -38,10 +31,8 @@
 
 @media (max-width: 768px) {
   .categoryTitle {
-    display: none;
-  }
-  .categoryTitleMobile {
-    display: block;
+    font-size: 24px;
+    line-height: 28px;
   }
   .categorySubtitle {
     font-size: 14px;
