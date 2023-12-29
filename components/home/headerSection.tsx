@@ -6,6 +6,7 @@ type HeaderSectionProps = {
   title: string;
   highlighted: string;
   subtitle: string;
+  mobileSubtitle: string;
   buttonName: string;
   buttonLink: string;
 };
@@ -14,6 +15,7 @@ const HeaderSection: FunctionComponent<HeaderSectionProps> = ({
   title,
   highlighted,
   subtitle,
+  mobileSubtitle,
   buttonName,
   buttonLink,
 }) => {
@@ -23,6 +25,7 @@ const HeaderSection: FunctionComponent<HeaderSectionProps> = ({
         {title} <strong>{highlighted}</strong>
       </h2>
       <p className={styles.mainSubtitle}>{subtitle}</p>
+      <p className={styles.mainSubtitleMobile}>{mobileSubtitle}</p>
       <div className={styles.buttonContainer}>
         <Button onClick={() => window.open(buttonLink, "_blank")}>
           {buttonName}
