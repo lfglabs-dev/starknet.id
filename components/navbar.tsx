@@ -111,31 +111,31 @@ const Navbar: FunctionComponent = () => {
               <div>
                 <ul className="uppercase">
                   <li className={styles.menuItemSmall} onClick={handleNav}>
-                    <a
+                    <Link
                       href="https://app.starknet.id/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Domains
-                    </a>
+                    </Link>
                   </li>
                   <li className={styles.menuItemSmall} onClick={handleNav}>
-                    <a
+                    <Link
                       href="https://docs.starknet.id/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Documentation
-                    </a>
+                    </Link>
                   </li>
                   <li className={styles.menuItemSmall} onClick={handleNav}>
-                    <a
+                    <Link
                       href="/affiliates/individual-program"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Affiliation
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

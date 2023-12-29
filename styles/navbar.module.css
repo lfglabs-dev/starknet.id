@@ -41,8 +41,7 @@
 }
 
 .menuItemSmall {
-  padding-top: 1rem /* 16px */;
-  padding-bottom: 1rem /* 16px */;
+  padding: 1rem 0 /* 16px */;
   font-size: 0.875rem /* 14px */;
   line-height: 1.25rem /* 20px */;
   color: var(--dark-content);
@@ -55,16 +54,6 @@
   letter-spacing: 0.16px;
 }
 
-.navbarContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  height: 12vh;
-}
-
 .mobileNavBarHeader {
   display: flex;
   width: 100%;
@@ -75,9 +64,6 @@
 }
 
 @media (max-width: 768px) {
-  .navbarContainer {
-    height: 80px;
-  }
   .starknetIdLogo {
     width: 72px;
     height: 72px;
