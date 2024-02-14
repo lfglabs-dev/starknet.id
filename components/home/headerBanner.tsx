@@ -6,7 +6,7 @@ const HeaderBanner: FunctionComponent = () => {
   return (
     <CDNImg
       alt="Header banner"
-      src="/visuals/home/headerImage.webp"
+      src="/visuals/home/headerBanner.webp"
       className={styles.headerBanner}
     />
   );
