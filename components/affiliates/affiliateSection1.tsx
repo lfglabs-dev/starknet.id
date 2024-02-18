@@ -13,6 +13,10 @@ const AffiliateSection1: FunctionComponent = () => {
           <h3 className={styles.subtitle}>
             Earn&nbsp;
             <span style={{ fontFamily: "QuickZap" }} className="text-primary">
+              STRK
+            </span>
+            &nbsp;and&nbsp;
+            <span style={{ fontFamily: "QuickZap" }} className="text-primary">
               ETH
             </span>
             &nbsp;by promoting stark domains.

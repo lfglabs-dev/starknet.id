@@ -66,6 +66,11 @@
   align-items: center;
 }
 
+.integratedBySubtile {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
 .affiliateCard {
   margin: 1rem;
   text-align: left;
@@ -191,22 +196,26 @@
 }
 
 @media (max-width: 768px) {
-  div:has(> .leaf1) {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    display: block;
-    left: 2rem;
-  }
-  div:has(> .leaf2) {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    display: block;
-    right: 2rem;
+  .leaf1,
+  .leaf2 {
+    display: none;
   }
   .title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .paragraph {
+    color: var(--content-600);
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    margin-top: 2rem;
+  }
+  .button {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
   .earningsCard {
     flex-direction: column;
@@ -223,6 +232,12 @@
     margin: 0;
     flex-direction: column;
   }
+  .cardTitle {
+    font-size: 24px;
+  }
+  .integratedBySubtile {
+    font-size: 18px;
+  }
   .graph {
     max-width: calc(100% - 1rem);
   }
@@ -232,9 +247,20 @@
   .subsection {
     flex-direction: column;
   }
-
   .firstLeavesGroup,
   .secondLeavesGroup {
     visibility: hidden;
+  }
+  .banner {
+    max-width: 200px;
+  }
+  .graph {
+    margin: 3rem 1.5rem;
+    max-width: calc(100% - 3rem);
+  }
+  .earningsCard {
+    margin-top: 2rem;
+    width: calc(100% - 3rem);
+    padding: 40px 24px;
   }
 }

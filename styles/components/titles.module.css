@@ -30,7 +30,12 @@
 }
 
 @media (max-width: 768px) {
+  .categoryTitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
   .categorySubtitle {
-    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
   }
 }

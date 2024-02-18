@@ -12,7 +12,7 @@ const Footer: FunctionComponent = () => {
         <CDNImg
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
-          className="absolute right-10 mr-16"
+          className="absolute right-10 mr-16 hidden md:block"
           width={20}
           height={20}
         />

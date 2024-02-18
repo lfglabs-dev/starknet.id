@@ -31,3 +31,12 @@
 
   margin-top: 8px;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+  .description {
+    font-size: 12px;
+  }
+}
