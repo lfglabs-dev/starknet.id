@@ -1,12 +1,11 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
-import { CDNImg } from "../cdn/image";
 
 const HeaderBanner: FunctionComponent = () => {
   return (
-    <CDNImg
+    <img
       alt="Header banner"
-      src="/visuals/home/visualEverai1.webp"
+      src="/visuals/home/headerBanner.webp"
       className={styles.headerBanner}
     />
   );
