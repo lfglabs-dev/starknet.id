@@ -25,7 +25,7 @@ export function useNamingContract() {
 export function useStarknetIdContract() {
   const StarknetId = new Contract(
     starknet_id_abi as Abi,
-    process.env.NEXT_PUBLIC_STARKNETID_CONTRACT as string,
+    process.env.NEXT_PUBLIC_IDENTITY_CONTRACT as string,
     new Provider({
       sequencer: {
         network: process.env.NEXT_PUBLIC_NETWORK_NAME as
