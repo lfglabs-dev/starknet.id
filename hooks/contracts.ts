@@ -13,6 +13,7 @@ export function useNamingContract() {
       sequencer: {
         network: process.env.NEXT_PUBLIC_NETWORK_NAME as
           | "mainnet-alpha"
+          | "sepolia-alpha"
           | "goerli-alpha"
           | "goerli-alpha-2",
       },
@@ -29,6 +30,7 @@ export function useStarknetIdContract() {
       sequencer: {
         network: process.env.NEXT_PUBLIC_NETWORK_NAME as
           | "mainnet-alpha"
+          | "sepolia-alpha"
           | "goerli-alpha"
           | "goerli-alpha-2",
       },
@@ -45,6 +47,7 @@ export function useSoulboundContract(contractAddress: string) {
       sequencer: {
         network: process.env.NEXT_PUBLIC_NETWORK_NAME as
           | "mainnet-alpha"
+          | "sepolia-alpha"
           | "goerli-alpha"
           | "goerli-alpha-2",
       },

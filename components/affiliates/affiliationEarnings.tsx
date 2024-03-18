@@ -44,9 +44,9 @@ const AffiliationEarnings: FunctionComponent = () => {
             window.open(
               `https://${
                 (process.env.NEXT_PUBLIC_NETWORK_NAME as string).includes(
-                  "goerli"
+                  "sepolia"
                 )
-                  ? "goerli."
+                  ? "sepolia."
                   : ""
               }affiliate.starknet.id/`
             )
