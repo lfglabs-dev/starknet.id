@@ -4,8 +4,8 @@ import { ActivityProps, TransactionObject } from "../types";
 
 export async function getLastBlockNumber() {
   const provider = new Provider({
-    sequencer: {
-      network: "goerli-alpha",
+    rpc: {
+      nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
     },
   });
   let hasBlockNb = false;

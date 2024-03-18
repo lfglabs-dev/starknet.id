@@ -20,8 +20,8 @@ const ClickableGithubIcon: FunctionComponent<ClickableIconProps> = ({
       contract
         .call("get_verifier_data", [
           tokenId,
-          stringToHex("github"),
-          process.env.NEXT_PUBLIC_VERIFIER_CONTRACT,
+          stringToHex("github") as string,
+          process.env.NEXT_PUBLIC_VERIFIER_CONTRACT as string,
         ])
         .then((data) => {
           if (data) setGithubId(data["data"].toString(10));

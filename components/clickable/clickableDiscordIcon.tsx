@@ -20,8 +20,8 @@ const ClickableDiscordIcon: FunctionComponent<ClickableIconProps> = ({
       contract
         .call("get_verifier_data", [
           tokenId,
-          stringToHex("discord"),
-          process.env.NEXT_PUBLIC_VERIFIER_CONTRACT,
+          stringToHex("discord") as string,
+          process.env.NEXT_PUBLIC_VERIFIER_CONTRACT as string,
         ])
         .then((data) => {
           if (data) setDiscordId(data["data"].toString(10));
