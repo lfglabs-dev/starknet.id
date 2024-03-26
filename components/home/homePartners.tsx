@@ -8,6 +8,7 @@ import EveraiIcon from "../icons/everai";
 import AvnuIcon from "../icons/avnu";
 import { CDNImg } from "../cdn/image";
 import EkuboIcon from "../icons/ekubo";
+import MySwapIcon from "../icons/myswap";
 
 const HomePartners: FunctionComponent = () => {
   return (
@@ -57,10 +58,25 @@ const HomePartners: FunctionComponent = () => {
           >
             <EveraiIcon width={"100"} color="black" />
           </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://ekubo.org/"
+            className="mx-10"
+          >
+            <EkuboIcon height="60" />
+          </a>
           <a target="_blank" rel="noreferrer" href="https://briq.construction/">
             <BriqIcon />
           </a>
-
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.myswap.xyz/"
+            className="mx-10"
+          >
+            <MySwapIcon height="60" />
+          </a>
           <a
             target="_blank"
             rel="noreferrer"
@@ -92,21 +108,13 @@ const HomePartners: FunctionComponent = () => {
             target="_blank"
             rel="noreferrer"
             href="https://voyager.online/"
-            className="mx-10"
+            className="mx-10 mt-5"
           >
             <CDNImg
               width={200}
               src="/visuals/partners/voyager.png"
               alt="Voyager logo"
             />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://ekubo.org/"
-            className="mx-10"
-          >
-            <EkuboIcon height="60" />
           </a>
         </div>
       </div>
