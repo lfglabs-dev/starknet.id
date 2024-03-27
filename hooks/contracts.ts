@@ -10,11 +10,8 @@ export function useNamingContract() {
     naming_abi as Abi,
     process.env.NEXT_PUBLIC_NAMING_CONTRACT as string,
     new Provider({
-      sequencer: {
-        network: process.env.NEXT_PUBLIC_NETWORK_NAME as
-          | "mainnet-alpha"
-          | "goerli-alpha"
-          | "goerli-alpha-2",
+      rpc: {
+        nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
       },
     })
   );
@@ -24,13 +21,10 @@ export function useNamingContract() {
 export function useStarknetIdContract() {
   const StarknetId = new Contract(
     starknet_id_abi as Abi,
-    process.env.NEXT_PUBLIC_STARKNETID_CONTRACT as string,
+    process.env.NEXT_PUBLIC_IDENTITY_CONTRACT as string,
     new Provider({
-      sequencer: {
-        network: process.env.NEXT_PUBLIC_NETWORK_NAME as
-          | "mainnet-alpha"
-          | "goerli-alpha"
-          | "goerli-alpha-2",
+      rpc: {
+        nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
       },
     })
   );
@@ -42,11 +36,8 @@ export function useSoulboundContract(contractAddress: string) {
     soulbound_abi as Abi,
     contractAddress,
     new Provider({
-      sequencer: {
-        network: process.env.NEXT_PUBLIC_NETWORK_NAME as
-          | "mainnet-alpha"
-          | "goerli-alpha"
-          | "goerli-alpha-2",
+      rpc: {
+        nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
       },
     })
   );

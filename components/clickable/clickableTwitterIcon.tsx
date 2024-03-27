@@ -20,8 +20,8 @@ const ClickableTwitterIcon: FunctionComponent<ClickableIconProps> = ({
       contract
         .call("get_verifier_data", [
           tokenId,
-          stringToHex("twitter"),
-          process.env.NEXT_PUBLIC_VERIFIER_CONTRACT,
+          stringToHex("twitter") as string,
+          process.env.NEXT_PUBLIC_VERIFIER_CONTRACT as string,
         ])
         .then((data) => {
           if (data) setTwitterId(data["data"].toString(10));
