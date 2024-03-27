@@ -32,9 +32,9 @@ const Navbar: FunctionComponent = () => {
         </div>
         <div>
           <ul className="hidden md:flex uppercase items-center">
-            {/* <Link href="/affiliates/individual-program">
-              <li className={styles.menuItem}> Become an affiliate</li>
-            </Link> */}
+            <Link href="/affiliates/individual-program">
+              <li className={styles.menuItem}>Become an affiliate</li>
+            </Link>
 
             <li
               onClick={() => window.open("https://docs.starknet.id/")}
@@ -116,7 +116,7 @@ const Navbar: FunctionComponent = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Domains
+                      Get a domain
                     </Link>
                   </li>
                   <li className={styles.menuItemSmall} onClick={handleNav}>
@@ -134,7 +134,7 @@ const Navbar: FunctionComponent = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Affiliation
+                      Become an affiliate
                     </Link>
                   </li>
                 </ul>

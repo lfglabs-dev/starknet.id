@@ -33,7 +33,7 @@ const Roadmap: FunctionComponent = () => {
                 icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
-                title="Automatic Renewal Feature"
+                title="Domain Subscription Feature"
                 description="Implement an automatic renewal feature for domain ownership, ensuring a seamless and continuous user experience."
                 icon="/icons/checkMark.svg"
               />
@@ -43,9 +43,9 @@ const Roadmap: FunctionComponent = () => {
                 icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
-                title="Cairo 1 migration"
-                description="Transition to Cairo 1, the next level of Starknet's technological advancements, enhancing the scalability and capabilities of StarkNet ID."
-                icon="/icons/clock.svg"
+                title="Referral system"
+                description="Introduce an innovative referral system, empowering users and businesses to earn crypto while recommending Starknet ID."
+                icon="/icons/checkMark.svg"
               />
             </>
           ),
@@ -57,28 +57,28 @@ const Roadmap: FunctionComponent = () => {
           content: (
             <>
               <ParagraphWithIcon
+                title="Cairo 1 migration"
+                description="Transition to Cairo 1, the next level of Starknet's technological advancements, enhancing the scalability and capabilities of StarkNet ID."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
+                title="Starkurabu Customizable PFP"
+                description="To showcase our profile pic feature we created a customized PFP collection called Starkurabu."
+                icon="/icons/checkMark.svg"
+              />
+              <ParagraphWithIcon
                 title="Fully Audited"
-                description="After  Cairo 1 Transition, we will audit our smart contracts to ensure the security of our protocol."
+                description="After Cairo 1 Transition, we will audit our smart contracts to ensure the security of our protocol."
                 icon="/icons/clock.svg"
               />
               <ParagraphWithIcon
-                title="Starknet Quest"
-                description="Development of a gamified Starknet experience for  sustainable crypto marketing and fair reward distributions."
+                title="Multichain Bridging"
+                description="Enable seamless integration with Ethereum Name Service (ENS), Solana Naming Service (SNS) and potentially other relevant identity protocols. Linking your Starknet Identity to the rest of your on-chain identity."
                 icon="/icons/clock.svg"
               />
               <ParagraphWithIcon
-                title="ENS Bridging"
-                description="Enable seamless integration with Ethereum Name Service (ENS), bridging the decentralized identity experience between StarkNet and the Ethereum ecosystem."
-                icon="/icons/clock.svg"
-              />
-              <ParagraphWithIcon
-                title="On-chain resolving"
-                description="Implement on-chain resolving of StarkNet IDs and domains, ensuring a robust and reliable identity verification process."
-                icon="/icons/clock.svg"
-              />
-              <ParagraphWithIcon
-                title="Affiliation system"
-                description="Introduce an innovative affiliation system, empowering users to establish meaningful connections within the StarkNet ecosystem."
+                title="Domain Marketplace"
+                description="Enable domain liquidity by integrating a domain marketplace directly in the Starknet ID app."
                 icon="/icons/clock.svg"
               />
             </>
