@@ -11,5 +11,7 @@ export default async function getDataUrl(
     query: { tokenId },
   } = req;
   const svg = await Identicons.svg(tokenId);
+  // Set the Content-Type header to image/svg+xml so the browser treats the response as an SVG image
+  res.setHeader("Content-Type", "image/svg+xml");
   res.status(200).send(svg);
 }
