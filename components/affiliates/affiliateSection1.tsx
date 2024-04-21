@@ -2,7 +2,6 @@ import React, { FunctionComponent } from "react";
 import homeStyles from "../../styles/Home.module.css";
 import styles from "../../styles/affiliates.module.css";
 import Button from "../button";
-import { CDNImg } from "../cdn/image";
 import RightArrow from "../icons/rightArrow";
 import CheckIcon from "../icons/checkIcon";
 import Money from "../icons/money";
@@ -11,7 +10,7 @@ const AffiliateSection1: FunctionComponent = () => {
   return (
     <div className={homeStyles.section1}>
       <div className={styles.container}>
-        <CDNImg
+        <img
           alt="affiliation illustration"
           src="/visuals/affiliates/affiliateTreasure.webp"
           className={styles.banner}
