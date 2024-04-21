@@ -31,9 +31,8 @@ const AffiliateSection1: FunctionComponent = () => {
             </div>
           </div>
           <h3 className={styles.subtitle}>
-            Boost your earnings in the Starknet ecosystem. Partner with us to
-            share Stark domains and earn rewards in <strong>STRK</strong> tokens
-            and <strong>ETH</strong>.
+            Partner with us and <strong>Earn ETH</strong> while promoting stark
+            domains.
           </h3>
           <div className={styles.button}>
             <Button
