@@ -3,7 +3,7 @@ import styles from "../styles/button.module.css";
 
 type ButtonProps = {
   onClick: () => void;
-  children: string;
+  children: JSX.Element | string;
 };
 
 const Button: FunctionComponent<ButtonProps> = ({ children, onClick }) => {
