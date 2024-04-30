@@ -1,5 +1,3 @@
-//
-
 import React, { FunctionComponent } from "react";
 
 const cartridgeIcon: FunctionComponent = () => {

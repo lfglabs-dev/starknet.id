@@ -7,7 +7,7 @@ import styles from "../styles/navbar.module.css";
 import Button from "./button";
 import theme from "../styles/theme";
 import { CDNImg } from "./cdn/image";
-import CloseFilledIcon from "./icons/closeFilledIcon";
+import CloseFilledIcon from "./UI/iconsComponents/icons/closeFilledIcon";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);

@@ -3,6 +3,7 @@ import OnScrollIntoView from "../animations/onScrollIntoView";
 import styles from "../../styles/components/steps.module.css";
 import React, { FunctionComponent } from "react";
 import { CDNImg } from "../cdn/image";
+import { Step } from "../../types/frontTypes";
 
 type StepElementProps = {
   index: number;
@@ -33,7 +34,11 @@ const StepElement: FunctionComponent<StepElementProps> = ({
             </h3>
             {step.content}
           </div>
-          <CDNImg alt="Card banner" className={styles.banner} src={step.banner} />
+          <CDNImg
+            alt="Card banner"
+            className={styles.banner}
+            src={step.banner}
+          />
         </div>
       </OnScrollIntoView>
     </div>

@@ -1,11 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../../types/frontTypes";
 
-const starknetIcon: FunctionComponent<IconProps> = ({
-  color,
-  width,
-  height,
-}) => {
+const starknetIcon: FunctionComponent<IconProps> = ({}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
