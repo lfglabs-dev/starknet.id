@@ -15,6 +15,7 @@ import { Tooltip } from "@mui/material";
 import theme from "../styles/theme";
 import CopyIcon from "../components/UI/iconsComponents/icons/copyIcon";
 import DoneIcon from "../components/UI/iconsComponents/icons/doneIcon";
+import { hexToDecimal } from "../utils/feltService";
 
 const Profile: NextPage = () => {
   const router = useRouter();
@@ -158,19 +159,19 @@ const Profile: NextPage = () => {
           </div>
           <div className={styles.socialsContainer}>
             {/* <ClickableTwitterIcon
-              socialId={Number(
+              socialId={hexToDecimal(
                 identity?.twitterData ?? identity?.oldTwitterData
               ).toString()}
             /> */}
             <ClickableGithubIcon
-              socialId={Number(
+              socialId={hexToDecimal(
                 identity?.githubData ?? identity?.oldGithubData
-              ).toString()}
+              )}
             />
             <ClickableDiscordIcon
-              socialId={Number(
+              socialId={hexToDecimal(
                 identity?.discordData ?? identity?.oldDiscordData
-              ).toString()}
+              )}
             />
           </div>
         </div>
