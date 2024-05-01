@@ -115,10 +115,10 @@ const Profile: NextPage = () => {
   return initProfile && identity ? (
     <div className={styles.container}>
       <div className={styles.coconutTreeLeft}>
-        <CDNImg width="100%" alt="leaf" src="/visuals/coconutTree1.webp" />
+        <img width="100%" alt="leaf" src="/visuals/coconutTree1.webp" />
       </div>
       <div className={styles.coconutTreeRight}>
-        <CDNImg width="100%" alt="leaf" src="/visuals/coconutTree2.webp" />
+        <img width="100%" alt="leaf" src="/visuals/coconutTree2.webp" />
       </div>
       <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
         <div className={styles.profileCard}>
