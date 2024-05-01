@@ -13,7 +13,6 @@ const ClickableDiscordIcon: FunctionComponent<ClickableIconProps> = ({
       fetch(`/api/discord/get_username?id=${socialId}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log("data", data);
           setDiscordUsername(data.username);
         });
     }
