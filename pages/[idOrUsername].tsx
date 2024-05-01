@@ -157,11 +157,11 @@ const Profile: NextPage = () => {
             </p>
           </div>
           <div className={styles.socialsContainer}>
-            <ClickableTwitterIcon
+            {/* <ClickableTwitterIcon
               socialId={Number(
                 identity?.twitterData ?? identity?.oldTwitterData
               ).toString()}
-            />
+            /> */}
             <ClickableGithubIcon
               socialId={Number(
                 identity?.githubData ?? identity?.oldGithubData

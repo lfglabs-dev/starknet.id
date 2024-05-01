@@ -12,7 +12,6 @@ export async function useTokenIdFromDomain(
 ): Promise<TokenIdData> {
   const namingContract = useNamingContract();
   const encoded: bigint[] = utils.encodeDomain(domain);
-  console.log("encoded", encoded);
   const data = await namingContract.call("domain_to_id", [encoded]);
   return { tokenId: data as any, error: "error" };
 }

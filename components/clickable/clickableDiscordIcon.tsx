@@ -7,7 +7,6 @@ const ClickableDiscordIcon: FunctionComponent<ClickableIconProps> = ({
   socialId,
 }) => {
   const [discordUsername, setDiscordUsername] = useState<string | undefined>();
-  console.log("socialId", socialId);
   useEffect(() => {
     if (socialId) {
       fetch(`/api/discord/get_username?id=${socialId}`)
