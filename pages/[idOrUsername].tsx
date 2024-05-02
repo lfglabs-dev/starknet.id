@@ -16,6 +16,7 @@ import theme from "../styles/theme";
 import CopyIcon from "../components/UI/iconsComponents/icons/copyIcon";
 import DoneIcon from "../components/UI/iconsComponents/icons/doneIcon";
 import { hexToDecimal } from "../utils/feltService";
+import Navbar from "../components/navbar";
 
 const Profile: NextPage = () => {
   const router = useRouter();
@@ -112,83 +113,88 @@ const Profile: NextPage = () => {
     return <h2 className={styles.notFound}>Profile not found</h2>;
   }
 
-  return initProfile && identity ? (
-    <div className={styles.container}>
-      <div className={styles.coconutTreeLeft}>
-        <img width="100%" alt="leaf" src="/visuals/coconutTree1.webp" />
-      </div>
-      <div className={styles.coconutTreeRight}>
-        <img width="100%" alt="leaf" src="/visuals/coconutTree2.webp" />
-      </div>
-      <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
-        <div className={styles.profileCard}>
-          <div className="mx-auto">
-            <CDNImg
-              src={ppImageUrl}
-              height={200}
-              width={200}
-              alt="identicon"
-              className={styles.pfpImg}
-            />
+  return (
+    <>
+      <Navbar />
+      {initProfile && identity ? (
+        <div className={styles.container}>
+          <div className={styles.coconutTreeLeft}>
+            <img width="100%" alt="leaf" src="/visuals/coconutTree1.webp" />
           </div>
-          <div>
-            <div className={styles.domainContainer}>
-              <h2 className={styles.domainName}>
-                {identity?.domain
-                  ? shortenDomain(identity.domain, 25)
-                  : `SID: ${identity.id}`}
-              </h2>
-              <div className="cursor-pointer ml-3">
-                {!copied ? (
-                  <Tooltip title="Copy" arrow>
-                    <div
-                      className={styles.contentCopy}
-                      onClick={() => copyToClipboard()}
-                    >
-                      <CopyIcon width="25" color="#454545" />
-                    </div>
-                  </Tooltip>
-                ) : (
-                  <DoneIcon color={theme.palette.primary.main} width="25" />
-                )}
+          <div className={styles.coconutTreeRight}>
+            <img width="100%" alt="leaf" src="/visuals/coconutTree2.webp" />
+          </div>
+          <div className="flex flex-col items-center justify-center text min-h-screen mx-10">
+            <div className={styles.profileCard}>
+              <div className="mx-auto">
+                <CDNImg
+                  src={ppImageUrl}
+                  height={200}
+                  width={200}
+                  alt="identicon"
+                  className={styles.pfpImg}
+                />
               </div>
-            </div>
-            <p className={styles.addr}>
-              {minifyAddress(identity.targetAddress)}
-            </p>
-          </div>
-          <div className={styles.socialsContainer}>
-            {/* <ClickableTwitterIcon
+              <div>
+                <div className={styles.domainContainer}>
+                  <h2 className={styles.domainName}>
+                    {identity?.domain
+                      ? shortenDomain(identity.domain, 25)
+                      : `SID: ${identity.id}`}
+                  </h2>
+                  <div className="cursor-pointer ml-3">
+                    {!copied ? (
+                      <Tooltip title="Copy" arrow>
+                        <div
+                          className={styles.contentCopy}
+                          onClick={() => copyToClipboard()}
+                        >
+                          <CopyIcon width="25" color="#454545" />
+                        </div>
+                      </Tooltip>
+                    ) : (
+                      <DoneIcon color={theme.palette.primary.main} width="25" />
+                    )}
+                  </div>
+                </div>
+                <p className={styles.addr}>
+                  {minifyAddress(identity.targetAddress)}
+                </p>
+              </div>
+              <div className={styles.socialsContainer}>
+                {/* <ClickableTwitterIcon
               socialId={hexToDecimal(
                 identity?.twitterData ?? identity?.oldTwitterData
               ).toString()}
             /> */}
-            <ClickableGithubIcon
-              socialId={hexToDecimal(
-                identity?.githubData ?? identity?.oldGithubData
-              )}
-            />
-            <ClickableDiscordIcon
-              socialId={hexToDecimal(
-                identity?.discordData ?? identity?.oldDiscordData
-              )}
-            />
+                <ClickableGithubIcon
+                  socialId={hexToDecimal(
+                    identity?.githubData ?? identity?.oldGithubData
+                  )}
+                />
+                <ClickableDiscordIcon
+                  socialId={hexToDecimal(
+                    identity?.discordData ?? identity?.oldDiscordData
+                  )}
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  ) : (
-    <div className="h-screen flex justify-center items-center">
-      <ThreeDots
-        wrapperClass="flex justify-center"
-        height="100"
-        width="100"
-        radius="9"
-        color="#19AA6E"
-        ariaLabel="three-dots-loading"
-        visible={true}
-      />
-    </div>
+      ) : (
+        <div className="h-screen flex justify-center items-center">
+          <ThreeDots
+            wrapperClass="flex justify-center"
+            height="100"
+            width="100"
+            radius="9"
+            color="#19AA6E"
+            ariaLabel="three-dots-loading"
+            visible={true}
+          />
+        </div>
+      )}
+    </>
   );
 };
 
