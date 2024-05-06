@@ -4,7 +4,7 @@ import HeaderBanner from "./headerBanner";
 import HeaderSection from "./headerSection";
 
 const HomeSection1: FunctionComponent = () => {
-  const isTestnet = process.env.NEXT_PUBLIC_IS_TESTNET;
+  const isTestnet = Boolean(process.env.NEXT_PUBLIC_IS_TESTNET === "true");
 
   return (
     <div className={styles.section1}>
