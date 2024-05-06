@@ -4,190 +4,143 @@
   overflow: hidden;
 }
 
-.pfp {
-  margin-bottom: 10px;
-}
-.title {
-  font-family: "QuickZap";
-  color: var(--secondary);
-}
-
-.section1 {
-  padding: 4rem 0 3rem 0;
+.profileCard {
+  background-color: #fffcf8;
+  border-radius: 20px;
+  box-shadow: 0px 2px 30px 0px #0000000f;
+  padding: 36px 48px;
+  width: 650px;
+  max-width: 650px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 100vh;
+  gap: 24px;
 }
 
-.elemContainer {
+.pfpImg {
+  border-radius: 625px;
+}
+
+.domainContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.domainName {
+  font-family: "QuickZap";
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #454545;
+}
+
+.addr {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #454545;
+  margin-top: 6px;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 30px 0px #0000000f;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 450ms var(--nimiq-ease),
+    box-shadow 450ms var(--nimiq-ease);
+  will-change: box-shadow;
+}
+
+.iconContainer:hover,
+.iconContainer:focus {
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  transform: translate3D(0, -2px, 0);
+}
+
+.iconContainer:active {
+  outline: none;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+  transform: translate3D(0, 1px, 0);
+  transition: transform 200ms cubic-bezier(0.41, 0.34, 0.26, 1.55),
+    box-shadow 200ms cubic-bezier(0.41, 0.34, 0.26, 1.55) !important;
+}
+
+.socialsContainer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 10px 0;
+  gap: 24px;
 }
 
-.network {
-  background-color: var(--gray);
-  border-radius: 20px;
-  padding: 10px;
-  color: var(--secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.network p {
-  margin: 0px 5px;
-}
-.icon {
-  height: 28px;
-  width: 28px;
-}
-.contentCopy {
-  margin-left: 5px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.social {
-  border-radius: 20px;
-  padding: 10px 15px;
-  color: var(--tertiary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid var(--tertiary);
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.social p {
-  margin: 0 15px 0 10px;
-  font-weight: 700;
-}
-
-.walletAddress {
-  font-size: 2rem;
-  color: var(--secondary);
-}
-
-.SbtContainer {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.activityContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 10px 30px;
-  width: 100%;
-}
-
-.activity {
-  border: 2px solid var(--tertiary);
-  padding: 5px 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 15px;
-  margin: 10px 0;
-  cursor: pointer;
-  min-height: 5rem;
-}
-
-.activity p {
-  flex: 3;
-  justify-content: flex-start;
-  text-align: left;
-  color: var(--tertiary);
-  font-weight: 700;
+.socialName {
   font-family: "QuickZap";
-  font-size: 1.3rem;
-  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #454545;
+  text-transform: uppercase;
 }
 
-.activityBtn {
-  background: rgba(191, 158, 122, 0.3);
-  border-radius: 20px;
-  font-family: "QuickZap";
-  font-weight: 700;
-  color: var(--secondary);
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-.openInNew {
-  margin-right: 10px;
-}
-
-.firstLeavesGroup {
+.coconutTreeLeft {
   position: absolute;
-  top: -7%;
-  left: -120px;
-  width: 300px;
-  z-index: -1000;
-  transform: rotate(130deg);
-  overflow: hidden;
-}
-
-.secondLeavesGroup {
-  position: absolute;
-  top: -7%;
-  right: -90px;
-  width: 190px;
-  transform: rotate(-130deg);
+  left: -200px;
+  bottom: -50px;
+  width: 500px;
   z-index: -1000;
   overflow: hidden;
 }
 
-.thirdLeavesGroup {
+.coconutTreeRight {
   position: absolute;
-  left: -120px;
-  bottom: -7%;
-  width: 300px;
+  right: -200px;
+  bottom: -50px;
+  width: 500px;
   z-index: -1000;
   overflow: hidden;
 }
 
-.fourthLeavesGroup {
-  position: absolute;
-  right: -90px;
-  bottom: -7%;
-  width: 190px;
-  z-index: -1000;
-  overflow: hidden;
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .profileCard {
+    width: 100%;
+  }
+
+  .domainName {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .addr {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .socialsContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .coconutTreeRight,
+  .coconutTreeLeft {
+    display: none;
+  }
 }
-
-/* ----- Other leaves  ------  */
-
-/* .leaf1 {
-  position: absolute;
-  right: -160px;
-  bottom: 45%;
-  width: 340px;
-  z-index: -1000;
-  overflow: hidden;
-}
-
-.leaf2 {
-  position: absolute;
-  left: -110px;
-  bottom: 25%;
-  width: 240px;
-  transform: rotate(10deg);
-  z-index: -1000;
-  overflow: hidden;
-} */
 
 .notFound {
   text-align: center;
@@ -198,29 +151,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-}
-
-@media (max-width: 500px) {
-  .elemContainer {
-    flex-direction: column;
-  }
-  .social {
-    margin: 5px 0;
-  }
-  .SbtContainer {
-    flex-direction: column;
-  }
-
-  .firstLeavesGroup {
-    width: 200px;
-  }
-
-  .secondLeavesGroup {
-    width: 120px;
-  }
-
-  .thirdLeavesGroup,
-  .fourthLeavesGroup {
-    visibility: hidden;
-  }
 }

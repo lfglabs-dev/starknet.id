@@ -2,39 +2,49 @@ import React, { FunctionComponent } from "react";
 import homeStyles from "../../styles/Home.module.css";
 import styles from "../../styles/affiliates.module.css";
 import Button from "../button";
-import { CDNImg } from "../cdn/image";
+import Money from "../icons/money";
+import CheckIcon from "../UI/iconsComponents/icons/checkIcon";
+import RightArrow from "../UI/iconsComponents/icons/rightArrow";
 
 const AffiliateSection1: FunctionComponent = () => {
   return (
     <div className={homeStyles.section1}>
       <div className={styles.container}>
-        <div className="flex flex-col justify-center">
+        <img
+          alt="affiliation illustration"
+          src="/visuals/affiliates/affiliateTreasure.webp"
+          className={styles.banner}
+          width={380}
+        />
+        <div className={styles.content}>
+          <p className={styles.secondSubtitle}>Join & Earn!</p>
           <h1 className={styles.title}>The Stark Affiliate Program</h1>
+          <div className={styles.highlights}>
+            <div className="flex items-center gap-2">
+              <CheckIcon width="16" color="#402D28" />
+              Simple Steps
+            </div>
+            <div className={styles.separator} />
+            <div className="flex items-center gap-2">
+              <Money width="16" color="#402D28" />
+              Big Gains!
+            </div>
+          </div>
           <h3 className={styles.subtitle}>
-            Earn&nbsp;
-            <span style={{ fontFamily: "QuickZap" }} className="text-primary">
-              STRK
-            </span>
-            &nbsp;and&nbsp;
-            <span style={{ fontFamily: "QuickZap" }} className="text-primary">
-              ETH
-            </span>
-            &nbsp;by promoting stark domains.
+            Partner with us and <strong>Earn ETH</strong> while promoting stark
+            domains.
           </h3>
           <div className={styles.button}>
             <Button
               onClick={() => window.open("https://affiliate.starknet.id/")}
             >
-              Join now
+              <div className="flex items-center gap-6">
+                <p className="text-lg font-normal">Start earning now</p>
+                <RightArrow width="28" color="white" />
+              </div>
             </Button>
           </div>
         </div>
-        <CDNImg
-          alt="affiliation illustration"
-          src="/visuals/affiliates/affiliationIllu.webp"
-          className={styles.banner}
-          width={380}
-        />
       </div>
     </div>
   );

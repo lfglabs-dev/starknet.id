@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../../../../types/frontTypes";
 
 const CopiedIcon: FunctionComponent<IconProps> = ({ width, color }) => {
   return (

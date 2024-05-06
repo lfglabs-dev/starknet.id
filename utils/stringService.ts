@@ -53,3 +53,49 @@ export function generateString(length: number): string {
 export function isSubdomain(domain: string): boolean {
   return Boolean((domain.match(/\./g) || []).length > 1);
 }
+
+// this makes sure hex string will be 64 chars
+export function formatHexString(txHash: string) {
+  // Remove the '0x' prefix if it exists
+  if (txHash.startsWith("0x")) {
+    txHash = txHash.slice(2);
+  }
+
+  // Calculate the number of leading zeros needed
+  const totalHashLength = 64; // 64 characters for the hash
+  const leadingZerosNeeded = totalHashLength - txHash.length;
+
+  // Add the required leading zeros
+  for (let i = 0; i < leadingZerosNeeded; i++) {
+    txHash = "0" + txHash;
+  }
+
+  // Add the '0x' prefix back
+  txHash = "0x" + txHash;
+
+  return txHash.toLowerCase();
+}
+
+export function getImgUrl(image: string): string {
+  if (image.startsWith("ipfs://")) {
+    return image.replace("ipfs://", "https://gateway.pinata.cloud/ipfs/");
+  } else {
+    return image;
+  }
+}
+
+export function shortenDomain(
+  domain?: string,
+  characterToBreak?: number
+): string {
+  if (!domain) return "";
+
+  if (domain.length > (characterToBreak ?? 20)) {
+    const firstPart = domain.substring(0, 4);
+    const secondPart = domain.substring(domain.length - 3, domain.length);
+
+    return (firstPart + "..." + secondPart).toLowerCase();
+  } else {
+    return domain.toLowerCase();
+  }
+}

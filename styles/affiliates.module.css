@@ -1,6 +1,8 @@
 .container {
   display: flex;
   margin: 2.5rem;
+  gap: 74px;
+  align-items: center;
 }
 
 .title {
@@ -10,14 +12,68 @@
   text-shadow: 1px 1px var(--tertiary);
   text-transform: uppercase;
   margin-bottom: 1rem;
+  line-height: 58px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 561px;
+}
+
+.secondSubtitle {
+  color: var(--secondary);
+
+  /* Body/Small/Medium */
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  opacity: 0.8;
 }
 
 .subtitle {
   font-family: "Poppins-Regular";
-  font-size: 1.5rem;
-  color: var(--secondary);
   text-shadow: none;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.subtitle strong {
+  color: var(--primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+.highlights {
+  display: flex;
+  padding: 12px 1.5rem;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 8px;
+  background: var(--background-light);
+
+  /* Small Shadow */
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.06);
+  margin-bottom: 3rem;
+  width: fit-content;
+}
+
+.separator {
+  background-color: var(--content-800);
+  width: 1px;
+  height: 20px;
+  border-radius: 90px;
 }
 
 .button {
@@ -111,7 +167,9 @@
 }
 
 .banner {
-  margin: auto 0 auto 8rem;
+  width: 100%;
+  max-width: 50%;
+  height: fit-content;
 }
 
 .earningsCard {
@@ -183,12 +241,19 @@
   }
   .banner {
     margin: auto;
+    max-width: 100%;
   }
   .title {
     text-align: center;
   }
   .subtitle {
     text-align: center;
+  }
+  .secondSubtitle {
+    text-align: center;
+  }
+  .highlights {
+    margin: 0 auto 2rem auto;
   }
   .button {
     width: 100%;
@@ -252,7 +317,7 @@
     visibility: hidden;
   }
   .banner {
-    max-width: 200px;
+    width: 100%;
   }
   .graph {
     margin: 3rem 1.5rem;
