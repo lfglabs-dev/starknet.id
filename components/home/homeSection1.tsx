@@ -4,6 +4,8 @@ import HeaderBanner from "./headerBanner";
 import HeaderSection from "./headerSection";
 
 const HomeSection1: FunctionComponent = () => {
+  const isTestnet = process.env.NEXT_PUBLIC_IS_TESTNET;
+
   return (
     <div className={styles.section1}>
       <HeaderSection
@@ -13,7 +15,7 @@ const HomeSection1: FunctionComponent = () => {
         mobileSubtitle="Step into the future with StarkNet ID. Begin by claiming your free StarkNet identity, your passport to the blockchain world. Register your unique .stark domain to transform your presence—say goodbye to the complex addresses. Elevate your StarkNet experience today."
         buttonName="Choose your domain"
         buttonLink={
-          window.location.origin.includes("sepolia")
+          isTestnet
             ? "https://sepolia.app.starknet.id/"
             : "https://app.starknet.id/"
         }
