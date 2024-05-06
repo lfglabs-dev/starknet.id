@@ -11,7 +11,7 @@ export default async function handler(
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bot ${process.env.NEXT_PUBLIC_DISCORD_TOKEN}`,
+      Authorization: `Bot ${process.env.DISCORD_TOKEN}`,
     },
   });
   const body = await response.json();

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../../types/frontTypes";
 
 const NostraIcon: FunctionComponent<IconProps> = ({ width, height }) => {
   return (

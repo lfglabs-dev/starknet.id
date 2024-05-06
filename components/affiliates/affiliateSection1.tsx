@@ -2,9 +2,9 @@ import React, { FunctionComponent } from "react";
 import homeStyles from "../../styles/Home.module.css";
 import styles from "../../styles/affiliates.module.css";
 import Button from "../button";
-import RightArrow from "../icons/rightArrow";
-import CheckIcon from "../icons/checkIcon";
 import Money from "../icons/money";
+import CheckIcon from "../UI/iconsComponents/icons/checkIcon";
+import RightArrow from "../UI/iconsComponents/icons/rightArrow";
 
 const AffiliateSection1: FunctionComponent = () => {
   return (

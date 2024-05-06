@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../../../../types/frontTypes";
 
 const CloseFilledIcon: FunctionComponent<IconProps> = ({ width, color }) => {
   return (

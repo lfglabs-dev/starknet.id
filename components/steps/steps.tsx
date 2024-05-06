@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/components/steps.module.css";
 import StepElement from "./stepElement";
+import { Step } from "../../types/frontTypes";
 
 type StepsProps = {
   steps: Step[];
