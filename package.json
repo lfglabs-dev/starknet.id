@@ -28,9 +28,9 @@
     "react-intersection-observer": "^9.5.2",
     "react-loader-spinner": "^5.3.4",
     "react-scroll-parallax": "^3.4.2",
-    "starknet": "^5.24.3",
+    "starknet": "^6.11.0",
     "starknetid-identicons": "^1.6.0",
-    "starknetid.js": "^3.2.0",
+    "starknetid.js": "^4.0.0",
     "twitter-api-sdk": "^1.2.1"
   },
   "devDependencies": {
