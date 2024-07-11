@@ -1,9 +1,11 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
-import HeaderSection from "./headerSection";
 import HeaderBanner from "./headerBanner";
+import HeaderSection from "./headerSection";
 
 const HomeSection1: FunctionComponent = () => {
+  const isTestnet = Boolean(process.env.NEXT_PUBLIC_IS_TESTNET === "true");
+
   return (
     <div className={styles.section1}>
       <HeaderSection
@@ -12,7 +14,11 @@ const HomeSection1: FunctionComponent = () => {
         subtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."
         mobileSubtitle="Step into the future with StarkNet ID. Begin by claiming your free StarkNet identity, your passport to the blockchain world. Register your unique .stark domain to transform your presence—say goodbye to the complex addresses. Elevate your StarkNet experience today."
         buttonName="Choose your domain"
-        buttonLink="https://app.starknet.id/"
+        buttonLink={
+          isTestnet
+            ? "https://sepolia.app.starknet.id/"
+            : "https://app.starknet.id/"
+        }
       />
       <HeaderBanner />
     </div>

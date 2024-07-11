@@ -10,9 +10,7 @@ export function useNamingContract() {
     naming_abi as Abi,
     process.env.NEXT_PUBLIC_NAMING_CONTRACT as string,
     new Provider({
-      rpc: {
-        nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
-      },
+      nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
     })
   );
   return Naming;
@@ -23,9 +21,7 @@ export function useStarknetIdContract() {
     starknet_id_abi as Abi,
     process.env.NEXT_PUBLIC_IDENTITY_CONTRACT as string,
     new Provider({
-      rpc: {
-        nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
-      },
+      nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
     })
   );
   return StarknetId;
@@ -36,9 +32,7 @@ export function useSoulboundContract(contractAddress: string) {
     soulbound_abi as Abi,
     contractAddress,
     new Provider({
-      rpc: {
-        nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
-      },
+      nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
     })
   );
   return Soulbound;
