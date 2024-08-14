@@ -69,12 +69,12 @@ const Roadmap: FunctionComponent = () => {
               <ParagraphWithIcon
                 title="Fully Audited"
                 description="After Cairo 1 Transition, we will audit our smart contracts to ensure the security of our protocol."
-                icon="/icons/clock.svg"
+                icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
                 title="Multichain Bridging"
                 description="Enable seamless integration with Ethereum Name Service (ENS), Solana Naming Service (SNS) and potentially other relevant identity protocols. Linking your Starknet Identity to the rest of your on-chain identity."
-                icon="/icons/clock.svg"
+                icon="/icons/checkMark.svg"
               />
               <ParagraphWithIcon
                 title="Domain Marketplace"
