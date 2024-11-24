@@ -10,7 +10,7 @@ const AffiliateSection3: FunctionComponent = () => {
       <AffiliationOpportunity />
       <CDNImg
         alt="affiliate logo"
-        src="/visuals/affiliates/affiliationGraph.svg"
+        src="/visuals/affiliates/affiliationGraph2.svg"
         className={styles.graph}
       />
       <AffiliationEarnings />
