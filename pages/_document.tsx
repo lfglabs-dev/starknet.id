@@ -25,7 +25,7 @@ export default function Document() {
         />
       </Head>
 
-      <link rel="icon" href="/visuals/StarknetIdLogo.png" />
+      <link rel="icon" href="/visuals/favicon.ico" />
 
       <body className="default_background_color">
         <Main />
