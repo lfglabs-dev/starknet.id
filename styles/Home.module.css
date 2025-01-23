@@ -1,6 +1,6 @@
 .page {
   overflow: hidden;
-  background: linear-gradient(0deg, #eae0d5 0%, #fff9f0 100%);
+  background: white;
 }
 
 .section1 {
@@ -20,9 +20,10 @@
 }
 
 .headerBanner {
-  width: 50%;
+  width: 400px;
   max-width: 680px;
   max-height: calc(100vh - 8rem);
+  min-width: 358px;
 }
 
 .buttonContainer {
@@ -37,10 +38,11 @@
   text-align: left;
   /* Title/H1 */
   font-family: QuickZap;
-  font-size: 48px;
+  font-size: 36px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 58px;
+  font-weight: 400;
+  line-height: 48px;
+  width: 487px;
 }
 
 .mainTitle strong {
@@ -54,10 +56,10 @@
   width: 487px;
   flex-direction: column;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 32px;
+  font-weight: 400;
+  line-height: 24px;
   margin-top: 32px;
 }
 
@@ -203,6 +205,9 @@ div:has(> .lilLeaf04) {
   .headerBanner {
     display: none;
   }
+  .mainTitle {
+    width: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -263,8 +268,8 @@ div:has(> .lilLeaf04) {
   }
   .mainTitle {
     width: 100%;
-    font-size: 24px;
-    line-height: max(8vw, 25px);
+    font-size: 36px;
+    line-height: max(8vw, 48px);
     margin-top: 24px;
     text-align: center;
   }
@@ -273,9 +278,10 @@ div:has(> .lilLeaf04) {
   }
   .mainSubtitleMobile {
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 2rem;
-    line-height: max(4vw, 19px);
+    line-height: max(4vw, 24px);
+    font-weight: 400;
     text-align: center;
     color: var(--content-600);
     display: block;
@@ -292,11 +298,12 @@ div:has(> .lilLeaf04) {
     margin-right: auto;
   }
   .buttonContainer button {
-    width: 281px;
+    width: fit-content;
     box-shadow: none;
-    font-size: 18px;
+    font-size: 14px;
     font-family: QuickZap;
     font-weight: lighter;
+    padding: 0 0.8rem;
   }
   .headerBanner {
     display: block;
