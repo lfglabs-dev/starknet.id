@@ -4,24 +4,18 @@ import Roadmap from "../roadmap";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
 import { CDNImg } from "../cdn/image";
+import DomainCountTitle from "../UI/titles/domainCountTitle";
+import Button from "../button";
 
 const HomeSection3: FunctionComponent = () => {
   return (
-    <div className={styles.section3}>
-      <CategoryTitle
-        title="Evolution Roadmap"
-        subtitle="Navigating the Future of Your Blockchain Identity"
+    <div className={styles.section3Container}>
+      <DomainCountTitle
+        title="475,736" subtitle="Domains minted"
+        button={
+          <button className={styles.section3ContainerButton}>Choose Your Domain</button>
+        }
       />
-      <Roadmap />
-      <Parallax speed={-10}>
-        <CDNImg
-          src="/leaves/lilLeaf01.svg"
-          alt="leaf"
-          className={styles.lilLeaf04}
-          width={20}
-          height={20}
-        />
-      </Parallax>
     </div>
   );
 };
