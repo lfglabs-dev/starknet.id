@@ -5,6 +5,46 @@
   margin: 0 auto;
 }
 
+.domainCountTitleContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  gap: 8px;
+}
+
+.domainCountTitle {
+  width: 329px;
+  height: 90px;
+  font-family: QuickZap;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 100%;
+  text-align: center;
+  color: #0C8654;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.domainCountSubtitle {
+  width: 286px;
+  height: 32px;
+  font-family: QuickZap;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #454545;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .categoryTitle {
   color: var(--secondary);
 
@@ -34,6 +74,7 @@
     font-size: 24px;
     line-height: 28px;
   }
+
   .categorySubtitle {
     font-size: 14px;
     line-height: 24px;
