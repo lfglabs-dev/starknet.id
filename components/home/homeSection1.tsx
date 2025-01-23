@@ -12,7 +12,7 @@ const HomeSection1: FunctionComponent = () => {
         title="One profile,"
         highlighted="Connected to all the Starknet Ecosystem."
         subtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."
-        mobileSubtitle="Step into the future with StarkNet ID. Begin by claiming your free StarkNet identity, your passport to the blockchain world. Register your unique .stark domain to transform your presence—say goodbye to the complex addresses. Elevate your StarkNet experience today."
+        mobileSubtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."
         buttonName="Choose your domain"
         buttonLink={
           isTestnet
