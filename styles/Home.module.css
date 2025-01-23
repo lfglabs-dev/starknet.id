@@ -71,6 +71,52 @@
   padding: 4rem 4rem;
 }
 
+
+.section3Container {
+  background-image: url("../public/visuals/home/jungle-vector-image.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 128px;
+  gap: 24px;
+  isolation: isolate;
+  width: 1440px;
+  height: 604px;
+  border-radius: 24px 24px 0px 0px;
+  flex: none;
+  order: 4;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.section3ContainerButton {
+  display: flex;
+  padding: 10px 16px;
+  width: 180px;
+  height: 44px;
+  margin-top: 16px;
+  font-family: QuickZap;
+  align-self: center;
+  justify-self: center;
+  font-size: 14px;
+  color: white;
+  background: #0C8654;
+  border: 1px solid #19AA6E;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 450ms var(--nimiq-ease),
+    box-shadow 450ms var(--nimiq-ease);
+
+}
+
+.section3ContainerButton:hover,
+.section3ContainerButton:focus {
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  transform: translate3D(0, -2px, 0);
+}
+
 .section3 {
   min-height: 120vh;
   padding: 4rem 5rem;
@@ -147,8 +193,12 @@
 }
 
 .cardDescription {
-  font-size: 1.25rem /* 20px */;
-  line-height: 1.75rem /* 28px */;
+  font-size: 1.25rem
+    /* 20px */
+  ;
+  line-height: 1.75rem
+    /* 28px */
+  ;
   margin: 0;
 }
 
@@ -210,12 +260,14 @@ div:has(> .lilLeaf04) {
     font-size: 3rem;
     text-shadow: 2px 2px var(--tertiary);
   }
+
   .card {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 2rem;
   }
+
   .card2 {
     width: 100%;
     margin: 0;
@@ -223,6 +275,7 @@ div:has(> .lilLeaf04) {
     justify-content: center;
     align-items: center;
   }
+
   .cardDescription {
     color: var(--content-600);
     text-align: center;
@@ -232,14 +285,18 @@ div:has(> .lilLeaf04) {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
+    /* 142.857% */
   }
+
   .homeCardBanner {
     max-width: 100px;
   }
+
   .section2 {
     padding: 1rem 1.5rem;
   }
+
   .subsection {
     flex-direction: column;
   }
@@ -249,18 +306,22 @@ div:has(> .lilLeaf04) {
     gap: 3rem;
     padding-top: 1rem;
   }
+
   .partnersSubtitle {
     font-size: 14px;
   }
+
   .section3 {
     padding: 4.5rem 1.5rem 24px 1.5rem;
   }
+
   .section1 {
     padding: 7rem 1rem 1rem;
     margin-bottom: 2rem;
     min-height: fit-content;
     flex-direction: column;
   }
+
   .mainTitle {
     width: 100%;
     font-size: 24px;
@@ -268,9 +329,11 @@ div:has(> .lilLeaf04) {
     margin-top: 24px;
     text-align: center;
   }
+
   .mainSubtitle {
     display: none;
   }
+
   .mainSubtitleMobile {
     width: 100%;
     font-size: 14px;
@@ -280,6 +343,7 @@ div:has(> .lilLeaf04) {
     color: var(--content-600);
     display: block;
   }
+
   .headerContent {
     position: relative;
     padding: 0 !important;
@@ -287,10 +351,12 @@ div:has(> .lilLeaf04) {
     display: block;
     margin: 0 auto;
   }
+
   .buttonContainer {
     margin-left: auto;
     margin-right: auto;
   }
+
   .buttonContainer button {
     width: 281px;
     box-shadow: none;
@@ -298,20 +364,24 @@ div:has(> .lilLeaf04) {
     font-family: QuickZap;
     font-weight: lighter;
   }
+
   .headerBanner {
     display: block;
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: min(70%, 300px);
   }
+
   .secondTitle {
     font-size: 24px;
   }
+
   .thirdTitle {
     font-size: 18px;
     text-align: center;
     margin-top: 2rem;
   }
+
   .lilLeaf04 {
     display: none;
   }
