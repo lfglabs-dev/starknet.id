@@ -8,80 +8,65 @@
 .domainCountTitleContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  width: fit-content;
-  gap: 8px;
+  align-items: center;
 }
 
 .domainCountTitle {
-  width: 329px;
-  height: 90px;
   font-family: QuickZap;
+  padding: 0;
+  margin: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 90px;
-  line-height: 100%;
   text-align: center;
+  line-height: 1;
   color: #0C8654;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  flex: 1;
+  height: max-content;
+  max-width: 100%;
 }
 
 .domainCountSubtitle {
-  width: 286px;
-  height: 32px;
+  max-width: 286px;
+  margin: 0;
   font-family: QuickZap;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1;
   text-align: center;
   color: #454545;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
-
 @media (max-width: 768px) {
-  .domainCountTitleContainer {
-    gap: 0px;
-  }
-
   .domainCountTitle {
-    margin-top: -40px;
     font-size: 60px;
     line-height: 72px;
   }
 
   .domainCountSubtitle {
     font-size: 18px;
-    height: 16px;
-    line-height: 16px;
+    line-height: 0;
   }
 }
 
 @media (max-width: 480px) {
   .domainCountTitleContainer {
-    gap: 0px;
+    align-self: center;
+    justify-self: center;
+    height: inherit;
   }
 
   .domainCountTitle {
-    margin-top: -40px;
     font-size: 40px;
-    line-height: 140px;
   }
-
+  
   .domainCountSubtitle {
+    margin-top: -5px;
     font-size: 18px;
-    height: 16px;
-    line-height: 32px;
   }
 }
-
 .categoryTitle {
   color: var(--secondary);
 
