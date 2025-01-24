@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8rem;
 }
 
 .domainCountTitle {
@@ -21,7 +22,7 @@
   font-size: 90px;
   text-align: center;
   line-height: 1;
-  color: #0C8654;
+  color: #0c8654;
   flex: 1;
   height: max-content;
   max-width: 100%;
@@ -43,6 +44,7 @@
   .domainCountTitle {
     font-size: 60px;
     line-height: 72px;
+    margin-top: 6rem;
   }
 
   .domainCountSubtitle {
@@ -61,7 +63,7 @@
   .domainCountTitle {
     font-size: 40px;
   }
-  
+
   .domainCountSubtitle {
     margin-top: -5px;
     font-size: 18px;
