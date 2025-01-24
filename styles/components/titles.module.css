@@ -5,7 +5,7 @@
   margin: 0 auto;
 }
 
-.domainCountTitleContainer{
+.domainCountTitleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +43,42 @@
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+
+@media (max-width: 768px) {
+  .domainCountTitleContainer {
+    gap: 0px;
+  }
+
+  .domainCountTitle {
+    margin-top: -40px;
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  .domainCountSubtitle {
+    font-size: 18px;
+    height: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .domainCountTitleContainer {
+    gap: 0px;
+  }
+
+  .domainCountTitle {
+    margin-top: -40px;
+    font-size: 40px;
+    line-height: 140px;
+  }
+
+  .domainCountSubtitle {
+    font-size: 20px;
+    height: 16px;
+    line-height: 32px;
+  }
 }
 
 .categoryTitle {
