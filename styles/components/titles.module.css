@@ -5,6 +5,70 @@
   margin: 0 auto;
 }
 
+.domainCountTitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.domainCountTitle {
+  font-family: QuickZap;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  text-align: center;
+  line-height: 1;
+  color: #0c8654;
+  flex: 1;
+  height: max-content;
+  max-width: 100%;
+}
+
+.domainCountSubtitle {
+  max-width: 286px;
+  margin: 0;
+  font-family: QuickZap;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  color: #454545;
+}
+
+@media (max-width: 768px) {
+  .domainCountTitle {
+    font-size: 60px;
+    line-height: 72px;
+    margin-top: 6rem;
+  }
+
+  .domainCountSubtitle {
+    font-size: 18px;
+    line-height: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .domainCountTitleContainer {
+    align-self: center;
+    justify-self: center;
+    height: inherit;
+  }
+
+  .domainCountTitle {
+    font-size: 40px;
+  }
+
+  .domainCountSubtitle {
+    margin-top: -5px;
+    font-size: 18px;
+  }
+}
 .categoryTitle {
   color: var(--secondary);
 
@@ -34,6 +98,7 @@
     font-size: 24px;
     line-height: 28px;
   }
+
   .categorySubtitle {
     font-size: 14px;
     line-height: 24px;
