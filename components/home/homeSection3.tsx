@@ -6,7 +6,7 @@ const HomeSection3: FunctionComponent = () => {
   return (
     <div className={styles.section3Container}>
       <DomainCountTitle
-        title="475,736" subtitle="Domains minted"
+       subtitle="Domains minted"
         button={
           <button className={styles.section3ContainerButton}>Choose Your Domain</button>
         }

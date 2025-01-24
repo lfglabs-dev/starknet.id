@@ -3,13 +3,11 @@ import styles from "../../../styles/components/titles.module.css";
 import Counter from "../../home/counterComponent";
 
 type CategoryTitleProps = {
-  title: string;
   subtitle: string;
   button: ReactNode;
 };
 
 const DomainCountTitle: FunctionComponent<CategoryTitleProps> = ({
-  title,
   subtitle,
   button,
 }) => {
