@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Identity and naming service for Starknet. Mint your identity and choose your .stark domain now 🔥"
         />
         <meta property="og:url" content="https://starknet.id/" />
-        <meta property="og:image" content="/visuals/StarknetIdLogo.png" />
+        <meta property="og:image" content="/visuals/favicon.png" />
         <meta
           name="description"
           content="Use your Starknet ID to prove your identity on-chain."
