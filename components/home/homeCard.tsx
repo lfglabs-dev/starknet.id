@@ -16,14 +16,14 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
   numb
 }) => {
   return (
-    <div className="w-full bg-green-400 max-w-[864px]  flex items-center justify-between flex-wrap m-4 mb-12 p-12 pl-6 text-left text-inherit no-underline rounded-lg transition-all duration-150 ease-in-out bg-background-light shadow-shadow z-10 ">
-      <div className="min-w-[300px] flex-1 basis-1/2  bg-blue-700" >
-        <h2 >{numb}</h2>
-        <h1 className={styles.thirdTitle}>{title}</h1>
-        <p className={styles.cardDescription}>{description}</p>
+    <div className="w-full bg-white max-w-[864px]  flex items-stretch justify-between flex-wrap m-4 mb-12  text-left text-inherit no-underline rounded-lg shadow-xl transition-all duration-150 ease-in-out bg-background-light z-10 ">
+      <div className="min-w-[300px] flex flex-col gap-4 px-3 py-10 lg:pl-12 flex-1 basis-1/2 text-left " >
+        <h2 className="text-[#fff] bg-[#402D28] w-7 h-6 p-2 rounded-md text-sm font-medium text-center flex items-center justify-center " >{numb}</h2>
+        <h1 className="text-xl font-bold text-[#454545] " >{title}</h1>
+        <p className="text-[#8C8989] text-xs font-normal " >{description}</p>
 
       </div>
-      <div className="flex justify-center lg:justify-end min-w-[300px] flex-1 basis-1/2 bg-blue-700" >
+      <div className="flex justify-center lg:justify-end min-w-[300px] flex-1 basis-1/2 " >
       <CDNImg
           className={styles.homeCardBanner}
           alt="illustration"
