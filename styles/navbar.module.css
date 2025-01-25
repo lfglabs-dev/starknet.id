@@ -1,14 +1,21 @@
 .starknetIdLogo {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: QuickZap;
+  gap: 10px;
+  font-size: 22px;
+  width: 170px !important;
+  color: var(--secondary);
 }
 
 .menuItem {
-  margin-left: 2.5rem /* 40px */;
+  /* margin-left: 2.5rem 40px; */
   font-size: 0.875rem /* 14px */;
   line-height: 1.25rem /* 20px */;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--secondary);
   text-transform: underline;
   transition: 0.3s ease-in-out;
