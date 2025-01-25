@@ -94,16 +94,23 @@ const partners = [
 
 const HomePartners: FunctionComponent = () => {
   return (
-    <div className="py-8 flex gap-10 items-center">
-      <div className="">
-        <p className=" font-poppins w-[220px] text-sm font-medium leading-5 text-left text-[14px] text-gray-500">
+    <div className="relative py-8 flex items-center">
+      {/* Description */}
+      <div className="mr-8">
+        <p className="font-poppins w-[220px] text-sm font-medium leading-5 text-left text-[14px] text-gray-500">
           Integrated by the whole Starknet ecosystem
         </p>
       </div>
 
-      <div className="overflow-hidden relative">
+      {/* Slider Container */}
+      <div className="relative w-full overflow-hidden">
+        {/* Left Blur */}
+        <div className="absolute left-0 top-0 bottom-0 w-12 backdrop-blur-sm bg-gradient-to-r  from-inherit via-white/70 to-transparent pointer-events-none z-10"></div>
+        {/* Right Blur */}
+        <div className="absolute right-0 top-0 bottom-0 w-12 backdrop-blur bg-gradient-to-l  from-inherit via-white/70 to-transparent pointer-events-none z-10"></div>
+
+        {/* Scrolling Content */}
         <div className="flex gap-10 whitespace-nowrap animate-marquee">
-          {/* Render the partner list twice for seamless animation */}
           {[...partners, ...partners].map((partner, index) => (
             <a
               key={index}
@@ -112,7 +119,6 @@ const HomePartners: FunctionComponent = () => {
               rel="noreferrer"
               href={partner.href}
             >
-              {/* Icon Container */}
               <div className="flex justify-center items-center w-16 h-16">
                 {partner.icon}
               </div>
@@ -123,4 +129,5 @@ const HomePartners: FunctionComponent = () => {
     </div>
   );
 };
+
 export default HomePartners;
