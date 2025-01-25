@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import styles from "../../styles/Home.module.css";
 import CarbonableIcon from "../icons/carbonable";
 import BriqIcon from "../icons/briq";
 import RealmsIcon from "../icons/realms";
@@ -10,116 +9,118 @@ import { CDNImg } from "../cdn/image";
 import EkuboIcon from "../icons/ekubo";
 import MySwapIcon from "../icons/myswap";
 
+const partners = [
+  {
+    name: "Avnu",
+    href: "https://www.avnu.fi/",
+    icon: <AvnuIcon width="60" color="black" />,
+  },
+  {
+    name: "Argent",
+    href: "https://www.argent.xyz/",
+    icon: (
+      <CDNImg
+        className="w-12 h-12 object-contain mb-1"
+        src="/visuals/partners/argent-logo-colour.svg"
+      />
+    ),
+  },
+  {
+    name: "Starkscan",
+    href: "https://starkscan.co/",
+    icon: (
+      <CDNImg
+        className="w-12 h-12 object-contain mb-1"
+        src="/visuals/partners/starkscan.png"
+      />
+    ),
+  },
+  {
+    name: "Braavos",
+    href: "https://braavos.app/",
+    icon: (
+      <CDNImg
+        className="w-12 h-12 object-contain mb-1"
+        src="/visuals/partners/braavos.svg"
+      />
+    ),
+  },
+  {
+    name: "Everai",
+    href: "https://www.everai.xyz/",
+    icon: <EveraiIcon width="60" color="black" />,
+  },
+  {
+    name: "Ekubo",
+    href: "https://ekubo.org/",
+    icon: <EkuboIcon height="40" />,
+  },
+  {
+    name: "Briq",
+    href: "https://briq.construction/",
+    icon: <BriqIcon />,
+  },
+  {
+    name: "MySwap",
+    href: "https://www.myswap.xyz/",
+    icon: <MySwapIcon height="40" />,
+  },
+  {
+    name: "Carbonable",
+    href: "https://carbonable.io/",
+    icon: <CarbonableIcon />,
+  },
+  {
+    name: "Nostra",
+    href: "https://www.nostra.finance",
+    icon: <NostraIcon height="30px" />,
+  },
+  {
+    name: "Realms",
+    href: "https://realmseternum.com/",
+    icon: <RealmsIcon />,
+  },
+  {
+    name: "Voyager",
+    href: "https://voyager.online/",
+    icon: (
+      <CDNImg
+        className="w-12 h-12 object-contain mb-1"
+        src="/visuals/partners/voyager.png"
+      />
+    ),
+  },
+];
+
 const HomePartners: FunctionComponent = () => {
   return (
-    <div className={styles.subsection}>
-      <div className={styles.card2}>
-        <p className={styles.partnersSubtitle}>Our partners</p>
-        <h2 className={styles.secondTitle}>They already integrated us</h2>
-        <div className={styles.partners}>
-          <a
-            className="mx-10"
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.avnu.fi/"
-          >
-            <AvnuIcon width="100" color="black" />
-          </a>
-          <a target="_blank" rel="noreferrer" href="https://www.argent.xyz/">
-            <CDNImg
-              className="mx-10"
-              width={200}
-              src="/visuals/partners/argent-logo-colour.svg"
-              alt="Argent logo"
-            />
-          </a>
-          <a target="_blank" rel="noreferrer" href="https://starkscan.co/">
-            <CDNImg
-              className="mx-10"
-              width={200}
-              src="/visuals/partners/starkscan.png"
-              alt="Starkscan logo"
-            />
-          </a>
-          <a target="_blank" rel="noreferrer" href="https://braavos.app/">
-            <CDNImg
-              className="mx-10"
-              width={200}
-              src="/visuals/partners/braavos.svg"
-              alt="Braavos logo"
-            />
-          </a>
+    <div className="py-8 flex gap-10 items-center">
+      <div className="">
+        <p className=" font-poppins w-[220px] text-sm font-medium leading-5 text-left text-[14px] text-gray-500">
+          Integrated by the whole Starknet ecosystem
+        </p>
+      </div>
 
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.everai.xyz/"
-            className="mx-10"
-          >
-            <EveraiIcon width={"100"} color="black" />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://ekubo.org/"
-            className="mx-10"
-          >
-            <EkuboIcon height="60" />
-          </a>
-          <a target="_blank" rel="noreferrer" href="https://briq.construction/">
-            <BriqIcon />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.myswap.xyz/"
-            className="mx-10"
-          >
-            <MySwapIcon height="60" />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://carbonable.io/"
-            className="mx-10"
-          >
-            <CarbonableIcon />
-          </a>
-
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className="mx-10"
-            href="https://www.nostra.finance"
-          >
-            <NostraIcon height="40px" />
-          </a>
-
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://realmseternum.com/"
-            className="mx-10"
-          >
-            <RealmsIcon />
-          </a>
-
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://voyager.online/"
-            className="mx-10 mt-5"
-          >
-            <CDNImg
-              width={200}
-              src="/visuals/partners/voyager.png"
-              alt="Voyager logo"
-            />
-          </a>
+      <div className="overflow-hidden relative">
+        <div className="flex gap-10 whitespace-nowrap animate-marquee">
+          {/* Render the partner list twice for seamless animation */}
+          {[...partners, ...partners].map((partner, index) => (
+            <a
+              key={index}
+              className="flex flex-col items-center text-center"
+              target="_blank"
+              rel="noreferrer"
+              href={partner.href}
+            >
+              {/* Icon Container */}
+              <div className="flex justify-center items-center w-16 h-16">
+                {partner.icon}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </div>
   );
 };
-
 export default HomePartners;
