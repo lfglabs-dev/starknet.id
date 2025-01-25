@@ -1,6 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
 import { CDNImg } from "../cdn/image";
+import Image from "next/image";
+
 
 type HomeCardProps = {
   img: string;
@@ -16,21 +18,31 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
   numb
 }) => {
   return (
-    <div className="w-full bg-white max-w-[864px]  flex items-stretch justify-between flex-wrap m-4 mb-12  text-left text-inherit no-underline rounded-lg shadow-xl transition-all duration-150 ease-in-out bg-background-light z-10 ">
-      <div className="min-w-[300px] flex flex-col gap-4 px-3 py-10 lg:pl-12 flex-1 basis-1/2 text-left " >
+    <div className="w-full bg-white max-w-[864px]  flex items-stretch justify-between flex-wrap m-4 mb-12  text-left text-inherit no-underline rounded-lg shadow-lg transition-all duration-150 ease-in-out bg-background-light z-10 ">
+      <div className="min-w-[300px] flex flex-col items-center lg:items-start gap-4 px-3 py-10 lg:pl-12 flex-1 lg:basis-1/2 text-center lg:text-left " >
         <h2 className="text-[#fff] bg-[#402D28] w-7 h-6 p-2 rounded-md text-sm font-medium text-center flex items-center justify-center " >{numb}</h2>
-        <h1 className="text-xl font-bold text-[#454545] " >{title}</h1>
+        <h1 className="text-xl font-bold text-[#454545]  " style={{ textShadow: "none" }} >{title}</h1>
         <p className="text-[#8C8989] text-xs font-normal " >{description}</p>
-
+        
       </div>
-      <div className="flex justify-center lg:justify-end min-w-[300px] flex-1 basis-1/2 " >
+      <div className=" justify-center hidden lg:flex items-end lg:items-stretch lg:justify-end min-w-[300px] lg:flex-1 lg:basis-1/2 " >
       <CDNImg
-          className={styles.homeCardBanner}
+          className={` w-[300px] h-[300px]   object-cover ${styles.homeCardBanner}`}
           alt="illustration"
-          height={300}
-          width={300}
+          height={100}
+          width={100}
           src={img}
         />
+        </div>
+        <div className="w-full flex items-center justify-center lg:hidden lg:flex-1 lg:basis-1/2 " >
+        <Image
+          className={` bg-red-700 w-[500px] h-auto object-contain  lg:hidden  ${styles.homeCardBanner}`}
+          alt="illustration"
+          height={100}
+          width={100}
+          src="/visuals/home/visualEverai4.webp"
+        />
+ 
       </div>
     </div>
   );
