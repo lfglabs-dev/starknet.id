@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
-import HomePartners from "./homePartners";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
 import { CDNImg } from "../cdn/image";
+import HomePartners from "./homePartners";
 
 const HomeSection2: FunctionComponent = () => {
   return (
@@ -18,6 +18,7 @@ const HomeSection2: FunctionComponent = () => {
           className="hidden md:block"
         />
       </Parallax>
+      <HomePartners />
       <CategoryTitle
         title="Forge Your Unique StarkNet Identity"
         subtitle="Seamlessly Claim, Personalize, and Elevate"
@@ -53,7 +54,6 @@ const HomeSection2: FunctionComponent = () => {
           domains."
         />
       </div>
-      <HomePartners />
     </div>
   );
 };

@@ -10,6 +10,16 @@ module.exports = {
         background: "#ffffff",
       },
     },
+    animation: {
+      marquee: "scroll 30s linear infinite",
+    },
+
+    keyframes: {
+      scroll: {
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-25%)" },
+      },
+    },
   },
   plugins: [],
 };
