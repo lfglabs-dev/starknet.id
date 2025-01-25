@@ -22,12 +22,12 @@ const Navbar: FunctionComponent = () => {
         <div className="ml-4">
           <Link href="/" className={styles.starknetIdLogo}>
             <CDNImg
-              src="/visuals/StarknetIdLogo.png"
+              src="/visuals/StarknetIdLogo.svg"
               alt="Starknet.id Logo"
               width={30.5}
               height={30.5}
             />
-            <span className="font-" >STARKNET ID</span>
+            <span className="hidden sm:block">STARKNET ID</span>
           </Link>
         </div>
         <div>
@@ -88,12 +88,12 @@ const Navbar: FunctionComponent = () => {
               <div className="w-full">
                 <Link href="/" className={styles.starknetIdLogo}>
                   <CDNImg
-                    src="/visuals/StarknetIdLogo.png"
+                    src="/visuals/StarknetIdLogo.svg"
                     alt="Starknet.id Logo"
                     width={30.5}
                     height={30.5}
                   />
-                  <span className="font-" >STARKNET ID</span>
+                  <span className="hidden sm:block">STARKNET ID</span>
                 </Link>
               </div>
 
