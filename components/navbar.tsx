@@ -42,20 +42,6 @@ const Navbar: FunctionComponent = () => {
             >
               Documentation
             </li>
-            {/* <li
-              onClick={() => window.open("https://twitter.com/starknet_id")}
-              className="ml-10 mr-5 text-sm uppercase cursor-pointer"
-            >
-              <FaTwitter color={theme.palette.secondary.main} size="30px" />
-            </li>
-            <li
-              onClick={() =>
-                window.open("https://discord.com/invite/8uS2Mgcsza")
-              }
-              className="mr-10 text-sm uppercase cursor-pointer"
-            >
-              <FaDiscord color={theme.palette.secondary.main} size="30px" />
-            </li> */}
             <div className="mr-5">
               <Button onClick={() => window.open("https://app.starknet.id")}>
                 Launch App
