@@ -105,9 +105,9 @@ const HomePartners: FunctionComponent = () => {
       {/* Slider Container */}
       <div className="relative w-full overflow-hidden">
         {/* Left Blur */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 backdrop-blur-sm bg-gradient-to-r  from-inherit via-white/70 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-7 backdrop-blur-[2px] bg-gradient-to-r  from-inherit to-transparent pointer-events-none z-10"></div>
         {/* Right Blur */}
-        <div className="absolute right-0 top-0 bottom-0 w-12 backdrop-blur bg-gradient-to-l  from-inherit via-white/70 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-7 backdrop-blur-[2px] bg-gradient-to-l  from-inherit  to-transparent pointer-events-none z-10"></div>
 
         {/* Scrolling Content */}
         <div className="flex gap-10 whitespace-nowrap animate-marquee">
