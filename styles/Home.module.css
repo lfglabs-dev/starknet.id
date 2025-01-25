@@ -160,8 +160,14 @@
 }
 
 .subsection {
+  width: 100%;
   display: flex;
   flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  gap: 20px;
 }
 
 .title a {
@@ -212,7 +218,6 @@
   text-decoration: none;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 33%;
   background-color: var(--background-light);
   box-shadow: var(--shadow);
   z-index: 10;
