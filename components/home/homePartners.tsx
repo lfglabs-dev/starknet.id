@@ -94,10 +94,10 @@ const partners = [
 
 const HomePartners: FunctionComponent = () => {
   return (
-    <div className="relative py-8 flex items-center">
+    <div className="relative sm:py-12 flex items-center flex-wrap sm:flex-nowrap mb-12">
       {/* Description */}
-      <div className="mr-8">
-        <p className="font-poppins w-[220px] text-sm font-medium leading-5 text-left text-[14px] text-gray-500">
+      <div className="sm:mr-8 w-full sm:w-fit">
+        <p className="font-poppins w-full sm:w-[220px] text-sm font-medium leading-5 sm:text-left text-[14px] text-gray-500 text-center">
           Integrated by the whole Starknet ecosystem
         </p>
       </div>
@@ -105,25 +105,27 @@ const HomePartners: FunctionComponent = () => {
       {/* Slider Container */}
       <div className="relative w-full overflow-hidden">
         {/* Left Blur */}
-        <div className="absolute left-0 top-0 bottom-0 w-7 backdrop-blur-[2px] bg-gradient-to-r  from-inherit to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-7 bg-gradient-to-r from-background to-transparent pointer-events-none z-10"></div>
         {/* Right Blur */}
-        <div className="absolute right-0 top-0 bottom-0 w-7 backdrop-blur-[2px] bg-gradient-to-l  from-inherit  to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-7 bg-gradient-to-l  from-background  to-transparent pointer-events-none z-10"></div>
 
         {/* Scrolling Content */}
-        <div className="flex gap-10 whitespace-nowrap animate-marquee">
-          {[...partners, ...partners].map((partner, index) => (
-            <a
-              key={index}
-              className="flex flex-col items-center text-center"
-              target="_blank"
-              rel="noreferrer"
-              href={partner.href}
-            >
-              <div className="flex justify-center items-center w-16 h-16">
-                {partner.icon}
-              </div>
-            </a>
-          ))}
+        <div className="flex gap-10 whitespace-nowrap animate-marquee w-fit">
+          {[...partners, ...partners, ...partners, ...partners].map(
+            (partner, index) => (
+              <a
+                key={index}
+                className="flex flex-col items-center text-center"
+                target="_blank"
+                rel="noreferrer"
+                href={partner.href}
+              >
+                <div className="flex justify-center items-center w-16 h-16">
+                  {partner.icon}
+                </div>
+              </a>
+            )
+          )}
         </div>
       </div>
     </div>
