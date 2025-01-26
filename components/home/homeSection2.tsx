@@ -1,34 +1,35 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
-import HomePartners from "./homePartners";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
-import { CDNImg } from "../cdn/image";
+import HomePartners from "./homePartners";
+import Image from "next/image";
 
 const HomeSection2: FunctionComponent = () => {
   return (
     <div id="info" className={styles.section2}>
       <Parallax speed={-5}>
-        <CDNImg
+        <Image
           src="/leaves/lilLeaf01.svg"
           alt="leaf"
-          width={20}
-          height={20}
+          width={54}
+          height={53}
           className="hidden md:block"
         />
       </Parallax>
+      <HomePartners />
       <CategoryTitle
         title="Forge Your Unique StarkNet Identity"
         subtitle="Seamlessly Claim, Personalize, and Elevate"
       />
       <Parallax speed={-10}>
-        <CDNImg
+        <Image
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
           className="absolute right-3 hidden md:block"
-          width={20}
-          height={20}
+          width={54}
+          height={53}
         />
       </Parallax>
       <div className={`${styles.subsection} mt-8`}>
@@ -53,7 +54,6 @@ const HomeSection2: FunctionComponent = () => {
           domains."
         />
       </div>
-      <HomePartners />
     </div>
   );
 };
