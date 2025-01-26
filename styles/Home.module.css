@@ -322,11 +322,6 @@ div:has(> .lilLeaf04) {
     line-height: 20px;
     /* 142.857% */
   }
-
-  .homeCardBanner {
-    max-width: 100px;
-  }
-
   .section2 {
     padding: 1rem 1.5rem;
   }
