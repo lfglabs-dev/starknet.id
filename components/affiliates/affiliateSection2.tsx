@@ -12,20 +12,23 @@ const AffiliateSection2: FunctionComponent = () => {
         <HomeCard
           img="/visuals/affiliates/affiliationIllu1.webp"
           title="Permissionless and Trustless"
-          description="The particularity of our program is that it is
-          completely trustless and permissionless, everyone can participate by
-          just owning a stark domain and all the logic takes place on-chain so
-          you don't have to trust any centralized entity."
+          description="The particularity of our program is that it is completely trustless and permissionless, everyone can participate by just owning a stark domain and all the logic takes place on-chain so you don't have to trust any centralized entity."
+          numb= "1" 
+          mobileimg="/visuals/affiliates/affiliationIllu1-mobile.webp" 
         />
         <HomeCard
           img="/visuals/affiliates/searchIllu.webp"
           title="Track and Grow your performances"
           description="As an affiliate you'll get access to ready to use designs, news in advance, a special analytics dashboard and a dedicated affiliate manager to optimize your campaigns as much as possible."
+          numb="2"
+          mobileimg="/visuals/affiliates/searchIllu-mobile.webp" 
         />
         <HomeCard
           img="/visuals/affiliates/moneyIllu.webp"
           title="Get paid in Crypto (ETH & STRK in the future)"
           description="We share revenue fairly. Every eligible sale made earns you at least 30% commissions. And this is just the start because you could go bigger if you are a top performer."
+          numb="3"
+          mobileimg="/visuals/affiliates/moneyIllu-mobile.webp"
         />
       </div>
       <IntegratedBySection />
