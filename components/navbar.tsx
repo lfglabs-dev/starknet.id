@@ -8,6 +8,7 @@ import Button from "./button";
 import theme from "../styles/theme";
 import { CDNImg } from "./cdn/image";
 import CloseFilledIcon from "./UI/iconsComponents/icons/closeFilledIcon";
+import Image from "next/image";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);
@@ -73,7 +74,7 @@ const Navbar: FunctionComponent = () => {
             <div className={styles.mobileNavBarHeader}>
               <div className="w-full">
                 <Link href="/" className={styles.starknetIdLogo}>
-                  <CDNImg
+                  <Image
                     src="/visuals/StarknetIdLogo.svg"
                     alt="Starknet.id Logo"
                     width={30.5}
