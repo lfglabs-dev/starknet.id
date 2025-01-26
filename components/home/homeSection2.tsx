@@ -55,21 +55,24 @@ const HomeSection2 = () => {
       <div className={`${styles.subsection} mt-8`}>
         {[
           {
-            img: "/visuals/home/homeimg2.png",
+            img: "/visuals/home/visualEverai2.webp",
+            mobileimg: "/visuals/home/visualEverai2.webp",
             title: "Claim your Starknet identity",
             description:
               "You can already mint your starknet identity for free, it'll act as your starknet passport and represent you during your on-chain interactions.",
             numb: "1",
           },
           {
-            img: "/visuals/home/homeCardimg.png",
+            img: "/visuals/home/visualEverai4.webp",
+            mobileimg: "/visuals/home/visualEverai3.webp",
             title: "Register your .stark domain",
             description:
               "You’re not 0x072d4…b2Be7, you can already register your .stark domain and link it with your starknet identity.",
             numb: "2",
           },
           {
-            img: "/visuals/home/homeCardimg.png",
+            img: "/visuals/home/visualEverai3.webp",
+            mobileimg: "/visuals/home/visualEverai3.webp",
             title: "Build your identity",
             description:
               "You'll also be able to attach any data to your starknet identity, from web2 with social media accounts to web3 with ENS domains.",
@@ -86,6 +89,7 @@ const HomeSection2 = () => {
               title={card.title}
               description={card.description}
               numb={card.numb}
+              mobileimg={card.mobileimg}
             />
           </div>
         ))}

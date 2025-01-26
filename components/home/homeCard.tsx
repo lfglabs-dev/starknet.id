@@ -1,21 +1,23 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
 import { CDNImg } from "../cdn/image";
-import Image from "next/image";
+
 
 
 type HomeCardProps = {
   img: string;
   title: string;
   description: string;
-  numb: string
+  numb: string;
+  mobileimg: string
 };
 
 const HomeCard: FunctionComponent<HomeCardProps> = ({
   img,
   title,
   description,
-  numb
+  numb,
+  mobileimg
 }) => {
   return (
     <div className="w-full bg-white max-w-[864px]  flex items-stretch justify-between flex-wrap m-4 mb-12  text-left text-inherit no-underline rounded-lg shadow-lg transition-all duration-150 ease-in-out bg-background-light z-10 ">
@@ -35,12 +37,12 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
         />
         </div>
         <div className="w-full flex items-center justify-center lg:hidden lg:flex-1 lg:basis-1/2 " >
-        <Image
-          className={`  object-contain  lg:hidden  ${styles.homeCardBanner}`}
+        <CDNImg
+          className={`  object-cover  lg:hidden  ${styles.homeCardBanner}`}
           alt="illustration"
           height={357}
           width={260}
-          src={img}
+          src={mobileimg}
         />
  
       </div>
