@@ -333,6 +333,7 @@ div:has(> .lilLeaf04) {
 
   .subsection {
     flex-direction: column;
+    padding-right: 1.5rem;
   }
 
   .partners {
