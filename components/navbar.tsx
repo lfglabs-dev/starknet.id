@@ -6,7 +6,6 @@ import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import styles from "../styles/navbar.module.css";
 import Button from "./button";
 import theme from "../styles/theme";
-import { CDNImg } from "./cdn/image";
 import CloseFilledIcon from "./UI/iconsComponents/icons/closeFilledIcon";
 import Image from "next/image";
 
@@ -22,7 +21,7 @@ const Navbar: FunctionComponent = () => {
       <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
         <div className="ml-4">
           <Link href="/" className={styles.starknetIdLogo}>
-            <CDNImg
+            <Image
               src="/visuals/StarknetIdLogo.svg"
               alt="Starknet.id Logo"
               width={30.5}
