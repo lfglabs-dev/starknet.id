@@ -8,26 +8,26 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#284028] text-white px-6 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-fit lg:mx-[100px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-          <div className="md:col-span-4">
-            <Parallax speed={-20}>
-              <CDNImg
-                src="/visuals/home/footer-icon.png"
-                alt="leaf"
-                className="absolute left-0  hidden md:block"
-                width={20}
-                height={20}
-              />
-            </Parallax>
+          <div className="md:col-span-4 space-y-10 lg:text-left md:text-left text-center">
+            
+            <CDNImg
+              src="/visuals/home/footer-icon.png"
+              alt="leaf"
+              className="relative text-center mx-auto lg:ml-0 md:ml-0 lg:left-0 w-10"
+              width={40}
+              height={40}
+            />
+            
             <h2 className="text-xl font-bold leading-tight mb-8 md:mb-0">
               One profile, seamlessly integrated to the whole ecosystem
             </h2>
           </div>
 
           <div className="md:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-end">
-              <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:justify-items-end lg:text-left md:text-left text-center">
+              <div className="space-y-4 lg:mr-[-120px] md:ml-[55px] mr-0">
                 <h3 className="text-lg font-semibold mb-4">About</h3>
                 <div className="flex flex-col space-y-3">
                   <Link
