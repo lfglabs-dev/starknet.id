@@ -324,7 +324,7 @@ div:has(> .lilLeaf04) {
   }
 
   .homeCardBanner {
-    max-width: 500px;
+    max-width: 100px;
   }
 
   .section2 {
@@ -333,7 +333,6 @@ div:has(> .lilLeaf04) {
 
   .subsection {
     flex-direction: column;
-    padding-right: 1.5rem;
   }
 
   .partners {
