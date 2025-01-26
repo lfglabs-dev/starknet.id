@@ -70,7 +70,7 @@
 .section2 {
   min-height: 80vh;
   flex-direction: column;
-  padding: 4rem 4rem;
+  padding: 0 4rem 4rem;
 }
 
 .section3Container {

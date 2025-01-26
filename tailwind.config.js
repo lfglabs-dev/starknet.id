@@ -7,7 +7,17 @@ module.exports = {
         primary: "#19AA6E",
         secondary: "#402D28",
         tertiary: "#BF9E7B",
-        background: "#FFF9F0",
+        background: "#ffffff",
+      },
+    },
+    animation: {
+      marquee: "scroll 30s linear infinite",
+    },
+
+    keyframes: {
+      scroll: {
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-25%)" },
       },
       keyframes: {
         slideIn: {

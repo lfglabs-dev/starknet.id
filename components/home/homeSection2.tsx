@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import styles from "../../styles/Home.module.css";
-import HomePartners from "./homePartners";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
 import { CDNImg } from "../cdn/image";
+import HomePartners from "./homePartners";
 
 const HomeSection2 = () => {
-  const cardsRef = useRef<HTMLDivElement[]>([]); 
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,12 +20,19 @@ const HomeSection2 = () => {
           }
         });
       },
-      { threshold: 0.2 } 
+      { threshold: 0.2 }
     );
 
-    cardsRef.current.forEach((card) => observer.observe(card));
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
 
-    return () => observer.disconnect(); 
+    return () => {
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -39,6 +46,7 @@ const HomeSection2 = () => {
           className="hidden md:block"
         />
       </Parallax>
+      <HomePartners />
       <CategoryTitle
         title="Forge Your Unique StarkNet Identity"
         subtitle="Seamlessly Claim, Personalize, and Elevate"
@@ -81,7 +89,7 @@ const HomeSection2 = () => {
         ].map((card, index) => (
           <div
             key={index}
-            ref={(el) => (cardsRef.current[index] = el!)} 
+            ref={(el) => (cardsRef.current[index] = el)}
             className="opacity-0 translate-y-6 transition-all duration-700 ease-out"
           >
             <HomeCard
@@ -94,7 +102,6 @@ const HomeSection2 = () => {
           </div>
         ))}
       </div>
-      <HomePartners />
     </div>
   );
 };
