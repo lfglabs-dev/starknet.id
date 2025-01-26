@@ -9,18 +9,16 @@ module.exports = {
         tertiary: "#BF9E7B",
         background: "#ffffff",
       },
-    },
-    animation: {
-      marquee: "scroll 30s linear infinite",
-    },
-
-    keyframes: {
-      scroll: {
-        "0%": { transform: "translateX(0)" },
-        "100%": { transform: "translateX(-25%)" },
+      animation: {
+        marquee: "scroll 30s linear infinite",
+        "slide-in": "slideIn 0.7s ease-out forwards", 
       },
       keyframes: {
-        slideIn: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-25%)" },
+        },
+        slideIn: { 
           "0%": {
             opacity: 0,
             transform: "translateY(24px)",
@@ -30,9 +28,6 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
-      },
-      animation: {
-        "slide-in": "slideIn 0.7s ease-out forwards",
       },
     },
   },
