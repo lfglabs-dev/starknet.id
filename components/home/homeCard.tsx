@@ -25,25 +25,26 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
         <p className="text-[#8C8989] text-xs font-normal " >{description}</p>
         
       </div>
-      <div className=" justify-center hidden lg:flex items-end lg:items-stretch lg:justify-end min-w-[300px] lg:flex-1 lg:basis-1/2 " >
+      <div className=" justify-center hidden  lg:flex items-center lg:items-stretch lg:justify-end min-w-[300px] lg:flex-1 lg:basis-1/2 " >
       <CDNImg
-          className={` w-[300px] h-[300px]   object-cover ${styles.homeCardBanner}`}
+          className={`  object-cover ${styles.homeCardBanner}`}
           alt="illustration"
-          height={100}
-          width={100}
+          height={300}
+          width={300}
           src={img}
         />
         </div>
         <div className="w-full flex items-center justify-center lg:hidden lg:flex-1 lg:basis-1/2 " >
         <Image
-          className={` bg-red-700 w-[500px] h-auto object-contain  lg:hidden  ${styles.homeCardBanner}`}
+          className={`  object-contain  lg:hidden  ${styles.homeCardBanner}`}
           alt="illustration"
-          height={100}
-          width={100}
-          src="/visuals/home/visualEverai4.webp"
+          height={357}
+          width={260}
+          src={img}
         />
  
       </div>
+      
     </div>
   );
 };
