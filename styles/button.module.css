@@ -67,12 +67,12 @@
 .nq-button::after {
   content: "";
   position: absolute;
-  background: #000;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  top: -4px;
   border: 2px solid var(--tertiary); /* Based on Nimiq Light Blue */
-  border-radius: 500px;
+  border-radius: 8px;
   opacity: 0;
 }
 
