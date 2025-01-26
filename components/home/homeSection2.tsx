@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import styles from "../../styles/Home.module.css";
-import HomePartners from "./homePartners";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
 import { CDNImg } from "../cdn/image";
+import HomePartners from "./homePartners";
 
 const HomeSection2 = () => {
   const cardsRef = useRef<HTMLDivElement[]>([]); 
@@ -39,6 +39,7 @@ const HomeSection2 = () => {
           className="hidden md:block"
         />
       </Parallax>
+      <HomePartners />
       <CategoryTitle
         title="Forge Your Unique StarkNet Identity"
         subtitle="Seamlessly Claim, Personalize, and Elevate"
@@ -94,7 +95,6 @@ const HomeSection2 = () => {
           </div>
         ))}
       </div>
-      <HomePartners />
     </div>
   );
 };
