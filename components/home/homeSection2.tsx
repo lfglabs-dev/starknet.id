@@ -13,8 +13,8 @@ const HomeSection2: FunctionComponent = () => {
         <CDNImg
           src="/leaves/lilLeaf01.svg"
           alt="leaf"
-          width={20}
-          height={20}
+          width={54}
+          height={53}
           className="hidden md:block"
         />
       </Parallax>
@@ -28,8 +28,8 @@ const HomeSection2: FunctionComponent = () => {
           src="/leaves/lilLeaf02.svg"
           alt="leaf"
           className="absolute right-3 hidden md:block"
-          width={20}
-          height={20}
+          width={54}
+          height={53}
         />
       </Parallax>
       <div className={`${styles.subsection} mt-8`}>
