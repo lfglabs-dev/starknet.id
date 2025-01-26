@@ -18,7 +18,7 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
   mobileimg,
 }) => {
   return (
-    <div className="w-full bg-white max-w-[864px]  flex items-stretch justify-between flex-wrap m-4 mb-12  text-left text-inherit no-underline rounded-lg shadow-lg transition-all duration-150 ease-in-out bg-background-light z-10">
+    <div className="w-full bg-white max-w-[864px]  flex items-stretch justify-between flex-wrap m-4 mb-12  text-left text-inherit no-underline rounded-lg shadow-xl transition-all duration-150 ease-in-out bg-background-light z-10">
       <div className="min-w-[300px] flex flex-col items-center lg:items-start gap-4 px-3 py-10 lg:pl-12 flex-1 lg:basis-1/2 text-center lg:text-left ">
         <h2 className="text-[#fff] bg-[#402D28] w-7 h-6 p-2 rounded-md text-sm font-medium text-center flex items-center justify-center ">
           {numb}
@@ -40,11 +40,11 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
           src={img}
         />
       </div>
-      <div className="w-full flex items-center justify-center lg:hidden lg:flex-1 lg:basis-1/2 ">
+      <div className="w-full flex items-center justify-center lg:hidden lg:flex-1 lg:basis-1/2">
         <CDNImg
-          className={`object-cover lg:hidden ${styles.homeCardBanner} `}
+          className={`object-cover lg:hidden ${styles.homeCardBanner}`}
           alt="illustration"
-          height={357}
+          height={358}
           width={300}
           src={mobileimg}
         />
