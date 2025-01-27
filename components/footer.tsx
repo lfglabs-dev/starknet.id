@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -10,12 +10,11 @@ export default function Footer() {
       <div className="max-w-fit lg:mx-[100px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-4 space-y-10 lg:text-left md:text-left text-center">
-            
             <Image
-              src="/visuals/home/footer-icon.webp" 
-              alt="leaf" 
-              width={40} 
-              height={40} 
+              src="/visuals/home/footer-icon.webp"
+              alt="leaf"
+              width={40}
+              height={40}
               className="relative text-center mx-auto lg:ml-0 md:ml-0 lg:left-0 w-10"
             />
             <h2 className="text-xl font-bold leading-tight mb-8 md:mb-0">
@@ -55,19 +54,19 @@ export default function Footer() {
                   <Link
                     href="https://app.starknet.id/"
                     target="_blank"
-                      rel="noopener noreferrer"
+                    rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
                   >
                     Get Your Domain
                   </Link>
                   <Link
-                    href="/"
+                    href="https://app.starknet.id/pfpcollections"
                     className="hover:opacity-80 transition-opacity"
                   >
                     PFP Collections
                   </Link>
                   <Link
-                    href="/"
+                    href="https://app.starknet.id/newsletter"
                     className="hover:opacity-80 transition-opacity"
                   >
                     Newsletter
@@ -92,7 +91,7 @@ export default function Footer() {
           </p>
           <div className="flex space-x-6">
             <a
-              href="https://twitter.com/Starknet_id" 
+              href="https://twitter.com/Starknet_id"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
