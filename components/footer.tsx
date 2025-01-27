@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-10 lg:text-left md:text-left text-center">
             
             <Image
-              src="/visuals/home/footer-icon.webp" 
+              src="/visuals/home/vector-group.webp" 
               alt="leaf" 
               width={40} 
               height={40} 
