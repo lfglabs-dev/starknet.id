@@ -3,6 +3,9 @@ module.exports = {
   content: ["./pages/**/*.{html,tsx}", "./components/**/*.{html,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        'custom': '0px 2px 30px 0px #0000000F',
+      },
       colors: {
         primary: "#19AA6E",
         secondary: "#402D28",
