@@ -6,13 +6,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#284028] text-white px-6 lg:mt-[-230px] -mt-[105px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-12 md:py-16">
+    <footer className="bg-[#284028] text-white px-6 lg:mt-[-220px] -mt-[105px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-12 md:py-16">
       <div className="max-w-fit lg:mx-[100px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-4 space-y-10 lg:text-left md:text-left text-center">
             
             <Image
-              src="/visuals/home/vector-group.webp" 
+              src="/visuals/home/footer-icon.webp" 
               alt="leaf" 
               width={40} 
               height={40} 
