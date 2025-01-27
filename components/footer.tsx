@@ -1,8 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Parallax } from "react-scroll-parallax";
-import { CDNImg } from "./cdn/image";
+import Image from 'next/image';
 import Link from "next/link";
 
 export default function Footer() {
@@ -12,14 +11,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-4 space-y-10 lg:text-left md:text-left text-center">
             
-            <CDNImg
-              src="/visuals/home/footer-icon.png"
-              alt="leaf"
+            <Image
+              src="/visuals/home/footer-icon.webp" 
+              alt="leaf" 
+              width={40} 
+              height={40} 
               className="relative text-center mx-auto lg:ml-0 md:ml-0 lg:left-0 w-10"
-              width={40}
-              height={40}
             />
-            
             <h2 className="text-xl font-bold leading-tight mb-8 md:mb-0">
               One profile, seamlessly integrated to the whole ecosystem
             </h2>
