@@ -24,12 +24,12 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
           {numb}
         </h2>
         <h1
-          className="text-xl font-bold text-[#454545]  "
-          style={{ textShadow: "none" }}
+          className="text-xl  text-[#454545] card-title  "
+          style={{ textShadow: "none",  fontFamily: "'Poppins-Regular', sans-serif", fontWeight: "bold" }}
         >
           {title}
         </h1>
-        <p className="text-[#8C8989] text-xs font-normal ">{description}</p>
+        <p className="text-[#8C8989] text-xs font-normal  ">{description}</p>
       </div>
       <div className=" justify-center hidden  lg:flex items-center lg:items-stretch lg:justify-end min-w-[300px] lg:flex-1 lg:basis-1/2">
         <Image
