@@ -79,10 +79,7 @@ const HomeSection2 = () => {
         />
       </Parallax>
       <HomePartners />
-      <CategoryTitle
-        title="Forge Your Unique StarkNet Identity"
-        subtitle="Seamlessly Claim, Personalize, and Elevate"
-      />
+      <CategoryTitle title="Forge Your Unique StarkNet Identity" />
       <Parallax speed={-10}>
         <Image
           src="/leaves/lilLeaf02.svg"

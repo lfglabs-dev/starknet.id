@@ -3,13 +3,9 @@ import styles from "../../../styles/components/titles.module.css";
 
 type CategoryTitleProps = {
   title: string;
-  subtitle: string;
 };
 
-const CategoryTitle: FunctionComponent<CategoryTitleProps> = ({
-  title,
-  subtitle,
-}) => {
+const CategoryTitle: FunctionComponent<CategoryTitleProps> = ({ title }) => {
   return (
     <div className={styles.container}>
       <h2 className={styles.categoryTitle}>{title}</h2>
