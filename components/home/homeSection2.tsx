@@ -97,7 +97,7 @@ const HomeSection2 = () => {
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            className="opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col justify-center items-center"
           >
             <HomeCard
               img={card.img}
