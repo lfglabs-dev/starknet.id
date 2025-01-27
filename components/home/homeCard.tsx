@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styles from "../../styles/Home.module.css";
-import { CDNImg } from "../cdn/image";
+import Image from "next/image";
 
 type HomeCardProps = {
   img: string;
@@ -32,7 +32,7 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
         <p className="text-[#8C8989] text-xs font-normal ">{description}</p>
       </div>
       <div className=" justify-center hidden  lg:flex items-center lg:items-stretch lg:justify-end min-w-[300px] lg:flex-1 lg:basis-1/2">
-        <CDNImg
+        <Image
           className={`  object-cover ${styles.homeCardBanner}`}
           alt="illustration"
           height={300}
@@ -41,7 +41,7 @@ const HomeCard: FunctionComponent<HomeCardProps> = ({
         />
       </div>
       <div className="w-full flex items-center justify-center lg:hidden lg:flex-1 lg:basis-1/2">
-        <CDNImg
+        <Image
           className={`object-cover lg:hidden ${styles.homeCardBanner}`}
           alt="illustration"
           height={358}
