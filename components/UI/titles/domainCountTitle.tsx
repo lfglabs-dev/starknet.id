@@ -15,7 +15,7 @@ const DomainCountTitle: FunctionComponent<CategoryTitleProps> = ({
     <div className={styles.domainCountTitleContainer}>
       <Counter />
       <p className={styles.domainCountSubtitle}>{subtitle}</p>
-     {button}
+      {button}
     </div>
   );
 };
