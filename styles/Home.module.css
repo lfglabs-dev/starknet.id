@@ -160,8 +160,13 @@
 }
 
 .subsection {
+  width: 100%;
   display: flex;
   flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .title a {
@@ -212,7 +217,6 @@
   text-decoration: none;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 33%;
   background-color: var(--background-light);
   box-shadow: var(--shadow);
   z-index: 10;
@@ -318,11 +322,6 @@ div:has(> .lilLeaf04) {
     line-height: 20px;
     /* 142.857% */
   }
-
-  .homeCardBanner {
-    max-width: 100px;
-  }
-
   .section2 {
     padding: 1rem 1.5rem;
   }
@@ -418,3 +417,4 @@ div:has(> .lilLeaf04) {
     display: none;
   }
 }
+

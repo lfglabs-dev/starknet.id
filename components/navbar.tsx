@@ -18,7 +18,7 @@ const Navbar: FunctionComponent = () => {
 
   return (
     <div className="fixed w-full h-20 z-[100] bg-background">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
         <div className="ml-4">
           <Link href="/" className={styles.starknetIdLogo}>
             <Image
@@ -27,7 +27,9 @@ const Navbar: FunctionComponent = () => {
               width={30.5}
               height={30.5}
             />
-            <span className="hidden sm:block">STARKNET ID</span>
+            <span className="hidden sm:block tracking-wide text-[18px] whitespace-nowrap text-nowrap">
+              STARKNET ID
+            </span>
           </Link>
         </div>
         <div>
@@ -79,7 +81,9 @@ const Navbar: FunctionComponent = () => {
                     width={30.5}
                     height={30.5}
                   />
-                  <span className="hidden sm:block">STARKNET ID</span>
+                  <span className="hidden sm:block tracking-wide text-[18px] whitespace-nowrap text-nowrap">
+                    STARKNET ID
+                  </span>
                 </Link>
               </div>
 

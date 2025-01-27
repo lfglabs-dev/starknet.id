@@ -21,14 +21,14 @@
 
 :root {
   --primary: #0c8654;
-  --secondary: #402d28;
+  --secondary: #454545;
   --content-500: #b0aeae;
   --content-800: #454545;
   --content-600: #8c8989;
   --tertiary: #bf9e7b;
   --tertiary600: #ccb297;
-  --background: #ffffff;
-  --background-light: #ffffff;
+  --background: white;
+  --background-light: #fffcf8;
   --nimiq-ease: cubic-bezier(0.25, 0, 0, 1);
   --gray: rgba(0, 0, 0, 0.11);
   --shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.06);
