@@ -18,7 +18,10 @@ export default function Document() {
           content="Identity and naming service for Starknet. Mint your identity and choose your .stark domain now 🔥"
         />
         <meta property="og:url" content="https://starknet.id/" />
-        <meta property="og:image" content="/visuals/StarknetIdLogo.png" />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_STARKNET_ID}/visuals/StarknetIdLogo.png`}
+        />
         <meta
           name="description"
           content="Use your Starknet ID to prove your identity on-chain."
