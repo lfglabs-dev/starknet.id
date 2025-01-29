@@ -53,3 +53,7 @@ interface ExtendedVerifierData {
   field: string;
   extended_data: string[];
 }
+
+export interface ICounter{
+  finalValue : number;
+}

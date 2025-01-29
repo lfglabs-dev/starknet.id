@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from "../../styles/components/titles.module.css";
+import { ICounter } from '../../types/frontTypes';
 
-const Counter: React.FC = () => {
+const Counter: React.FC<ICounter> = ({finalValue}) => {
  const [count, setCount] = useState(0);
  const [hasStarted, setHasStarted] = useState(false);
  const ref = useRef<HTMLHeadingElement | null>(null);
@@ -13,7 +14,7 @@ const Counter: React.FC = () => {
         setHasStarted(true);
       }
     },
-    { threshold: 0.5 } // Adjust threshold as needed
+    { threshold: 0.5 } 
   );
 
   if (ref.current) observer.observe(ref.current);
@@ -21,10 +22,11 @@ const Counter: React.FC = () => {
   return () => observer.disconnect();
 }, [hasStarted]);
 
- useEffect(() => {
+
+useEffect(() => {
  if (!hasStarted) return;
  
-   const end = 475736;
+   const end = finalValue;
    const duration = 5000;
    const range = end;
    const step = Math.floor(duration / range);
