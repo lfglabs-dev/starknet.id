@@ -16,7 +16,7 @@ const DomainCountTitle: FunctionComponent<CategoryTitleProps> = ({
   subtitle,
   button,
 }) => {
-  const [domainCount, setDomainCount] = useState(136000);
+  const [domainCount, setDomainCount] = useState(1356000);
   useEffect(() => {
     const fetchDomainCount = async () => {
       try {
