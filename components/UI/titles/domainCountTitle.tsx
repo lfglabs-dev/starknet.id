@@ -25,7 +25,6 @@ const DomainCountTitle: FunctionComponent<CategoryTitleProps> = ({
         );
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
           setDomainCount(data.count);
         }
       } catch (error) {
