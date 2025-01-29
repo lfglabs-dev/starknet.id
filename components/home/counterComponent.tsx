@@ -1,10 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from "../../styles/components/titles.module.css";
 
 const Counter: React.FC = () => {
  const [count, setCount] = useState(0);
- 
+ const [hasStarted, setHasStarted] = useState(false);
+ const ref = useRef<HTMLHeadingElement | null>(null);
+
  useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && !hasStarted) {
+        setHasStarted(true);
+      }
+    },
+    { threshold: 0.5 } // Adjust threshold as needed
+  );
+
+  if (ref.current) observer.observe(ref.current);
+
+  return () => observer.disconnect();
+}, [hasStarted]);
+
+ useEffect(() => {
+ if (!hasStarted) return;
+ 
    const end = 475736;
    const duration = 5000;
    const range = end;
@@ -28,9 +47,9 @@ const Counter: React.FC = () => {
    }, step);
    
    return () => clearInterval(timer);
- }, []);
+ }, [hasStarted]);
  
- return <h2 id='count' className={styles.domainCountTitle}>{count.toLocaleString()}</h2>;
+ return <h2 ref={ref} id='count' className={styles.domainCountTitle}>{count.toLocaleString()}</h2>;
 };
 
 export default Counter;
