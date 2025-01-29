@@ -20,9 +20,10 @@
 }
 
 .headerBanner {
-  width: 400px;
-  max-width: 680px;
-  max-height: calc(100vh - 8rem);
+  width: 700px;
+  height: 700px;
+  max-width: 100%;
+  object-fit: contain;
   min-width: 358px;
 }
 

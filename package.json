@@ -19,6 +19,7 @@
     "@mui/material": "^5.11.4",
     "@nimiq/style": "^0.8.4",
     "bn.js": "^5.2.1",
+    "lottie-react": "^2.4.1",
     "next": "^14.2.5",
     "next-sitemap": "^4.0.5",
     "prettier": "^2.8.1",
