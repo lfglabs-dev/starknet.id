@@ -1,5 +1,4 @@
-"use client"
-import React, { useEffect, useRef, useCallback, useState } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import styles from "../../styles/Home.module.css";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
