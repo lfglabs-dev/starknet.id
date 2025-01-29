@@ -49,7 +49,7 @@ useEffect(() => {
    }, step);
    
    return () => clearInterval(timer);
- }, [hasStarted]);
+ }, [finalValue, hasStarted]);
  
  return <h2 ref={ref} id='count' className={styles.domainCountTitle}>{count.toLocaleString()}</h2>;
 };
