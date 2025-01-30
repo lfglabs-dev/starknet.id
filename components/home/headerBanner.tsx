@@ -5,7 +5,7 @@ const HeaderBanner: FunctionComponent = () => {
   return (
     <img
       alt="Header banner"
-      src="/visuals/home/headerImage.png"
+      src="/visuals/home/headerImage.webp"
       className={styles.headerBanner}
       width={700}
       height={700}
