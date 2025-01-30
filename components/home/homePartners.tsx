@@ -8,6 +8,7 @@ import AvnuIcon from "../icons/avnu";
 import { CDNImg } from "../cdn/image";
 import EkuboIcon from "../icons/ekubo";
 import MySwapIcon from "../icons/myswap";
+import Image from "next/image";
 
 const partners = [
   {
@@ -18,17 +19,17 @@ const partners = [
   {
     name: "Argent",
     href: "https://www.argent.xyz/",
-    icon: <CDNImg className="w-32 h-32 object-contain mb-1" src="/visuals/partners/argent-logo-colour.svg" />,
+    icon: <Image src="/visuals/partners/argent-logo-colour.svg" alt="Argent" width={128} height={128} />,
   },
   {
     name: "Starkscan",
     href: "https://starkscan.co/",
-    icon: <CDNImg className="w-48 h-48 object-contain mb-1" src="/visuals/partners/starkscan.png" />,
+    icon: <Image src="/visuals/partners/starkscan.png" alt="Starkscan" width={192} height={192} />,
   },
   {
     name: "Braavos",
     href: "https://braavos.app/",
-    icon: <CDNImg className="w-20 h-20 object-contain mb-1" src="/visuals/partners/braavos.svg" />,
+    icon: <Image src="/visuals/partners/braavos.svg" alt="Braavos" width={80} height={80} />,
   },
   {
     name: "Everai",
@@ -68,13 +69,13 @@ const partners = [
   {
     name: "Voyager",
     href: "https://voyager.online/",
-    icon: <CDNImg className="w-20 h-20 object-contain mb-1" src="/visuals/partners/voyager.png" />,
+    icon: <Image src="/visuals/partners/voyager.png" alt="Voyager" width={80} height={80} />,
   },
 ]
 
 const HomePartners: FunctionComponent = () => {
   return (
-    <div className="relative py-16 flex items-center flex-col sm:flex-row mb-16">
+    <div className="relative py-16 flex items-center flex-col sm:flex-row mb-6">
       {/* Description */}
       <div className="sm:mr-8 w-full sm:w-fit">
         <p className="font-poppins w-full sm:w-[240px] text-base font-medium leading-6 sm:text-left text-gray-500 text-center">

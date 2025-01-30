@@ -4,7 +4,7 @@
 }
 
 .section1 {
-  padding: 8rem 5rem 1rem 5rem;
+  padding: 2rem 5rem 1rem 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,8 +346,7 @@ div:has(> .lilLeaf04) {
   }
 
   .section1 {
-    padding: 7rem 1rem 1rem;
-    margin-bottom: 2rem;
+    padding: 4rem 1rem 0.5rem;
     min-height: fit-content;
     flex-direction: column;
   }
@@ -399,6 +398,8 @@ div:has(> .lilLeaf04) {
 
   .headerBanner {
     display: block;
+    height: auto;
+    max-height: 400px;
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: min(70%, 300px);
