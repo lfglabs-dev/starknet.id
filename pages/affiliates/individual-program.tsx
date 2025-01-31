@@ -18,6 +18,7 @@ const IndividualProgram: NextPage = () => {
           <AffiliateSection2 />
           <AffiliateSection3 />
         </div>
+        <div className="mt-60" />
         <Footer />
       </div>
     </ParallaxProvider>

@@ -1,10 +1,10 @@
 .page {
   overflow: hidden;
-  background: linear-gradient(0deg, #eae0d5 0%, #fff9f0 100%);
+  background: white;
 }
 
 .section1 {
-  padding: 8rem 5rem 1rem 5rem;
+  padding: 2rem 5rem 1rem 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,9 +20,11 @@
 }
 
 .headerBanner {
-  width: 50%;
-  max-width: 680px;
-  max-height: calc(100vh - 8rem);
+  width: 700px;
+  height: 700px;
+  max-width: 100%;
+  object-fit: contain;
+  min-width: 358px;
 }
 
 .buttonContainer {
@@ -37,10 +39,11 @@
   text-align: left;
   /* Title/H1 */
   font-family: QuickZap;
-  font-size: 48px;
+  font-size: 36px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 58px;
+  font-weight: 400;
+  line-height: 48px;
+  width: 487px;
 }
 
 .mainTitle strong {
@@ -54,10 +57,10 @@
   width: 487px;
   flex-direction: column;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 32px;
+  font-weight: 400;
+  line-height: 24px;
   margin-top: 32px;
 }
 
@@ -68,7 +71,82 @@
 .section2 {
   min-height: 80vh;
   flex-direction: column;
-  padding: 4rem 4rem;
+  padding: 0 4rem 4rem;
+}
+
+.section3Container {
+  background-image: url("../public/visuals/home/jungle-vector-image.svg");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  aspect-ratio: 1040/604;
+  isolation: isolate;
+  width: 100%;
+  flex: none;
+  align-self: center;
+  flex-grow: 0;
+}
+
+.section3ContainerButton {
+  display: flex;
+  padding: 10px 16px;
+  width: 180px;
+  height: 44px;
+  margin-top: 24px;
+  font-family: QuickZap;
+  align-self: center;
+  justify-self: center;
+  font-size: 14px;
+  color: white;
+  background: #0c8654;
+  border: 1px solid #19aa6e;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 450ms var(--nimiq-ease),
+    box-shadow 450ms var(--nimiq-ease);
+}
+
+.section3ContainerButton:hover,
+.section3ContainerButton:focus {
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  transform: translate3D(0, -2px, 0);
+}
+
+@media (max-width: 1024px) {
+  .section3Container {
+    background-size: 120%;
+  }
+  .section3ContainerButton {
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3Container {
+    background-size: 150%;
+  }
+  .section3ContainerButton {
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section3ContainerButton {
+    width: 150px;
+    height: 36px;
+    font-size: 11px;
+  }
 }
 
 .section3 {
@@ -83,8 +161,13 @@
 }
 
 .subsection {
+  width: 100%;
   display: flex;
   flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .title a {
@@ -135,7 +218,6 @@
   text-decoration: none;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 33%;
   background-color: var(--background-light);
   box-shadow: var(--shadow);
   z-index: 10;
@@ -203,6 +285,9 @@ div:has(> .lilLeaf04) {
   .headerBanner {
     display: none;
   }
+  .mainTitle {
+    width: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -210,12 +295,14 @@ div:has(> .lilLeaf04) {
     font-size: 3rem;
     text-shadow: 2px 2px var(--tertiary);
   }
+
   .card {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 2rem;
   }
+
   .card2 {
     width: 100%;
     margin: 0;
@@ -223,6 +310,7 @@ div:has(> .lilLeaf04) {
     justify-content: center;
     align-items: center;
   }
+
   .cardDescription {
     color: var(--content-600);
     text-align: center;
@@ -232,14 +320,13 @@ div:has(> .lilLeaf04) {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
-  }
-  .homeCardBanner {
-    max-width: 100px;
+    line-height: 20px;
+    /* 142.857% */
   }
   .section2 {
     padding: 1rem 1.5rem;
   }
+
   .subsection {
     flex-direction: column;
   }
@@ -249,37 +336,44 @@ div:has(> .lilLeaf04) {
     gap: 3rem;
     padding-top: 1rem;
   }
+
   .partnersSubtitle {
     font-size: 14px;
   }
+
   .section3 {
     padding: 4.5rem 1.5rem 24px 1.5rem;
   }
+
   .section1 {
-    padding: 7rem 1rem 1rem;
-    margin-bottom: 2rem;
+    padding: 4rem 1rem 0.5rem;
     min-height: fit-content;
     flex-direction: column;
   }
+
   .mainTitle {
     width: 100%;
-    font-size: 24px;
-    line-height: max(8vw, 25px);
+    font-size: 36px;
+    line-height: max(8vw, 48px);
     margin-top: 24px;
     text-align: center;
   }
+
   .mainSubtitle {
     display: none;
   }
+
   .mainSubtitleMobile {
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 2rem;
-    line-height: max(4vw, 19px);
+    line-height: max(4vw, 24px);
+    font-weight: 400;
     text-align: center;
     color: var(--content-600);
     display: block;
   }
+
   .headerContent {
     position: relative;
     padding: 0 !important;
@@ -287,32 +381,42 @@ div:has(> .lilLeaf04) {
     display: block;
     margin: 0 auto;
   }
+
   .buttonContainer {
     margin-left: auto;
     margin-right: auto;
   }
+
   .buttonContainer button {
-    width: 281px;
+    width: fit-content;
     box-shadow: none;
-    font-size: 18px;
+    font-size: 14px;
     font-family: QuickZap;
     font-weight: lighter;
+    padding: 0 0.8rem;
   }
+
   .headerBanner {
     display: block;
+    height: auto;
+    max-height: 400px;
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: min(70%, 300px);
   }
+
   .secondTitle {
     font-size: 24px;
   }
+
   .thirdTitle {
     font-size: 18px;
     text-align: center;
     margin-top: 2rem;
   }
+
   .lilLeaf04 {
     display: none;
   }
 }
+

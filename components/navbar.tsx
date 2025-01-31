@@ -6,8 +6,8 @@ import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import styles from "../styles/navbar.module.css";
 import Button from "./button";
 import theme from "../styles/theme";
-import { CDNImg } from "./cdn/image";
 import CloseFilledIcon from "./UI/iconsComponents/icons/closeFilledIcon";
+import Image from "next/image";
 
 const Navbar: FunctionComponent = () => {
   const [nav, setNav] = useState(false);
@@ -18,20 +18,22 @@ const Navbar: FunctionComponent = () => {
 
   return (
     <div className="fixed w-full h-20 z-[100] bg-background">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16">
         <div className="ml-4">
-          <Link href="/" className="cursor-pointer">
-            <CDNImg
-              className={styles.starknetIdLogo}
-              src="/visuals/StarknetIdLogo.png"
+          <Link href="/" className={styles.starknetIdLogo}>
+            <Image
+              src="/visuals/StarknetIdLogo.svg"
               alt="Starknet.id Logo"
-              width={90}
-              height={90}
+              width={30.5}
+              height={30.5}
             />
+            <span className="hidden sm:block tracking-wide text-[18px] whitespace-nowrap text-nowrap">
+              STARKNET ID
+            </span>
           </Link>
         </div>
         <div>
-          <ul className="hidden md:flex uppercase items-center">
+          <ul className="hidden md:flex items-center gap-7">
             <Link href="/affiliates/individual-program">
               <li className={styles.menuItem}>Become an affiliate</li>
             </Link>
@@ -41,20 +43,6 @@ const Navbar: FunctionComponent = () => {
               className={styles.menuItem}
             >
               Documentation
-            </li>
-            <li
-              onClick={() => window.open("https://twitter.com/starknet_id")}
-              className="ml-10 mr-5 text-sm uppercase cursor-pointer"
-            >
-              <FaTwitter color={theme.palette.secondary.main} size="30px" />
-            </li>
-            <li
-              onClick={() =>
-                window.open("https://discord.com/invite/8uS2Mgcsza")
-              }
-              className="mr-10 text-sm uppercase cursor-pointer"
-            >
-              <FaDiscord color={theme.palette.secondary.main} size="30px" />
             </li>
             <div className="mr-5">
               <Button onClick={() => window.open("https://app.starknet.id")}>
@@ -85,15 +73,17 @@ const Navbar: FunctionComponent = () => {
         >
           <div className="h-full flex flex-col">
             <div className={styles.mobileNavBarHeader}>
-              <div>
-                <Link href="/" className="cursor-pointer">
-                  <CDNImg
-                    className="cursor-pointer"
-                    src="/visuals/StarknetIdLogo.png"
+              <div className="w-full">
+                <Link href="/" className={styles.starknetIdLogo}>
+                  <Image
+                    src="/visuals/StarknetIdLogo.svg"
                     alt="Starknet.id Logo"
-                    width={72}
-                    height={72}
+                    width={30.5}
+                    height={30.5}
                   />
+                  <span className="hidden sm:block tracking-wide text-[18px] whitespace-nowrap text-nowrap">
+                    STARKNET ID
+                  </span>
                 </Link>
               </div>
 
