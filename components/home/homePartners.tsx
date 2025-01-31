@@ -5,7 +5,6 @@ import RealmsIcon from "../icons/realms";
 import NostraIcon from "../icons/nostra";
 import EveraiIcon from "../icons/everai";
 import AvnuIcon from "../icons/avnu";
-import { CDNImg } from "../cdn/image";
 import EkuboIcon from "../icons/ekubo";
 import MySwapIcon from "../icons/myswap";
 import Image from "next/image";
@@ -19,17 +18,38 @@ const partners = [
   {
     name: "Argent",
     href: "https://www.argent.xyz/",
-    icon: <Image src="/visuals/partners/argent-logo-colour.svg" alt="Argent" width={128} height={128} />,
+    icon: (
+      <Image
+        src="/visuals/partners/argent-logo-colour.svg"
+        alt="Argent"
+        width={128}
+        height={128}
+      />
+    ),
   },
   {
     name: "Starkscan",
     href: "https://starkscan.co/",
-    icon: <Image src="/visuals/partners/starkscan.png" alt="Starkscan" width={192} height={192} />,
+    icon: (
+      <Image
+        src="/visuals/partners/starkscan.png"
+        alt="Starkscan"
+        width={192}
+        height={192}
+      />
+    ),
   },
   {
     name: "Braavos",
     href: "https://braavos.app/",
-    icon: <Image src="/visuals/partners/braavos.svg" alt="Braavos" width={80} height={80} />,
+    icon: (
+      <Image
+        src="/visuals/partners/braavos.svg"
+        alt="Braavos"
+        width={80}
+        height={80}
+      />
+    ),
   },
   {
     name: "Everai",
@@ -69,9 +89,16 @@ const partners = [
   {
     name: "Voyager",
     href: "https://voyager.online/",
-    icon: <Image src="/visuals/partners/voyager.png" alt="Voyager" width={80} height={80} />,
+    icon: (
+      <Image
+        src="/visuals/partners/voyager.png"
+        alt="Voyager"
+        width={80}
+        height={80}
+      />
+    ),
   },
-]
+];
 
 const HomePartners: FunctionComponent = () => {
   return (
@@ -92,21 +119,19 @@ const HomePartners: FunctionComponent = () => {
 
         {/* Scrolling Content */}
         <div className="flex gap-16 whitespace-nowrap animate-marquee w-fit">
-          {[...partners, ...partners].map(
-            (partner, index) => (
-              <a
-                key={index}
-                className="flex flex-col items-center text-center"
-                target="_blank"
-                rel="noreferrer"
-                href={partner.href}
-              >
-                <div className="flex justify-center items-center w-32 h-32">
-                  {partner.icon}
-                </div>
-              </a>
-            )
-          )}
+          {[...partners, ...partners].map((partner, index) => (
+            <a
+              key={index}
+              className="flex flex-col items-center text-center"
+              target="_blank"
+              rel="noreferrer"
+              href={partner.href}
+            >
+              <div className="flex justify-center items-center w-32 h-32">
+                {partner.icon}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </div>
