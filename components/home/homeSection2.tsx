@@ -4,10 +4,13 @@ import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
 import HomePartners from "./homePartners";
-import Image from "next/image";
+import useLottie from "../../hooks/useLottie";
+
 
 const HomeSection2 = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const leftLeafRef = useRef<HTMLDivElement>(null)
+  const rightLeafRef = useRef<HTMLDivElement>(null)
 
   const createObserver = useCallback(() => {
     return new IntersectionObserver(
@@ -40,6 +43,9 @@ const HomeSection2 = () => {
     };
   }, [createObserver]);
 
+  useLottie(leftLeafRef, "/animations/Falling.leaf.json")
+  useLottie(rightLeafRef, "/animations/Falling.leaf.json")
+
   const cardsData = [
     {
       img: "/visuals/home/visualEverai1.webp",
@@ -70,24 +76,12 @@ const HomeSection2 = () => {
   return (
     <div id="info" className={styles.section2}>
       <Parallax speed={-5}>
-        <Image
-          src="/leaves/lilLeaf01.svg"
-          alt="leaf"
-          width={54}
-          height={53}
-          className="hidden md:block"
-        />
+        <div ref={leftLeafRef} className="hidden md:block absolute top-80 -left-20 w-[25rem] h-[25rem]" />
       </Parallax>
       <HomePartners />
       <CategoryTitle title="Forge Your Unique StarkNet Identity" />
       <Parallax speed={-10}>
-        <Image
-          src="/leaves/lilLeaf02.svg"
-          alt="leaf"
-          className="absolute right-3 hidden md:block"
-          width={54}
-          height={53}
-        />
+        <div ref={rightLeafRef} className="absolute -right-20 top-[25rem] hidden md:block w-[25rem] h-[25rem]" />
       </Parallax>
       <div className={`${styles.subsection} mt-8`}>
         {cardsData.map((card, index) => (
