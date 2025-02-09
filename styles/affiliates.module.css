@@ -174,10 +174,11 @@
 
 .earningsCard {
   display: flex;
-  padding: 40px 64px;
+  align-items: center;
+  padding: 24px 48px;
   gap: 128px;
-  border-radius: 30px;
-  background: var(--background-light);
+  border-radius: 12px;
+  background: var(--background);
 
   /* Small Shadow */
   box-shadow: var(--shadow);
@@ -189,6 +190,13 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  width: 100%;
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sliderName {
@@ -196,16 +204,25 @@
 
   /* Body/normal/bold */
   font-family: Poppins-Bold;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px; /* 120% */
   letter-spacing: 0.2px;
 }
 
+.sliderComp {
+  min-width: 330px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+
 .earningsCard .resultContainer {
   display: flex;
   flex-direction: column;
+  gap: 48px;
+  min-width: 164px;
 }
 
 .earningsCard .resultTitle {
@@ -213,7 +230,7 @@
 
   /* Body/normal/bold */
   font-family: Poppins-Bold;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px; /* 120% */
@@ -284,10 +301,10 @@
   }
   .earningsCard {
     flex-direction: column;
-    gap: 1rem;
-  }
-  .earningsCard .result {
-    margin-bottom: 2rem;
+    gap: 48px;
+    margin-top: 2rem;
+    width: calc(100% - 3rem);
+    padding: 40px 24px;
   }
   .card1 {
     width: 100%;
@@ -323,9 +340,8 @@
     margin: 3rem 1.5rem;
     max-width: calc(100% - 3rem);
   }
-  .earningsCard {
-    margin-top: 2rem;
-    width: calc(100% - 3rem);
-    padding: 40px 24px;
+  .sliderComp {
+    min-width: 100%;
+    width: 100%;
   }
 }

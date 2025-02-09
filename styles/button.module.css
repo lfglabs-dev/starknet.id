@@ -56,6 +56,7 @@
   background: var(--primary);
   background-image: var(--primary-bg);
   font-family: "QuickZap";
+  border: 1px solid var(--green-500);
 }
 
 .nq-button::before {
