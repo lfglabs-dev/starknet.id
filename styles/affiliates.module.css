@@ -96,6 +96,16 @@
   display: block;
 }
 
+.paragraphContent {
+  color: var(--content-600);
+  margin: 1rem auto 0 auto;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  max-width: 574px;
+  display: block;
+}
+
 .partners {
   display: flex;
   justify-content: center;
@@ -277,6 +287,11 @@
     font-size: 14px;
     line-height: 20px; /* 142.857% */
     margin-top: 2rem;
+  }
+  .paragraphContent {
+    color: var(--content-600);
+    max-width: 100%;
+    display: block;
   }
   .button {
     margin-top: 1.5rem;
