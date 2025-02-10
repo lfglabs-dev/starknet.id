@@ -20,7 +20,7 @@
 }
 
 .headerBanner {
-  width: 700px;
+  width: 800px;
   height: 700px;
   max-width: 100%;
   object-fit: contain;
@@ -35,7 +35,6 @@
 .mainTitle {
   display: flex;
   flex-direction: column;
-  color: var(--primary);
   text-align: left;
   /* Title/H1 */
   font-family: QuickZap;
@@ -43,7 +42,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  width: 487px;
 }
 
 .mainTitle strong {
@@ -53,7 +51,6 @@
 
 .mainSubtitle,
 .mainSubtitleMobile {
-  display: flex;
   width: 487px;
   flex-direction: column;
   text-align: left;
@@ -61,7 +58,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin-top: 32px;
+  margin-top: 25px;
 }
 
 .mainSubtitleMobile {

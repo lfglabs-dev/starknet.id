@@ -8,19 +8,18 @@ const HomeSection1: FunctionComponent = () => {
 
   return (
     <div className={styles.section1}>
+      <HeaderBanner />
+
       <HeaderSection
-        title="One profile,"
-        highlighted="Connected to all the Starknet Ecosystem."
-        subtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."
-        mobileSubtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."
-        buttonName="Choose your domain"
+        title="Join & Earn!"
+        highlighted="THE STARK AFFILIATE PROGRAM"
         buttonLink={
           isTestnet
             ? "https://sepolia.app.starknet.id/"
             : "https://app.starknet.id/"
         }
       />
-      <HeaderBanner />
+      
     </div>
   );
 };
