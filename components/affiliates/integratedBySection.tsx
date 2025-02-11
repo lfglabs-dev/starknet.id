@@ -6,6 +6,7 @@ import Partners from "../partners/partners";
 import { Partner } from "../partners/partners";
 const IntegratedBySection: FunctionComponent = () => {
   const partners: Partner[] = [
+    { name: "", href: "" },
     {
       name: "Meta mask",
       href: "https://metamask.io/",
@@ -141,7 +142,7 @@ const IntegratedBySection: FunctionComponent = () => {
       ),
     },
     {
-      name: "Realms World",
+      name: "Realms",
       href: "https://realmseternum.com/",
       icon: (
         <Image
@@ -153,14 +154,8 @@ const IntegratedBySection: FunctionComponent = () => {
         />
       ),
     },
-    {
-      name: "",
-      href: "",
-    },
-    {
-      name: "",
-      href: "",
-    },
+    { name: "", href: "" },
+    { name: "", href: "" },
   ];
   return (
     <div className="relative py-16 flex items-center flex-col sm:flex-row mb-6">

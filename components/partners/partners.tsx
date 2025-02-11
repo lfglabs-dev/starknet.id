@@ -41,16 +41,10 @@ const Partners: FunctionComponent<PartnersProps> = ({
               rel="noreferrer"
               href={partner.href}
             >
-              {!showNames ? (
-                <div className="flex justify-center items-center w-32 h-32">
-                  {partner.icon}
-                </div>
-              ) : (
-                <div className="flex justify-center gap-4 items-center w-32 h-32">
-                  {partner.icon}
-                  {partner.name}
-                </div>
-              )}
+              <div className="flex justify-center gap-4 items-center w-32 h-32">
+                {partner.icon}
+                {partner.name}
+              </div>
             </a>
           ))}
         </div>

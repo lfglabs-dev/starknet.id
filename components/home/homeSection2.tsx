@@ -18,25 +18,105 @@ import Image from "next/image";
 
 const HomeSection2 = () => {
   const partners: Partner[] = [
+    { name: "", href: "" },
     {
-      name: "Avnu",
-      href: "https://www.avnu.fi/",
-      icon: <AvnuIcon width="140" color="black" />,
+      name: "Meta mask",
+      href: "https://metamask.io/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/metamasklogo.png"
+          alt="Meta mask"
+          width={40}
+          height={40}
+        />
+      ),
+    },
+    {
+      name: "ENS",
+      href: "https://ens.domains/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/enslogo.png"
+          alt="ENS"
+          width={40}
+          height={40}
+        />
+      ),
+    },
+    {
+      name: "AVNU",
+      href: "https://app.avnu.fi/en/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/avnuLogo.png"
+          alt="AVNU"
+          width={40}
+          height={40}
+        />
+      ),
+    },
+    {
+      name: "Braavos",
+      href: "https://braavos.app/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/bravooslogo.png"
+          alt="Braavos"
+          width={40}
+          height={40}
+        />
+      ),
     },
     {
       name: "Argent",
       href: "https://www.argent.xyz/",
       icon: (
         <Image
-          src="/visuals/partners/argent-logo-colour.svg"
+          src="/visuals/affiliates/argentlogo.png"
           alt="Argent"
-          width={128}
-          height={128}
+          width={40}
+          height={40}
         />
       ),
     },
     {
-      name: "Starkscan",
+      name: "Nostra",
+      href: "https://nostra.finance/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/nostrologo.png"
+          alt="Nostra"
+          width={40}
+          height={40}
+        />
+      ),
+    },
+
+    {
+      name: "Ekubo",
+      href: "https://ekubo.org/",
+      icon: <EkuboIcon height="40" />,
+    },
+    {
+      name: "Voyager",
+      href: "https://voyager.online/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/voyagerlogo.png"
+          alt="Voyager"
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
+      ),
+    },
+    {
+      name: "MySwap",
+      href: "https://www.myswap.xyz/",
+      icon: <MySwapIcon height="40" />,
+    },
+    {
+      name: "",
       href: "https://starkscan.co/",
       icon: (
         <Image
@@ -48,72 +128,46 @@ const HomeSection2 = () => {
       ),
     },
     {
-      name: "Braavos",
-      href: "https://braavos.app/",
+      name: "Nimbora",
+      href: "https://www.nimbora.io/",
       icon: (
         <Image
-          src="/visuals/partners/braavos.svg"
-          alt="Braavos"
-          width={80}
-          height={80}
+          src="/visuals/affiliates/nimboralogo.png"
+          alt="Nimbora"
+          width={40}
+          height={40}
+          className="rounded-full"
         />
       ),
     },
     {
-      name: "Everai",
-      href: "https://www.everai.xyz/",
-      icon: <EveraiIcon width="100" color="black" />,
-    },
-    {
-      name: "Ekubo",
-      href: "https://ekubo.org/",
-      icon: <EkuboIcon height="60" />,
-    },
-    {
-      name: "Briq",
-      href: "https://briq.construction/",
-      icon: <BriqIcon width="100" />,
-    },
-    {
-      name: "MySwap",
-      href: "https://www.myswap.xyz/",
-      icon: <MySwapIcon height="60" />,
-    },
-    {
-      name: "Carbonable",
-      href: "https://carbonable.io/",
-      icon: <CarbonableIcon width="120" />,
-    },
-    {
-      name: "Nostra",
-      href: "https://www.nostra.finance",
-      icon: <NostraIcon height="50px" />,
+      name: "Vesu",
+      href: "https://vesu.xyz/",
+      icon: (
+        <Image
+          src="/visuals/affiliates/vesulogo.png"
+          alt="Vesu"
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
+      ),
     },
     {
       name: "Realms",
       href: "https://realmseternum.com/",
-      icon: <RealmsIcon />,
-    },
-    {
-      name: "Voyager",
-      href: "https://voyager.online/",
       icon: (
         <Image
-          src="/visuals/partners/voyager.png"
-          alt="Voyager"
-          width={80}
-          height={80}
+          src="/visuals/affiliates/RealmsWorldlogo.png"
+          alt="Realms World"
+          width={40}
+          height={40}
+          className="rounded-full"
         />
       ),
     },
-    {
-      name: "",
-      href: "",
-    },
-    {
-      name: "",
-      href: "",
-    },
+    { name: "", href: "" },
+    { name: "", href: "" },
   ];
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const leftLeafRef = useRef<HTMLDivElement>(null);
@@ -188,7 +242,7 @@ const HomeSection2 = () => {
           className="hidden md:block absolute top-80 -left-20 w-[25rem] h-[25rem]"
         />
       </Parallax>
-      <Partners partners={partners} showNames={false} />
+      <Partners partners={partners} showNames={true} />
       <CategoryTitle title="Forge Your Unique StarkNet Identity" />
       <Parallax speed={-10}>
         <div
