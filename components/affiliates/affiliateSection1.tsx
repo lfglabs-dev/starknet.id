@@ -10,12 +10,19 @@ const AffiliateSection1: FunctionComponent = () => {
   return (
     <div className={homeStyles.section1}>
       <div className={styles.container}>
-        <img
-          alt="affiliation illustration"
-          src="/visuals/affiliates/affiliateTreasure.webp"
-          className={styles.banner}
-          width={380}
-        />
+
+        <div className={styles.bannerContainer}>
+          <img
+            alt="affiliation illustration"
+            src="/visuals/affiliates/chest.svg"
+            className={styles.banner}
+            width={380}
+          />
+          <img alt="Ethereum icon" src="/icons/ethIcon.svg" className={`${styles.floatingIcons} ${styles.eth}`} width={37} />
+          <img alt="Ethereum icon" src="/icons/ethIcon.svg" className={`${styles.floatingIcons} ${styles.smallEth}`} width={25} />
+          <img alt="Starknet icon" src="/icons/strkIcon.svg" className={`${styles.floatingIcons} ${styles.strk}`} width={32} />
+          <img alt="Starknet icon" src="/icons/strkIcon.svg" className={`${styles.floatingIcons} ${styles.smallStrk}`} width={18} />
+        </div>
         <div className={styles.content}>
           <p className={styles.secondSubtitle}>Join & Earn!</p>
           <h1 className={styles.title}>The Stark Affiliate Program</h1>
