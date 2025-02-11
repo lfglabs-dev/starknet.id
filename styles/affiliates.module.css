@@ -1,25 +1,28 @@
 .container {
   display: flex;
-  margin: 2.5rem;
-  gap: 74px;
+  margin: 3rem;
+  gap: 70px;
   align-items: center;
 }
 
 .title {
   font-family: "QuickZap";
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--secondary);
   text-shadow: 1px 1px var(--tertiary);
   text-transform: uppercase;
   margin-bottom: 1rem;
-  line-height: 58px;
+  /* line-height: 58px; */
+  width: 200%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 561px;
+  /* justify-content: center; */
+  /* max-width: 561px; */
+  margin-left: -90px;
+  margin-top: 20px;
 }
 
 .secondSubtitle {
@@ -56,23 +59,25 @@
 }
 
 .eth {
-  top: -11rem;
-  left: -27rem
+  top: -10rem;
+  left: -23rem
 }
 
 .strk{
   bottom: -10rem;
-  right: 32rem
+  right: 27rem
 }
 
 .smallStrk{
-  top: -11rem;
-  left: -10rem
+  top: -9rem;
+  left: -10rem;
+  rotate: 45deg;
 }
 
 .smallEth {
-  bottom: -10rem;
-  right: 4rem
+  bottom: -9rem;
+  right: 4rem;
+  rotate:45deg;
 }
 
 
@@ -85,12 +90,14 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  /* line-height: 20px; */
+  width: 200%;
+  margin-top: -20px;
 }
 
 .subtitle strong {
   color: var(--primary);
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
@@ -103,7 +110,7 @@
   align-items: center;
   gap: 1rem;
   border-radius: 8px;
-  background: var(--background-light);
+  background: var(--tertiary-400);
 
   /* Small Shadow */
   box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.06);
@@ -119,7 +126,7 @@
 }
 
 .button {
-  margin-top: 1rem;
+  margin-top: -6px;
   width: fit-content;
 }
 
@@ -217,7 +224,7 @@
 
 .banner {
   width: 100%;
-  max-width: 90%;
+  max-width: 65%;
   height: fit-content;
 }
 
@@ -356,11 +363,24 @@
 
   .title {
     font-size: 1.5rem;
+    margin-left: -125px;
+    /* text-align: center; */
+    width: none;
   }
 
+
   .subtitle {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 0;
+    margin-left: -125px;
+  }
+
+  .secondSubtitle{
+    margin-left: 60px;
+  }
+
+  .highlights{
+    margin-left: 50px;
   }
 
   .paragraph {
@@ -374,6 +394,7 @@
   .button {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+    margin-left: 30px;
   }
 
   .earningsCard {
