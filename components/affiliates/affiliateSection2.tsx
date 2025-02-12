@@ -62,8 +62,8 @@ const AffiliateSection2 = () => {
       numb: "2",
     },
     {
-      img: "/visuals/affiliates/moneyIllu.png",
-      mobileimg: "/visuals/affiliates/moneyIllu.png",
+      img: "/visuals/affiliates/moneyIllu.webp",
+      mobileimg: "/visuals/affiliates/moneyIllu.webp",
       title: "Get paid in Crypto (ETH & STRK in the future)",
       description:
         "We share revenue fairly. Every eligible sale made earns you at least 30% commissions. And this is just the start because you could go bigger if you are a top performer.",
