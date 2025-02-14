@@ -8,13 +8,15 @@ const AffiliateSection3: FunctionComponent = () => {
   return (
     <div className={styles.section3}>
       <AffiliationOpportunity />
-      <Image
-        alt="affiliate logo"
-        src="/visuals/affiliates/newAffliateGraph.webp"
-        className={styles.graph}
-        width={1219}
-        height={575}
-      />
+      <div className={styles.graphWrapper}>
+        <Image
+          alt="affiliate logo"
+          src="/visuals/affiliates/newAffliateGraph.webp"
+          className={styles.graph}
+          width={2000}
+          height={500}
+        />
+      </div>
       <AffiliationEarnings />
     </div>
   );

@@ -35,6 +35,15 @@
   opacity: 0.8;
 }
 
+.graphWrapper {
+  width: 100%;
+  padding: 0 6rem;
+}
+
+.graph {
+  margin: 0 auto;
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);
@@ -433,8 +442,14 @@
     font-size: 18px;
   }
 
+  .graphWrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
   .graph {
     max-width: calc(100% - 1rem);
+    width: calc(100% - 2rem);
   }
 
   .section2 {
