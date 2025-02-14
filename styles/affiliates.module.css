@@ -30,8 +30,58 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
+  /* 142.857% */
   opacity: 0.8;
+}
+
+.graphWrapper {
+  width: 100%;
+  padding: 0 6rem;
+}
+
+.graph {
+  margin: 0 auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.floatingIcons {
+  transform: translatey(20px);
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.eth {
+  top: -11rem;
+  left: -27rem;
+}
+
+.strk {
+  bottom: -10rem;
+  right: 32rem;
+}
+
+.smallStrk {
+  top: -11rem;
+  left: -10rem;
+}
+
+.smallEth {
+  bottom: -10rem;
+  right: 4rem;
 }
 
 .subtitle {
@@ -93,6 +143,16 @@
   margin: 1rem auto 0 auto;
   text-align: center;
   max-width: 1000px;
+  display: block;
+}
+
+.paragraphContent {
+  color: var(--content-600);
+  margin: 1rem auto 0 auto;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  max-width: 574px;
   display: block;
 }
 
@@ -166,18 +226,26 @@
   flex-direction: column;
 }
 
+.bannerContainer {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .banner {
   width: 100%;
-  max-width: 50%;
+  max-width: 90%;
   height: fit-content;
 }
 
 .earningsCard {
   display: flex;
-  padding: 40px 64px;
+  align-items: center;
+  padding: 24px 48px;
   gap: 128px;
-  border-radius: 30px;
-  background: var(--background-light);
+  border-radius: 12px;
+  background: var(--background);
 
   /* Small Shadow */
   box-shadow: var(--shadow);
@@ -189,6 +257,13 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  width: 100%;
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sliderName {
@@ -196,16 +271,26 @@
 
   /* Body/normal/bold */
   font-family: Poppins-Bold;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
   letter-spacing: 0.2px;
+}
+
+.sliderComp {
+  min-width: 330px;
+  height: 36px;
+  display: grid;
+  place-items: center;
 }
 
 .earningsCard .resultContainer {
   display: flex;
   flex-direction: column;
+  gap: 48px;
+  min-width: 164px;
 }
 
 .earningsCard .resultTitle {
@@ -213,10 +298,11 @@
 
   /* Body/normal/bold */
   font-family: Poppins-Bold;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
   letter-spacing: 0.2px;
   text-align: center;
 }
@@ -229,7 +315,8 @@
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 106.667% */
+  line-height: 32px;
+  /* 106.667% */
   text-align: center;
   margin-bottom: auto;
 }
@@ -239,22 +326,57 @@
     flex-direction: column;
     margin: 0.5rem;
   }
+
+  .bannerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+    transform: translateX(4rem);
+  }
+
+  .eth {
+    top: -10rem;
+    left: -20rem;
+  }
+
+  .strk {
+    bottom: -10rem;
+    right: 24rem;
+  }
+
+  .smallStrk {
+    top: -9rem;
+    left: -11rem;
+  }
+
+  .smallEth {
+    bottom: -9rem;
+    right: 5rem;
+  }
+
   .banner {
     margin: auto;
     max-width: 100%;
   }
+
   .title {
     text-align: center;
   }
+
   .subtitle {
     text-align: center;
   }
+
   .secondSubtitle {
     text-align: center;
   }
+
   .highlights {
     margin: 0 auto 2rem auto;
   }
+
   .button {
     width: 100%;
   }
@@ -265,67 +387,94 @@
   .leaf2 {
     display: none;
   }
+
   .title {
     font-size: 1.5rem;
   }
+
   .subtitle {
     font-size: 14px;
     margin-bottom: 0;
   }
+
   .paragraph {
     color: var(--content-600);
     font-size: 14px;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
+    /* 142.857% */
     margin-top: 2rem;
   }
+  .paragraphContent {
+    color: var(--content-600);
+    max-width: 100%;
+    display: block;
+  }
+
   .button {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
   }
+
   .earningsCard {
     flex-direction: column;
-    gap: 1rem;
-  }
-  .earningsCard .result {
+    gap: 48px;
+    margin-top: 2rem;
     margin-bottom: 2rem;
+    width: calc(100% - 3rem);
+    padding: 40px 24px;
   }
+
   .card1 {
     width: 100%;
     padding: 1rem;
   }
+
   .card2 {
     margin: 0;
     flex-direction: column;
   }
+
   .cardTitle {
     font-size: 24px;
   }
+
   .integratedBySubtile {
     font-size: 18px;
   }
+
+  .graphWrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
   .graph {
     max-width: calc(100% - 1rem);
+    width: calc(100% - 2rem);
   }
+
   .section2 {
     padding: 1rem 1rem;
   }
+
   .subsection {
     flex-direction: column;
   }
+
   .firstLeavesGroup,
   .secondLeavesGroup {
     visibility: hidden;
   }
+
   .banner {
     width: 100%;
   }
+
   .graph {
     margin: 3rem 1.5rem;
     max-width: calc(100% - 3rem);
   }
-  .earningsCard {
-    margin-top: 2rem;
-    width: calc(100% - 3rem);
-    padding: 40px 24px;
+  .sliderComp {
+    min-width: 100%;
+    width: 100%;
   }
 }

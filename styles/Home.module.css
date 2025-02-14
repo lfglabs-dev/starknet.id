@@ -405,10 +405,6 @@ div:has(> .lilLeaf04) {
     width: min(70%, 300px);
   }
 
-  .secondTitle {
-    font-size: 24px;
-  }
-
   .thirdTitle {
     font-size: 18px;
     text-align: center;
