@@ -3,14 +3,13 @@ import styles from "../../styles/Home.module.css";
 import HomeCard from "./homeCard";
 import CategoryTitle from "../UI/titles/categoryTitle";
 import { Parallax } from "react-scroll-parallax";
-import HomePartners from "./homePartners";
 import useLottie from "../../hooks/useLottie";
-
+import Partners from "../partners/partners";
 
 const HomeSection2 = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const leftLeafRef = useRef<HTMLDivElement>(null)
-  const rightLeafRef = useRef<HTMLDivElement>(null)
+  const leftLeafRef = useRef<HTMLDivElement>(null);
+  const rightLeafRef = useRef<HTMLDivElement>(null);
 
   const createObserver = useCallback(() => {
     return new IntersectionObserver(
@@ -43,8 +42,8 @@ const HomeSection2 = () => {
     };
   }, [createObserver]);
 
-  useLottie(leftLeafRef, "/animations/Falling.leaf.json")
-  useLottie(rightLeafRef, "/animations/Falling.leaf.json")
+  useLottie(leftLeafRef, "/animations/Falling.leaf.json");
+  useLottie(rightLeafRef, "/animations/Falling.leaf.json");
 
   const cardsData = [
     {
@@ -76,12 +75,18 @@ const HomeSection2 = () => {
   return (
     <div id="info" className={styles.section2}>
       <Parallax speed={-5}>
-        <div ref={leftLeafRef} className="hidden md:block absolute top-80 -left-20 w-[25rem] h-[25rem]" />
+        <div
+          ref={leftLeafRef}
+          className="hidden md:block absolute top-80 -left-20 w-[25rem] h-[25rem]"
+        />
       </Parallax>
-      <HomePartners />
+      <Partners />
       <CategoryTitle title="Forge Your Unique StarkNet Identity" />
       <Parallax speed={-10}>
-        <div ref={rightLeafRef} className="absolute -right-20 top-[25rem] hidden md:block w-[25rem] h-[25rem]" />
+        <div
+          ref={rightLeafRef}
+          className="absolute -right-20 top-[25rem] hidden md:block w-[25rem] h-[25rem]"
+        />
       </Parallax>
       <div className={`${styles.subsection} mt-8`}>
         {cardsData.map((card, index) => (
