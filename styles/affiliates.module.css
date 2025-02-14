@@ -9,7 +9,7 @@
   font-family: "QuickZap";
   font-size: 2rem;
   color: var(--secondary);
-  text-shadow: 1px 1px var(--tertiary);
+  text-shadow: 1px var(--tertiary);
   text-transform: uppercase;
   margin-bottom: 1rem;
   /* line-height: 58px; */
@@ -59,23 +59,23 @@
 }
 
 .eth {
-  top: -10rem;
-  left: -23rem
+  top: -11rem;
+  left: -27rem
 }
 
 .strk{
   bottom: -10rem;
-  right: 27rem
+  right: 32rem
 }
 
 .smallStrk{
-  top: -9rem;
+  top: -11rem;
   left: -10rem;
   rotate: 45deg;
 }
 
 .smallEth {
-  bottom: -9rem;
+  bottom: -10rem;
   right: 4rem;
   rotate:45deg;
 }
@@ -224,7 +224,7 @@
 
 .banner {
   width: 100%;
-  max-width: 65%;
+  max-width: 75%;
   height: fit-content;
 }
 
@@ -295,7 +295,7 @@
 
 @media (max-width: 1000px) {
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 0.5rem;
   }
 
@@ -304,8 +304,9 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-top: 50px;
+    padding-top: -50px;
     transform: translateX(4rem);
+    padding-bottom: 50px;
   }
 
   .eth {
@@ -362,16 +363,18 @@
   }
 
   .title {
-    font-size: 1.5rem;
-    margin-left: -125px;
-    width: none;
+    font-size: 2.2rem;
+    margin-left: 80px;
+    width: 420px;
+    text-align: center;
   }
 
 
   .subtitle {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0;
-    margin-left: -125px;
+    margin-left: 100px;
+    width: 400px;
   }
 
   .secondSubtitle{
@@ -379,7 +382,7 @@
   }
 
   .highlights{
-    margin-left: 50px;
+    margin-left: 130px;
   }
 
   .paragraph {
