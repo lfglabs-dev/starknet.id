@@ -4,6 +4,7 @@ import HomeCard from "../home/homeCard";
 import AffiliationDefinition from "./affiliationDefinition";
 import { Parallax } from "react-scroll-parallax";
 import useLottie from "../../hooks/useLottie";
+import IntegratedBySection from "./integratedBySection";
 
 const AffiliateSection2 = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -70,6 +71,7 @@ const AffiliateSection2 = () => {
 
   return (
     <div className={homeStyles.section2}>
+      <IntegratedBySection />
       <Parallax speed={-5}>
         <div
           ref={leftLeafRef}

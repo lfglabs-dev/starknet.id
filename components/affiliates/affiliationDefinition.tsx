@@ -10,7 +10,7 @@ const AffiliationDefinition: FunctionComponent = () => {
           <h2 className={homeStyles.secondTitle}>
             What is the stark affiliate program ?
           </h2>
-          <p className={styles.paragraph}>
+          <p className={styles.paragraphContent}>
             Our affiliate program pays you for sending your customers to our website. As an 
             Affiliate you&apos;ll be able to promote starknet.id domains and get a commission on 
             each domain sales made with your affiliate link. Earn at least 30% of commission 
