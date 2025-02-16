@@ -73,7 +73,6 @@
 .smallEth {
   bottom: -10rem;
   right: 4rem;
-
 }
 
 
@@ -360,7 +359,7 @@
 
   .title {
     font-size: 2.2rem;
-    margin-left: 80px;
+    margin-left: 95px;
     width: 420px;
     text-align: center;
   }
@@ -374,11 +373,11 @@
   }
 
   .secondSubtitle{
-    margin-left: 60px;
+    margin-left: 89px;
   }
 
   .highlights{
-    margin-left: 130px;
+    margin-left: 155px;
   }
 
   .paragraph {
@@ -392,7 +391,7 @@
   .button {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    margin-left: 30px;
+    margin-left: 47px;
   }
 
   .earningsCard {
