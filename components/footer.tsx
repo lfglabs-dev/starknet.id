@@ -54,7 +54,7 @@ export default function Footer() {
                   <Link
                     href="https://app.starknet.id/"
                     target="_blank"
-                      rel="noopener noreferrer"
+                    rel="noopener noreferrer"
                     className="opacity-70 font-light transition-opacity"
                   >
                     Get Your Domain
@@ -66,7 +66,7 @@ export default function Footer() {
                     PFP Collections
                   </Link>
                   <Link
-                    href="/"
+                    href="https://app.starknet.id/newsletter"
                     className="opacity-70 font-light transition-opacity"
                   >
                     Newsletter
