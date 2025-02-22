@@ -6,7 +6,7 @@ const AffiliationDefinition: FunctionComponent = () => {
   return (
     <div className={homeStyles.subsection}>
       <div className={styles.card1}>
-        <div className="flex items-center justify-evenly flex-col">
+        <div className="flex -mt-8 items-center justify-evenly flex-col">
           <h2 className={homeStyles.secondTitle}>
             What is the stark affiliate program ?
           </h2>
