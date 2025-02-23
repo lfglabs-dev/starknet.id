@@ -60,7 +60,7 @@ export default function Footer() {
                     Get Your Domain
                   </Link>
                   <Link
-                    href="/"
+                    href="https://app.starknet.id/pfpcollections"
                     className="opacity-70 font-light transition-opacity"
                   >
                     PFP Collections
