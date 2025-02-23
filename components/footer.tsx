@@ -67,6 +67,8 @@ export default function Footer() {
                   </Link>
                   <Link
                     href="https://app.starknet.id/newsletter"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="opacity-70 font-light transition-opacity"
                   >
                     Newsletter
