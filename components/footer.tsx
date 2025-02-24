@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center md:items-start space-y-3">
                   <Link
                     href="https://docs.starknet.id/"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                     className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                   >
                     Documentation
                   </Link>
@@ -55,7 +55,8 @@ export default function Footer() {
                     href="https://app.starknet.id/"
                     target="_blank"
                     rel="noopener noreferrer"
-                     className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+
+                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
 
                   >
                     Get Your Domain
@@ -69,7 +70,7 @@ export default function Footer() {
                   <Link
 
                     href="/"
-                     className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                   >
                     Newsletter
                   </Link>
