@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  margin: 3rem;
+  margin: 3rem 3rem 1rem 3rem;
   gap: 70px;
   align-items: center;
 }
@@ -18,7 +18,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  margin-left: -90px;
+  margin-left: -75px;
   margin-top: 20px;
 }
 
@@ -152,7 +152,7 @@
   color: var(--content-600);
   margin: 1rem auto 0 auto;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   line-height: 1.5rem;
   max-width: 574px;
   display: block;
@@ -171,6 +171,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  margin-top: -30px;
 }
 
 .card2 {
@@ -398,7 +399,6 @@
     text-align: center;
   }
 
-
   .subtitle {
     font-size: 14px;
     margin-bottom: 0;
@@ -406,11 +406,11 @@
     width: 400px;
   }
 
-  .secondSubtitle{
+  .secondSubtitle {
     margin-left: 89px;
   }
 
-  .highlights{
+  .highlights {
     margin-left: 155px;
   }
 
