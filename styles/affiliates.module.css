@@ -12,13 +12,15 @@
   text-shadow: 1px var(--tertiary);
   text-transform: uppercase;
   margin-bottom: 1rem;
+  margin-right: 5px;
   width: 200%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  margin-left: -75px;
+  justify-content: center;
+  margin-left: -85px;
   margin-top: 20px;
 }
 
