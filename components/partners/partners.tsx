@@ -164,7 +164,7 @@ export const partners: Partner[] = [
 
 const Partners: FunctionComponent = () => {
   return (
-    <div className="relative py-12 -mt-40 flex items-center flex-col sm:flex-row mb-5">
+    <div className="relative py-12 md:-mt-40 flex items-center flex-col sm:flex-row mb-5">
       {/* Description */}
       <div className="sm:mr-8 w-full sm:w-fit">
         <p className="font-poppins w-full sm:w-[240px] text-base font-medium leading-6 sm:text-left text-gray-500 text-center">

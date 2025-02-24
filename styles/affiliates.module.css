@@ -1,9 +1,8 @@
 .container {
   display: flex;
-  margin: 3rem;
+  margin: 3rem 3rem 1rem 3rem;
   gap: 70px;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .title {

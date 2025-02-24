@@ -10,7 +10,7 @@ const AffiliateSection1: FunctionComponent = () => {
   return (
     <div className={homeStyles.section1}>
       <div className={styles.container}>
-
+      
         <div className={styles.bannerContainer}>
           <img
             alt="affiliation illustration"
@@ -53,6 +53,7 @@ const AffiliateSection1: FunctionComponent = () => {
           </div>
         </div>
       </div>
+      <div className="-mb-16" />
     </div>
   );
 };
