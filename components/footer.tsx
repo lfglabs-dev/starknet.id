@@ -6,27 +6,27 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#284028] text-white px-6 lg:mt-[-220px] -mt-[105px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-12 md:py-16">
-      <div className="max-w-fit lg:mx-[100px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-          <div className="md:col-span-4 space-y-10 lg:text-left md:text-left text-center">
+    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:mt-[-220px] -mt-[105px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16">
+      <div className="w-full max-w-[calc(100%-100px)] mx-auto">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+          <div className="max-w-[400px] space-y-6 md:space-y-10 text-center md:text-left">
             <Image
               src="/visuals/home/footer-icon.webp"
               alt="leaf"
               width={40}
               height={40}
-              className="relative text-center mx-auto lg:ml-0 md:ml-0 lg:left-0 w-10"
+              className="relative mx-auto md:mx-0 w-10"
             />
-            <h2 className="text-xl font-bold leading-tight mb-8 md:mb-0">
+            <h2 className="text-lg sm:text-xl font-bold leading-tight">
               One profile, seamlessly integrated to the whole ecosystem
             </h2>
           </div>
 
-          <div className="md:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:justify-items-end lg:text-left md:text-left text-center">
-              <div className="space-y-4 lg:mr-[-120px] md:ml-[55px] mr-0">
+          <div className="flex justify-center md:justify-end w-full md:w-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 lg:gap-[72px]">
+              <div className="space-y-4 text-center md:text-left">
                 <h3 className="text-lg font-semibold mb-4">About</h3>
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col items-center md:items-start space-y-3">
                   <Link
                     href="https://docs.starknet.id/"
                     className="opacity-70 font-light transition-opacity"
@@ -48,13 +48,13 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-4 md:mt-0 mt-8 text-center md:text-left">
                 <h3 className="text-lg font-semibold mb-4">Starknet ID</h3>
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col items-center md:items-start space-y-3">
                   <Link
                     href="https://app.starknet.id/"
                     target="_blank"
-                      rel="noopener noreferrer"
+                    rel="noopener noreferrer"
                     className="opacity-70 font-light transition-opacity"
                   >
                     Get Your Domain
@@ -66,7 +66,9 @@ export default function Footer() {
                     PFP Collections
                   </Link>
                   <Link
-                    href="/"
+                    href="https://app.starknet.id/newsletter"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="opacity-70 font-light transition-opacity"
                   >
                     Newsletter
@@ -85,11 +87,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8">
-          <p className="text-sm opacity-70 font-light mb-4 md:mb-0">
-            © 2025 LFG Labs. All rights reserved.
+        <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-12 pt-8 ">
+          <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center">
+           © 2025 LFG Labs. All rights reserved.
           </p>
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 justify-center">
             <a
               href="https://twitter.com/Starknet_id"
               target="_blank"
