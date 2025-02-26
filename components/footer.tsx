@@ -41,7 +41,7 @@ export default function Footer() {
                   </Link>
                   <Link
                     href="/pdfs/PrivacyPolicy.pdf"
-                   className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                   >
                     Privacy policy
                   </Link>
@@ -55,12 +55,14 @@ export default function Footer() {
                     href="https://app.starknet.id/"
                     target="_blank"
                     rel="noopener noreferrer"
-                   className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                   >
                     Get Your Domain
                   </Link>
                   <Link
-                    href="/"
+                    href="https://app.starknet.id/pfpcollections"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                   >
                     PFP Collections
@@ -69,13 +71,13 @@ export default function Footer() {
                     href="https://app.starknet.id/newsletter"
                     target="_blank"
                     rel="noopener noreferrer"
-                   className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                   >
                     Newsletter
                   </Link>
                   <Link
                     href="/affiliates/individual-program"
-                   className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -89,14 +91,14 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-12 pt-8 ">
           <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center">
-           © 2025 LFG Labs. All rights reserved.
+            © 2025 LFG Labs. All rights reserved.
           </p>
           <div className="flex space-x-6 justify-center">
             <a
               href="https://twitter.com/Starknet_id"
               target="_blank"
               rel="noopener noreferrer"
-             className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+              className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
