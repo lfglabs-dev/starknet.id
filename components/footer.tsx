@@ -6,10 +6,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:px-12 xl:px-20 -mt-[105px] lg:mt-[-220px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16">
-      <div className="w-full max-w-[1280px] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between w-full">
-          {/* Left content - pushed to extreme left */}
+    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:px-12 xl:px-20 -mt-[105px] lg:mt-[-220px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16 w-full">
+      <div className="w-full 2xl:max-w-none max-w-[1280px] mx-auto">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
           <div className="max-w-[400px] space-y-6 md:space-y-10 text-center md:text-left">
             <Image
               src="/visuals/home/footer-icon.webp"
@@ -23,8 +22,7 @@ export default function Footer() {
             </h2>
           </div>
 
-          {/* Right content - pushed to extreme right */}
-          <div className="md:ml-auto">
+          <div className="flex justify-center md:justify-end w-full md:w-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 lg:gap-[72px]">
               {/* About Section */}
               <div className="space-y-4 text-center md:text-left">
@@ -95,12 +93,12 @@ export default function Footer() {
 
         {/* Footer Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-12 pt-8 border-t border-white/20">
-          <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center md:text-left">
+          <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center">
             © 2025 LFG Labs. All rights reserved.
           </p>
 
           {/* Social Media Links */}
-          <div className="flex space-x-6 justify-center md:justify-end">
+          <div className="flex space-x-6 justify-center">
             <a
               href="https://twitter.com/Starknet_id"
               target="_blank"
@@ -112,6 +110,7 @@ export default function Footer() {
               </svg>
               <span className="sr-only">Twitter</span>
             </a>
+
             
             <a
               href="https://discord.com/invite/8uS2Mgcsza"
