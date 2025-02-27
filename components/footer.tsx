@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:mt-[-220px] -mt-[105px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16">
-      <div className="w-full max-w-[calc(100%-100px)] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:px-12 xl:px-20 -mt-[105px] lg:mt-[-220px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16">
+      <div className="w-full max-w-[1280px] mx-auto">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
           <div className="max-w-[400px] space-y-6 md:space-y-10 text-center md:text-left">
             <Image
               src="/visuals/home/footer-icon.webp"
@@ -18,36 +18,38 @@ export default function Footer() {
               className="relative mx-auto md:mx-0 w-10"
             />
             <h2 className="text-lg sm:text-xl font-bold leading-tight">
-              One profile, seamlessly integrated to the whole ecosystem
+              One profile, seamlessly integrated into the whole ecosystem
             </h2>
           </div>
 
           <div className="flex justify-center md:justify-end w-full md:w-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 lg:gap-[72px]">
+              {/* About Section */}
               <div className="space-y-4 text-center md:text-left">
                 <h3 className="text-lg font-semibold mb-4">About</h3>
                 <div className="flex flex-col items-center md:items-start space-y-3">
                   <Link
                     href="https://docs.starknet.id/"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                   >
                     Documentation
                   </Link>
                   <Link
                     href="/pdfs/Terms.pdf"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                   >
                     Terms of use
                   </Link>
                   <Link
                     href="/pdfs/PrivacyPolicy.pdf"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                   >
                     Privacy policy
                   </Link>
                 </div>
               </div>
 
+              {/* Starknet ID Section */}
               <div className="space-y-4 md:mt-0 mt-8 text-center md:text-left">
                 <h3 className="text-lg font-semibold mb-4">Starknet ID</h3>
                 <div className="flex flex-col items-center md:items-start space-y-3">
@@ -55,29 +57,29 @@ export default function Footer() {
                     href="https://app.starknet.id/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                   >
                     Get Your Domain
                   </Link>
                   <Link
-                    href="https://app.starknet.id/pfpcollections"
+                    href="https://app.starknet.id/pfp-collections"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                   >
                     PFP Collections
                   </Link>
                   <Link
-                    href="https://app.starknet.id/newsletter"
+                    href="https://app.starknet.id/newsletter-subscription"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                   >
                     Newsletter
                   </Link>
                   <Link
                     href="/affiliates/individual-program"
-                    className="opacity-80 font-light transition-all duration-300 hover:opacity-55"
+                    className="transition-all duration-300 hover:text-gray-400 hover:scale-105"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -89,23 +91,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-12 pt-8 ">
+        {/* Footer Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-12 pt-8 border-t border-white/20">
           <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center">
             © 2025 LFG Labs. All rights reserved.
           </p>
-          <div className="flex space-x-6 justify-center">
-          <a
-            href="https://twitter.com/Starknet_id"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-light transition-all duration-300 hover:opacity-50 hover:scale-110 hover:rotate-6"
-            >
-        <svg className="w-6 h-6 transition-transform duration-300" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-        <span className="sr-only">Twitter</span>
-      </a>
 
+          {/* Social Media Links */}
+          <div className="flex space-x-6 justify-center">
+            <a
+              href="https://twitter.com/Starknet_id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-light transition-all duration-300 hover:opacity-50 hover:scale-110 hover:rotate-6"
+            >
+              <svg className="w-6 h-6 transition-transform duration-300" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              <span className="sr-only">Twitter</span>
+            </a>
+
+            
             <a
               href="https://discord.com/invite/8uS2Mgcsza"
               target="_blank"
