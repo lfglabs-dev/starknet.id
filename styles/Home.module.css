@@ -415,3 +415,53 @@ div:has(> .lilLeaf04) {
   }
 }
 
+/* Animation Definition */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* moves element slightly down */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* brings it to normal position */
+  }
+}
+
+/* Animation Triggers (applied via JS after delay) */
+.animateTitle {
+  animation: fadeSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animateSubtitle {
+  animation: fadeSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animateButton {
+  animation: fadeSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Initial Hidden State (pre-animation) */
+.mainTitle,
+.mainSubtitle,
+.mainSubtitleMobile,
+.buttonContainer {
+  opacity: 0;
+  transform: translateY(20px); /* matches animation start */
+}
+
+/* Responsive Subtitle Display */
+.mainSubtitle {
+  display: block;
+}
+.mainSubtitleMobile {
+  display: none;
+}
+/* On mobile, use alternate subtitle text */
+@media (max-width: 768px) {
+  .mainSubtitle {
+    display: none;
+  }
+  .mainSubtitleMobile {
+    display: block;
+}
+}
