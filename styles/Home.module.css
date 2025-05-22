@@ -1,8 +1,10 @@
+/* === PAGE === */
 .page {
   overflow: hidden;
   background: white;
 }
 
+/* === SECTION 1 === */
 .section1 {
   padding: 6rem 5rem 1rem 6rem;
   display: flex;
@@ -10,6 +12,7 @@
   min-height: calc(100vh - 4rem);
 }
 
+/* === HEADER CONTENT === */
 .headerContent {
   margin: 0 auto;
   padding: 22px 39px;
@@ -18,6 +21,7 @@
   display: block;
 }
 
+/* === HEADER BANNER === */
 .headerBanner {
   width: 700px;
   height: 700px;
@@ -26,30 +30,53 @@
   min-width: 358px;
 }
 
+/* === BUTTON === */
 .buttonContainer {
   width: fit-content;
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
+/* === MAIN TITLE === */
 .mainTitle {
   display: flex;
   flex-direction: column;
   color: var(--primary);
   text-align: left;
-  /* Title/H1 */
   font-family: QuickZap;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
   width: 487px;
+  opacity: 1;
 }
 
+/* Highlighted text */
 .mainTitle strong {
   font-family: QuickZap;
   color: var(--secondary);
 }
 
+/* Title animation wrappers */
+.mainTitleLine {
+  display: block;
+  overflow: hidden;
+}
+
+.mainTitleText {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: revealUp 1.2s ease forwards;
+}
+
+.highlightedText {
+  animation-delay: 0.15s;
+}
+
+/* === SUBTITLES === */
 .mainSubtitle,
 .mainSubtitleMobile {
   display: flex;
@@ -61,18 +88,22 @@
   font-weight: 400;
   line-height: 24px;
   margin-top: 32px;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .mainSubtitleMobile {
   display: none;
 }
 
+/* === SECTION 2 === */
 .section2 {
   min-height: 80vh;
   flex-direction: column;
   padding: 0 4rem 4rem;
 }
 
+/* === SECTION 3 CONTAINER === */
 .section3Container {
   background-image: url("../public/visuals/home/jungle-vector-image.svg");
   background-repeat: no-repeat;
@@ -91,6 +122,7 @@
   flex-grow: 0;
 }
 
+/* === SECTION 3 BUTTON === */
 .section3ContainerButton {
   display: flex;
   padding: 10px 16px;
@@ -106,9 +138,7 @@
   border: 1px solid #19aa6e;
   box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
-  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: transform 450ms var(--nimiq-ease),
-    box-shadow 450ms var(--nimiq-ease);
+  transition: transform 450ms var(--nimiq-ease), box-shadow 450ms var(--nimiq-ease);
 }
 
 .section3ContainerButton:hover,
@@ -117,37 +147,7 @@
   transform: translate3D(0, -2px, 0);
 }
 
-@media (max-width: 1024px) {
-  .section3Container {
-    background-size: 120%;
-  }
-  .section3ContainerButton {
-    width: 160px;
-    height: 40px;
-    font-size: 12px;
-    margin-top: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section3Container {
-    background-size: 150%;
-  }
-  .section3ContainerButton {
-    width: 160px;
-    height: 40px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section3ContainerButton {
-    width: 150px;
-    height: 36px;
-    font-size: 11px;
-  }
-}
-
+/* === SECTION 3 === */
 .section3 {
   min-height: 120vh;
   padding: 4rem 5rem;
@@ -159,6 +159,7 @@
   position: relative;
 }
 
+/* === TEXT STYLES === */
 .subsection {
   width: 100%;
   display: flex;
@@ -169,17 +170,18 @@
   gap: 10px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
 .title {
   font-family: "QuickZap";
   font-size: 8rem;
   color: var(--primary);
   text-shadow: 4px 4px var(--tertiary);
   text-transform: uppercase;
+  text-align: center;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
 }
 
 .subtitle {
@@ -193,6 +195,7 @@
   font-size: 2.4rem;
   color: var(--secondary);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .thirdTitle {
@@ -201,14 +204,10 @@
   margin-top: 0.5rem;
   color: var(--secondary);
   text-transform: uppercase;
-}
-
-.title,
-.secondTitle,
-.description {
   text-align: center;
 }
 
+/* === CARD === */
 .card {
   margin: 0 1rem 3rem 1rem;
   padding: 3rem 1.5rem;
@@ -216,31 +215,28 @@
   color: inherit;
   text-decoration: none;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
   background-color: var(--background-light);
   box-shadow: var(--shadow);
   z-index: 10;
 }
 
-.card h2 .card h2 {
+.card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
 .cardDescription {
-  font-size: 1.25rem /* 20px */;
-  line-height: 1.75rem /* 28px */;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   margin: 0;
 }
 
+/* === CARD 2 === */
 .card2 {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
-  color: inherit;
-  text-decoration: none;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -249,6 +245,7 @@
   box-shadow: var(--shadow);
 }
 
+/* === PARTNERS === */
 .partners {
   display: flex;
   justify-content: center;
@@ -262,12 +259,49 @@
   text-align: center;
 }
 
+/* === ABSOLUTE LEAF IMAGE === */
 div:has(> .lilLeaf04) {
   position: absolute;
   left: 16%;
   bottom: -12rem;
 }
 
+/* === ANIMATIONS === */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.animateTitle {
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.animateSubtitle {
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.animateButton {
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+/* === RESPONSIVE === */
 @media (min-width: 768px) and (max-width: 1024px) {
   .title {
     font-size: 6rem;
@@ -284,8 +318,9 @@ div:has(> .lilLeaf04) {
   .headerBanner {
     display: none;
   }
+
   .mainTitle {
-    width: none;
+    width: auto;
   }
 }
 
@@ -295,16 +330,17 @@ div:has(> .lilLeaf04) {
     text-shadow: 2px 2px var(--tertiary);
   }
 
-  .card {
+  .card,
+  .card2 {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+  }
+
+  .card {
     margin-bottom: 2rem;
   }
 
   .card2 {
-    width: 100%;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,15 +349,13 @@ div:has(> .lilLeaf04) {
   .cardDescription {
     color: var(--content-600);
     text-align: center;
-
-    /* Body/small/regular */
     font-family: Poppins-Regular;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    /* 142.857% */
   }
+
   .section2 {
     padding: 1rem 1.5rem;
   }
@@ -415,53 +449,23 @@ div:has(> .lilLeaf04) {
   }
 }
 
-/* Animation Definition */
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px); /* moves element slightly down */
+@media (max-width: 1024px) {
+  .section3Container {
+    background-size: 120%;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* brings it to normal position */
+
+  .section3ContainerButton {
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+    margin-top: 18px;
   }
 }
 
-/* Animation Triggers (applied via JS after delay) */
-.animateTitle {
-  animation: fadeSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.animateSubtitle {
-  animation: fadeSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.animateButton {
-  animation: fadeSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* Initial Hidden State (pre-animation) */
-.mainTitle,
-.mainSubtitle,
-.mainSubtitleMobile,
-.buttonContainer {
-  opacity: 0;
-  transform: translateY(20px); /* matches animation start */
-}
-
-/* Responsive Subtitle Display */
-.mainSubtitle {
-  display: block;
-}
-.mainSubtitleMobile {
-  display: none;
-}
-/* On mobile, use alternate subtitle text */
-@media (max-width: 768px) {
-  .mainSubtitle {
-    display: none;
+@media (max-width: 480px) {
+  .section3ContainerButton {
+    width: 150px;
+    height: 36px;
+    font-size: 11px;
   }
-  .mainSubtitleMobile {
-    display: block;
-}
 }
