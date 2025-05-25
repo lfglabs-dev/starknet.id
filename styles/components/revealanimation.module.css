@@ -1,0 +1,42 @@
+.curtain {
+  position: fixed;
+  background-color: #0C8654;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.progressBar {
+  background-color: #FCFFFE; 
+  height: 2px;
+  width: 2px;
+  animation: growEffect 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes growEffect {
+  0% {
+    width: 0;
+    height: 2px;
+  }
+  50% {
+    width: calc(100vw - 24px);
+    height: 2px;
+  }
+  100% {
+    width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain {
+    display: none;
+  }
+}
