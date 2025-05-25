@@ -13,11 +13,25 @@
   pointer-events: none;
 }
 
+
 .progressBar {
   background-color: #FCFFFE; 
   height: 2px;
   width: 2px;
   animation: growEffect 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.fadeOut {
+  animation: curtainFadeOut 0.2s ease-in-out forwards;
+}
+
+@keyframes curtainFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes growEffect {
