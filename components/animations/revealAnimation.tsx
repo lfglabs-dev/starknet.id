@@ -22,9 +22,10 @@ export default function RevealAnimation() {
 
   if (hide) return null;
 
-  return (
-    <div className={`${styles.curtain} ${fadeOut ? styles.fadeOut : ""}`}>
-      <div className={styles.progressBar} />
-    </div>
-  );
+    return (
+  <div className={`${styles.curtain} ${fadeOut ? styles.fadeOut : ""}`}>
+    <div className={styles.leftPanel} />
+    <div className={styles.rightPanel} />
+  </div>
+);
 }

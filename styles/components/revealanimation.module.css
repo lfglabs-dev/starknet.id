@@ -1,56 +1,58 @@
 .curtain {
   position: fixed;
-  background-color: #0C8654;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  pointer-events: none;
 }
 
 
-.progressBar {
-  background-color: #FCFFFE; 
-  height: 2px;
-  width: 2px;
-  animation: growEffect 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+.leftPanel,
+.rightPanel {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: #0C8654;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 9999;
 }
 
-.fadeOut {
-  animation: curtainFadeOut 0.2s ease-in-out forwards;
+.leftPanel {
+  left: 0;
+  animation-name: slideLeft;
+  transform-origin: left;
 }
 
-@keyframes curtainFadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.rightPanel {
+  right: 0;
+  animation-name: slideRight;
+  transform-origin: right;
 }
 
-@keyframes growEffect {
+
+@keyframes slideLeft {
   0% {
-    width: 0;
-    height: 2px;
-  }
-  50% {
-    width: calc(100vw - 24px);
-    height: 2px;
+    transform: translateX(0%);
   }
   100% {
-    width: calc(100vw - 24px);
-    height: calc(100vh - 24px);
+    transform: translateX(-100%);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .curtain {
-    display: none;
+@keyframes slideRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
