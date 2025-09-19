@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import PageReveal from "../components/animations/pageReveal";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -31,7 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Use your Starknet ID to prove your identity on-chain."
         />
       </Head>
-      <Component className="overflow-hidden" {...pageProps} />
+      <PageReveal>
+        <Component className="overflow-hidden" {...pageProps} />
+      </PageReveal>
     </>
   );
 }
