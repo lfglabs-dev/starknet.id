@@ -98,7 +98,7 @@ export default function BlogPage({ posts }: BlogIndexProps) {
           <Badge>Blog</Badge>
           <h1
             id="blog-title"
-            className="mt-2 inline-block bg-gradient-to-br from-primary to-primary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl"
+            className="mt-2 inline-block bg-clip-text py-2 text-4xl font-bold tracking-wide sm:text-6xl md:text-6xl"
           >
             Starknet ID Blog - Starknet Ecosystem Updates, News and Guides
           </h1>
