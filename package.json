@@ -24,6 +24,7 @@
     "@radix-ui/react-accordion": "^1.2.12",
     "@remixicon/react": "^4.6.0",
     "bn.js": "^5.2.1",
+    "caniuse-lite": "^1.0.30001749",
     "gray-matter": "^4.0.3",
     "lottie-react": "^2.4.1",
     "next": "^14.2.5",
