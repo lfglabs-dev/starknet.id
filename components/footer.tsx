@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:px-12 xl:px-20 -mt-[105px] lg:mt-[-220px] rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16 w-full">
+    <footer className="bg-[#284028] text-white px-4 sm:px-6 lg:px-12 xl:px-20 rounded-tl-2xl rounded-tr-2xl z-10 relative py-8 sm:py-12 md:py-16 w-full">
       <div className="w-full 2xl:max-w-none max-w-[1280px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
           <div className="max-w-[400px] space-y-6 md:space-y-10 text-center md:text-left">
@@ -18,7 +18,7 @@ export default function Footer() {
               className="relative mx-auto md:mx-0 w-10"
             />
             <h2 className="text-lg sm:text-xl font-bold leading-tight">
-              One profile, seamlessly integrated into the whole ecosystem
+              One domain, seamlessly integrated into the whole ecosystem
             </h2>
           </div>
 
@@ -62,25 +62,15 @@ export default function Footer() {
                     Get Your Domain
                   </Link>
                   <Link
-                    href="https://app.starknet.id/pfp-collections"
-                    target="_blank"
+                    href="/blog"
                     rel="noopener noreferrer"
                     className="transition-opacity duration-300 hover:opacity-70"
                   >
-                    PFP Collections
-                  </Link>
-                  <Link
-                    href="https://app.starknet.id/newsletter-subscription"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-opacity duration-300 hover:opacity-70"
-                  >
-                    Newsletter
+                    Blog
                   </Link>
                   <Link
                     href="/affiliates/individual-program"
                     className="transition-opacity duration-300 hover:opacity-70"
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     Affiliation
