@@ -1,23 +1,3 @@
-/** @type {import('next').NextConfig} */
-const isProd = process.env.VERCEL_ENV === "production";
-
-const nextConfig = {
-  async headers() {
-    return [
-      {
-        source: "/api/:slug*",
-        headers: [
-          {
-            key: "content-type",
-            value: "image/svg+xml",
-          },
-        ],
-      },
-    ];
-  },
-  reactStrictMode: true,
-  assetPrefix: isProd ? process.env.NEXT_PUBLIC_CDN_URL : undefined,
-  swcMinify: true,
-};
-
-module.exports = nextConfig;
+// Converted to ESM at next.config.mjs; keeping this file to avoid breaking imports.
+// See next.config.mjs for the active configuration with MDX support.
+module.exports = require("./next.config.mjs");

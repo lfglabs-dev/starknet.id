@@ -8,7 +8,7 @@ const AffiliationOpportunity: FunctionComponent = () => {
       <div className={styles.card1}>
         <div className="flex items-center justify-evenly flex-col">
           <h2 className={homeStyles.secondTitle}>Your opportunity</h2>
-          <p className={styles.paragraph}>
+          <p className={styles.paragraphContent}>
             Join our affiliate program and become a part of the StarkNet ID
             community. As an affiliate, you&apos;ll not only enjoy the benefits
             of StarkNet ID, but also have the opportunity to earn rewards by

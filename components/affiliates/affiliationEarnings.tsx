@@ -13,32 +13,39 @@ const AffiliationEarnings: FunctionComponent = () => {
       <div className={styles.sliders}>
         <div className={styles.sliderContainer}>
           <p className={styles.sliderName}>Direct Referrals Count</p>
-          <Slider
-            value={directReferrals}
-            onChange={setDirectReferrals}
-            min={1}
-            max={10000}
-          />
+          <div className={styles.sliderComp}>
+            <Slider
+              value={directReferrals}
+              onChange={setDirectReferrals}
+              min={1}
+              max={10000}
+            />
+          </div>
         </div>
         <div className={styles.sliderContainer}>
           <p className={styles.sliderName}>Each referral will refer</p>
-          <Slider
-            value={indirectReferrals}
-            onChange={setIndirectReferrals}
-            min={0.01}
-            max={1.99}
-            step={0.01}
-          />
+          <div className={styles.sliderComp}>
+            <Slider
+              value={indirectReferrals}
+              onChange={setIndirectReferrals}
+              min={0.01}
+              max={1.99}
+              step={0.01}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.resultContainer}>
-        <p className={styles.resultTitle}>Affiliate earnings</p>
-        <p className={styles.result}>
-          {Math.round(
-            (directReferrals * averageDomainPrice) / (4 - 2 * indirectReferrals)
-          )}
-          $
-        </p>
+        <div>
+          <p className={styles.resultTitle}>Affiliate earnings</p>
+          <p className={styles.result}>
+            {Math.round(
+              (directReferrals * averageDomainPrice) /
+                (4 - 2 * indirectReferrals)
+            )}
+            $
+          </p>
+        </div>
         <Button
           onClick={() =>
             window.open(

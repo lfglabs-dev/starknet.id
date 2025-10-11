@@ -9,7 +9,7 @@ const HomeSection1: FunctionComponent = () => {
   return (
     <div className={styles.section1}>
       <HeaderSection
-        title="One profile,"
+        title="One Domain,"
         highlighted="Connected to all the Starknet Ecosystem."
         subtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."
         mobileSubtitle="Create your Starknet Profile by claiming your stark domain and start using it everywhere in the ecosystem."

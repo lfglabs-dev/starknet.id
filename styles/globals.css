@@ -31,6 +31,7 @@
   --background-light: #fffcf8;
   --nimiq-ease: cubic-bezier(0.25, 0, 0, 1);
   --gray: rgba(0, 0, 0, 0.11);
+  --green-500: #19aa6e;
   --shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.06);
 }
 
@@ -44,8 +45,7 @@ body {
 h1 {
   font-family: "QuickZap";
   font-size: 8em;
-  color: var(--primary);
-  text-shadow: 4px 4px var(--tertiary);
+  color: var(--secondary);
 }
 
 a {
@@ -94,4 +94,74 @@ strong {
     color: var(--secondary);
     background: var(--background);
   }
+}
+
+/* ===== Global typography for MDX content ===== */
+.prose {
+  color: var(--secondary);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-family: "QuickZap";
+  text-transform: uppercase;
+}
+
+.prose h1 {
+  /* Article-friendly H1 (smaller than homepage hero) */
+  font-family: "QuickZap";
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: var(--secondary);
+  text-shadow: none;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  color: var(--secondary);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose ul { list-style: disc inside; }
+.prose ol { list-style: decimal inside; }
+
+.prose li { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
