@@ -5,7 +5,7 @@ import { ReactElement } from "react"
 import authorsData from "../lib/authors.json"
 import { customComponents } from "../mdx-components"
 
-const postsDirectory = path.join(process.cwd(), "public/blog/posts")
+const postsDirectory = path.join(process.cwd(), "content/posts")
 
 function estimateReadingTime(text: string): string {
   // Remove YAML frontmatter if present
