@@ -115,7 +115,7 @@ export default function ArticlePage({ id, frontmatter, mdxSource }: ArticlePageP
         <header className="mb-8 text-center">
           <div className="flex flex-col items-center justify-center">
             <Badge>Article</Badge>
-            <h1 className="mb-4 inline-block bg-clip-text py-2 text-4xl font-bold tracking-tighter sm:text-6xl md:text-6xl">
+            <h1 className="mb-4 inline-block bg-clip-text py-2 text-4xl font-bold tracking-wide sm:text-6xl md:text-6xl">
               {frontmatter.title}
             </h1>
           </div>
