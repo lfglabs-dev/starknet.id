@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://starknet.id</loc><lastmod>2025-10-11T07:11:56.732Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://starknet.id/affiliates/individual-program</loc><lastmod>2025-10-11T07:11:56.733Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://starknet.id/blog</loc><lastmod>2025-10-11T07:11:56.733Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://starknet.id/blog/starknet-id-simple-stark-name</loc><lastmod>2025-10-11T07:11:56.733Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id</loc><lastmod>2025-11-19T09:13:05.454Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/affiliates/individual-program</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/simplify-starknet-address-management-human-readable-names</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/create-unified-starknet-identity-free-stark-domain-guide</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/get-human-readable-starknet-id-on-chain-activity</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/set-up-starknet-id-stark-domain-unified-on-chain-identity-2</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/starknet-id-vs-traditional-addresses-on-chain-identity-system</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/set-up-starknet-id-stark-domain-unified-on-chain-identity</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://starknet.id/blog/starknet-id-simple-stark-name</loc><lastmod>2025-11-19T09:13:05.455Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
