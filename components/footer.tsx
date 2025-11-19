@@ -84,7 +84,15 @@ export default function Footer() {
         {/* Footer Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-12 pt-8 border-t border-white/20">
           <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center">
-            © 2025 LFG Labs. All rights reserved.
+            © 2025 LFG Labs. All rights reserved. &nbsp;|&nbsp; 
+            <a
+              href="https://relens.ai"
+              target="_blank"
+              rel="noreferrer"
+              className="underline transition-opacity duration-300 hover:opacity-70"
+            >
+              Powered by Relens AI
+            </a>
           </p>
 
           {/* Social Media Links */}
