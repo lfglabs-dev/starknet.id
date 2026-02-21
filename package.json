@@ -27,7 +27,7 @@
     "caniuse-lite": "^1.0.30001749",
     "gray-matter": "^4.0.3",
     "lottie-react": "^2.4.1",
-    "next": "^14.2.5",
+    "next": "14.2.35",
     "next-mdx-remote": "^5.0.0",
     "next-sitemap": "^4.0.5",
     "prettier": "^2.8.1",
