@@ -86,12 +86,12 @@ export default function Footer() {
           <p className="text-sm opacity-70 font-light mb-4 md:mb-0 text-center">
             © 2025 LFG Labs. All rights reserved. &nbsp;|&nbsp; 
             <a
-              href="https://relens.ai"
+              href="https://lfglabs.dev"
               target="_blank"
               rel="noreferrer"
               className="underline transition-opacity duration-300 hover:opacity-70"
             >
-              Powered by Relens AI
+              Powered by LFG Labs
             </a>
           </p>
 
