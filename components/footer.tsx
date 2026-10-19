@@ -68,13 +68,6 @@ export default function Footer() {
                   >
                     Blog
                   </Link>
-                  <Link
-                    href="/affiliates/individual-program"
-                    className="transition-opacity duration-300 hover:opacity-70"
-                    rel="noopener noreferrer"
-                  >
-                    Affiliation
-                  </Link>
                 </div>
               </div>
             </div>

@@ -96,7 +96,6 @@ const Home: NextPage = () => {
               { question: "What is Domain Subscription (auto‑renew)?", answer: "A smart‑contract feature that automatically renews your domains annually so they don’t expire." },
               { question: "Are there safeguards for subscription payments?", answer: "Yes: you set a limit_price cap; renewals occur only when near expiry; you can disable anytime; no hidden fees." },
               { question: "Can I personalize my identity (PFP, socials)?", answer: "Yes. Choose an NFT you own on Starknet as PFP, verify socials like Twitter/Discord, and add an EVM address or snid.eth for interoperability." },
-              { question: "How does the affiliate program work?", answer: "Domain holders get a referral link. You earn 25% on direct referrals and 12.5% on your referrals’ referrals (sub‑affiliates)." },
               { question: "Are subscription contracts audited?", answer: "Yes, the subscription and auto‑renew smart contracts have been independently audited." },
             ];
 
