@@ -37,7 +37,7 @@
     "react-intersection-observer": "^9.5.2",
     "react-loader-spinner": "^5.3.4",
     "react-scroll-parallax": "^3.4.2",
-    "starknet": "^6.11.0",
+    "starknet": "^10.8.0",
     "starknetid-identicons": "^1.6.0",
     "starknetid.js": "^4.0.0",
     "tailwind-merge": "^3.3.1",
