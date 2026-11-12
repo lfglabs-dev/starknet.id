@@ -39,7 +39,7 @@
     "react-scroll-parallax": "^3.4.2",
     "starknet": "^6.11.0",
     "starknetid-identicons": "^1.6.0",
-    "starknetid.js": "^4.0.0",
+    "starknetid.js": "^5.0.0",
     "tailwind-merge": "^3.3.1",
     "twitter-api-sdk": "^1.2.1"
   },
